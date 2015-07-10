@@ -1,4 +1,5 @@
-﻿using AlgorithmProblems.matrix_problems;
+﻿using AlgorithmProblems.Linked_List;
+using AlgorithmProblems.matrix_problems;
 using AlgorithmProblems.StringProblems;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,13 @@ namespace AlgorithmProblems
             Matrix_Column_Rows_0.TestMakeRowColZero2();
             RotateMatrix180.TestRotateMatrix180();
             SumOfMatrixElementsFormedByRectangleWithCoordinates.TestSumOfMatrixElements();
+
+            // Linked list Problems
+            DeleteLinkedListNode.TestDeleteFirstNode();
+            DeleteDuplicatesFromLinkedList.TestDeleteDuplicates();
+            NthLastElementOfLinkedList.TestNthLastNodeOfLinkedList();
+            DeleteNodeWithDirectReference.TestDeleteNode();
+            AddNumbers.TestAddNumbersRepresentedByLinkedList();
 
             Console.ReadLine();
         }

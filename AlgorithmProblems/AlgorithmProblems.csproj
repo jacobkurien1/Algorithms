@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Linked List\AddNumbers.cs" />
+    <Compile Include="Linked List\CircularLinkedList.cs" />
+    <Compile Include="Linked List\DeleteDuplicatesFromLinkedList.cs" />
+    <Compile Include="Linked List\DeleteLinkedListNode.cs" />
+    <Compile Include="Linked List\DeleteNodeWithDirectReference.cs" />
+    <Compile Include="Linked List\Linked List Helper\LinkedListHelper.cs" />
+    <Compile Include="Linked List\Linked List Helper\LinkedListNode.cs" />
+    <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
@@ -48,6 +56,10 @@
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />
+    <Compile Include="Stack and Queue\Queue Helper\QueueViaLinkedList.cs" />
+    <Compile Include="Stack and Queue\Stack Helper\StackViaArray.cs" />
+    <Compile Include="Stack and Queue\Stack Helper\StackViaLinkedList.cs" />
     <Compile Include="StringProblems\Anagrams.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
@@ -57,6 +69,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
