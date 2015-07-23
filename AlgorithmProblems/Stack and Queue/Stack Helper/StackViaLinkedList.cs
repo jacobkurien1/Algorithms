@@ -11,7 +11,7 @@ namespace AlgorithmProblems.Stack_and_Queue
     {
         public SingleLinkedListNode<T> Top { get; set; }
 
-        public SingleLinkedListNode<T> Pop()
+        public virtual SingleLinkedListNode<T> Pop()
         {
             if(Top != null)
             {
@@ -22,11 +22,25 @@ namespace AlgorithmProblems.Stack_and_Queue
             return null;
         }
 
-        public void Push(T dataToPush)
+        public virtual void Push(T dataToPush)
         {
             SingleLinkedListNode<T> nodeToPush = new SingleLinkedListNode<T>(dataToPush);
             nodeToPush.NextNode = Top;
             Top = nodeToPush;
+        }
+
+        public void Push(SingleLinkedListNode<T> nodeToPush)
+        {
+            if (nodeToPush != null)
+            {
+                nodeToPush.NextNode = Top;
+                Top = nodeToPush;
+            }
+        }
+
+        public SingleLinkedListNode<T> Peek()
+        {
+            return Top; // when Top == null, we will return null
         }
     }
 }

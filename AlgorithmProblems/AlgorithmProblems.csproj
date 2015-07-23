@@ -58,8 +58,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaLinkedList.cs" />
+    <Compile Include="Stack and Queue\QueueVia2Stack.cs" />
+    <Compile Include="Stack and Queue\SortAStack.cs" />
+    <Compile Include="Stack and Queue\Stack Helper\StackHelper.cs" />
     <Compile Include="Stack and Queue\Stack Helper\StackViaArray.cs" />
     <Compile Include="Stack and Queue\Stack Helper\StackViaLinkedList.cs" />
+    <Compile Include="Stack and Queue\StackOfPlates.cs" />
+    <Compile Include="Stack and Queue\Stack Helper\StackViaLinkedListWithLimit.cs" />
+    <Compile Include="Stack and Queue\StackWithMinElement.cs" />
+    <Compile Include="Stack and Queue\ThreeStackWithOneArray.cs" />
     <Compile Include="StringProblems\Anagrams.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
@@ -69,7 +76,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Recursion\" />
+    <Folder Include="Trees\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,6 @@
 ﻿using AlgorithmProblems.Linked_List;
 using AlgorithmProblems.matrix_problems;
+using AlgorithmProblems.Stack_and_Queue;
 using AlgorithmProblems.StringProblems;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,13 @@ namespace AlgorithmProblems
             NthLastElementOfLinkedList.TestNthLastNodeOfLinkedList();
             DeleteNodeWithDirectReference.TestDeleteNode();
             AddNumbers.TestAddNumbersRepresentedByLinkedList();
+
+            // stack and queue problem
+            ThreeStackWithOneArray.TestThreeStackWithOneArray();
+            StackWithMinElement.TestStackWithMinElement();
+            StackOfPlates.TestStackOfPlates();
+            SortAStack.TestSortAStackAscending();
+            QueueVia2Stack.TestQueueVia2Stack();
 
             Console.ReadLine();
         }
