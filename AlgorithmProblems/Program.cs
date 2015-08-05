@@ -1,5 +1,9 @@
-﻿using AlgorithmProblems.Linked_List;
+﻿using AlgorithmProblems.Arrays;
+using AlgorithmProblems.Linked_List;
 using AlgorithmProblems.matrix_problems;
+using AlgorithmProblems.Misc;
+using AlgorithmProblems.PermutationAndCombination;
+using AlgorithmProblems.Recursion;
 using AlgorithmProblems.Stack_and_Queue;
 using AlgorithmProblems.StringProblems;
 using System;
@@ -29,6 +33,7 @@ namespace AlgorithmProblems
             Anagrams.TestIsAnagramAlgo();
             StringRotation.TestIsThisRotatedString();
             RemoveDuplicates.TestRemoveDuplicatesFromString();
+            StringToLongConverter.TestStringToLong();
 
             //Console.ReadLine();
 
@@ -46,6 +51,7 @@ namespace AlgorithmProblems
             NthLastElementOfLinkedList.TestNthLastNodeOfLinkedList();
             DeleteNodeWithDirectReference.TestDeleteNode();
             AddNumbers.TestAddNumbersRepresentedByLinkedList();
+            CopyLinkedListWithRandomNode.TestGetCopiedLinkedListWithRandomNode();
 
             // stack and queue problem
             ThreeStackWithOneArray.TestThreeStackWithOneArray();
@@ -53,6 +59,20 @@ namespace AlgorithmProblems
             StackOfPlates.TestStackOfPlates();
             SortAStack.TestSortAStackAscending();
             QueueVia2Stack.TestQueueVia2Stack();
+
+            //Recursion Problem
+            TowerOfHanoi.TestTowerOfHanoi();
+            Sudoku.TestSudokuSolver();
+            MaxSumOfConsecutiveNums.TestMaxSumOfConsecutiveNums();
+
+            //Misc Problem
+            MinNumOfCoins.TestMinNumOfCoins();
+            IsPrime.TestCheckPrime();
+            SquareRoot.TestCalculateSquareRoot();
+            CreditCardCheck.TestLuhnAlgo();
+
+            // Permutation and Combination problem
+            ShuffleAList.TestFisherYatesAlgo();
 
             Console.ReadLine();
         }

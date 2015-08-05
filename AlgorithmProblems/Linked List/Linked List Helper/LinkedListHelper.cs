@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmProblems.PermutationAndCombination;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,5 +61,63 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
             }
             return randomNode;
         }
+
+        #region LinkedListWithRandomPointer
+        public static LinkedListNodeWithRandomPointer<int> CreateSinglyLinkedListWithRandomPointer(int length)
+        {
+            Dictionary<int, LinkedListNodeWithRandomPointer<int>> dict = new Dictionary<int, LinkedListNodeWithRandomPointer<int>>();
+
+            // Error checking
+            if (length <= 0)
+            {
+                return null;
+            }
+            LinkedListNodeWithRandomPointer<int> head = null;
+            LinkedListNodeWithRandomPointer<int> currentNode = null;
+            Random rnd = new Random();
+            while (length > 0)
+            {
+                if (head == null)
+                {
+                    head = new LinkedListNodeWithRandomPointer<int>(rnd.Next(0, 9));
+                    currentNode = head;
+                }
+                else
+                {
+                    currentNode.NextNode = new LinkedListNodeWithRandomPointer<int>(rnd.Next(0, 9));
+                    currentNode = currentNode.NextNode;
+                }
+                dict[length] = currentNode;
+                length--;
+            }
+
+            // Randomize the keys
+            List<int> listOfRandomDictionaryKeys = ShuffleAList.FisherYatesAlgo(dict.Keys.ToList<int>());
+
+            // Now populate the Random node for each node in the linked list
+            currentNode = head;
+            int dictIndex = 0;
+
+            while (currentNode != null)
+            {
+                currentNode.RandomNode = dict[listOfRandomDictionaryKeys[dictIndex]];
+                dictIndex++;
+                currentNode = currentNode.NextNode;
+            }
+
+            return head;
+        }
+
+        public static void PrintLinkedListWithRandomPointer(LinkedListNodeWithRandomPointer<int> head)
+        {
+            while (head != null)
+            {
+                Console.Write(head.Data + " |^ " + head.RandomNode.Data + " -> ");
+                head = (LinkedListNodeWithRandomPointer<int>)head.NextNode;
+            }
+            Console.Write("null");
+            Console.WriteLine();
+        }
+        #endregion
     }
 }

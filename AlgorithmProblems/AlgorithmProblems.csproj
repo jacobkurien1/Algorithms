@@ -41,21 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
+    <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
     <Compile Include="Linked List\CircularLinkedList.cs" />
+    <Compile Include="Linked List\CopyLinkedListWithRandomNode.cs" />
     <Compile Include="Linked List\DeleteDuplicatesFromLinkedList.cs" />
     <Compile Include="Linked List\DeleteLinkedListNode.cs" />
     <Compile Include="Linked List\DeleteNodeWithDirectReference.cs" />
     <Compile Include="Linked List\Linked List Helper\LinkedListHelper.cs" />
     <Compile Include="Linked List\Linked List Helper\LinkedListNode.cs" />
+    <Compile Include="Linked List\Linked List Helper\LinkedListNodeWithRandomPointer.cs" />
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
     <Compile Include="matrix problems\Rotate_Matrix_90_degree.cs" />
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
+    <Compile Include="Misc\CreditCardCheck.cs" />
+    <Compile Include="Misc\IsPrime.cs" />
+    <Compile Include="Misc\MinNumOfCoins.cs" />
+    <Compile Include="Misc\SquareRoot.cs" />
+    <Compile Include="Misc\ZerosInFactorial.cs" />
+    <Compile Include="PermutationAndCombination\ShuffleAList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursion\Sudoku.cs" />
+    <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaLinkedList.cs" />
     <Compile Include="Stack and Queue\QueueVia2Stack.cs" />
@@ -72,14 +84,14 @@
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
     <Compile Include="StringProblems\SimpleProblem.cs" />
     <Compile Include="StringProblems\StringRotation.cs" />
+    <Compile Include="StringProblems\StringToLongConverter.cs" />
+    <Compile Include="Trees\TreeFromExpression.cs" />
+    <Compile Include="Trees\TreeHelper\TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Recursion\" />
-    <Folder Include="Trees\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
