@@ -18,6 +18,7 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
 
         /// <summary>
         /// Appends a node to the end of the singly linked list
+        /// This will take O(n) time
         /// </summary>
         /// <param name="data">data for the node to be appended</param>
         public void AppendToEnd(T data)

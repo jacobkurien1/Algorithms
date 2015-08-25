@@ -42,5 +42,10 @@ namespace AlgorithmProblems.Stack_and_Queue
         {
             return Top; // when Top == null, we will return null
         }
+
+        public bool IsEmpty()
+        {
+            return Top == null;
+        }
     }
 }

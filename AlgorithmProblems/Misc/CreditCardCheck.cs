@@ -19,7 +19,7 @@ namespace AlgorithmProblems.Misc
                 {
                     intValAtIndex = ConvertCharToInt(creditCardNum[index]);
                 }
-                catch (Exception exp)
+                catch (Exception)
                 {
                     return false;   // The credit card number contains invalid characters
                 }

@@ -49,9 +49,11 @@
     <Compile Include="Linked List\DeleteDuplicatesFromLinkedList.cs" />
     <Compile Include="Linked List\DeleteLinkedListNode.cs" />
     <Compile Include="Linked List\DeleteNodeWithDirectReference.cs" />
+    <Compile Include="Linked List\Linked List Helper\DoublyLinkedListNode.cs" />
     <Compile Include="Linked List\Linked List Helper\LinkedListHelper.cs" />
     <Compile Include="Linked List\Linked List Helper\LinkedListNode.cs" />
     <Compile Include="Linked List\Linked List Helper\LinkedListNodeWithRandomPointer.cs" />
+    <Compile Include="Linked List\Linked List Helper\SinglyLinkedList.cs" />
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="matrix problems\Rotate_Matrix_90_degree.cs" />
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Misc\CreditCardCheck.cs" />
+    <Compile Include="Misc\ExcelFirstRowConversion.cs" />
     <Compile Include="Misc\IsPrime.cs" />
     <Compile Include="Misc\MinNumOfCoins.cs" />
     <Compile Include="Misc\SquareRoot.cs" />
@@ -68,7 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
+    <Compile Include="Stack and Queue\LRUCache.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />
+    <Compile Include="Stack and Queue\Queue Helper\QueueViaDoublyLinkedList.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaLinkedList.cs" />
     <Compile Include="Stack and Queue\QueueVia2Stack.cs" />
     <Compile Include="Stack and Queue\SortAStack.cs" />
@@ -85,8 +90,24 @@
     <Compile Include="StringProblems\SimpleProblem.cs" />
     <Compile Include="StringProblems\StringRotation.cs" />
     <Compile Include="StringProblems\StringToLongConverter.cs" />
+    <Compile Include="Trees\AncestorOfTwoNodesInBST.cs" />
+    <Compile Include="Trees\AncestorOfTwoNodesInBT.cs" />
+    <Compile Include="Trees\CheckBTisBST.cs" />
+    <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
+    <Compile Include="Trees\ExteriorOfBT.cs" />
+    <Compile Include="Trees\LinkedListFromLeavesOfBT.cs" />
+    <Compile Include="Trees\LinkedListOfTreeNodesAtEachDepth.cs" />
+    <Compile Include="Trees\MaxSumOnTreeBranch.cs" />
+    <Compile Include="Trees\SkewedBSTToCompleteBST.cs" />
+    <Compile Include="Trees\TreeHelper\BinarySearchTree.cs" />
+    <Compile Include="Trees\TreeHelper\BinarySearchTreeNode.cs" />
+    <Compile Include="Trees\TreeHelper\BinaryTree.cs" />
+    <Compile Include="Trees\TreeHelper\BinaryTreeNode.cs" />
     <Compile Include="Trees\TreeFromExpression.cs" />
+    <Compile Include="Trees\TreeHelper\TreeHelper.cs" />
     <Compile Include="Trees\TreeHelper\TreeNode.cs" />
+    <Compile Include="Trees\TreeSubtreeOfAnother.cs" />
+    <Compile Include="Trees\WalkTheBinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

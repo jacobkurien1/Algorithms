@@ -6,6 +6,8 @@ using AlgorithmProblems.PermutationAndCombination;
 using AlgorithmProblems.Recursion;
 using AlgorithmProblems.Stack_and_Queue;
 using AlgorithmProblems.StringProblems;
+using AlgorithmProblems.Trees;
+using AlgorithmProblems.Trees.TreeHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +61,7 @@ namespace AlgorithmProblems
             StackOfPlates.TestStackOfPlates();
             SortAStack.TestSortAStackAscending();
             QueueVia2Stack.TestQueueVia2Stack();
+            LRUCache.TestLRUCache();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
@@ -70,9 +73,25 @@ namespace AlgorithmProblems
             IsPrime.TestCheckPrime();
             SquareRoot.TestCalculateSquareRoot();
             CreditCardCheck.TestLuhnAlgo();
+            ExcelFirstRowConversion.TestCovertExcelColumnToLong();
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();
+
+            // Tree Problems
+            TreeFromExpression.TestCreateTreeFromExpression();
+            TestBinarySearchTree.TestDifferentOperationsOnBST();
+            AncestorOfTwoNodesInBST.TestAncestorOfTwoNodesInBST();
+            CheckBTisBST.TestCheckBTisBST();
+            MaxSumOnTreeBranch.TestMaxSum();
+            WalkTheTree.TestWalkTheTree();
+            SkewedBSTToCompleteBST.TestConvertSkewedBSTToCompleteBST();
+            CheckIfTheTreeIsBalanced.TestIsTreeBalanced();
+            LinkedListOfTreeNodesAtEachDepth.TestCreateLinkedListOfTreeNodesAtEachDepth();
+            TreeSubtreeOfAnother.TestMatchTree();
+            AncestorOfTwoNodesInBT.TestGetAncestorOfTwoNodesInBT();
+            LinkedListFromLeavesOfBT.TestLinkedListFromLeavesOfBT();
+            ExteriorOfBT.TestPrintExteriorOfBT();
 
             Console.ReadLine();
         }
