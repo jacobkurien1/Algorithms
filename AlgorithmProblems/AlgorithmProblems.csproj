@@ -104,10 +104,15 @@
     <Compile Include="Trees\TreeHelper\BinaryTree.cs" />
     <Compile Include="Trees\TreeHelper\BinaryTreeNode.cs" />
     <Compile Include="Trees\TreeFromExpression.cs" />
+    <Compile Include="Trees\TreeHelper\BinaryTreeNodeWithParent.cs" />
     <Compile Include="Trees\TreeHelper\TreeHelper.cs" />
     <Compile Include="Trees\TreeHelper\TreeNode.cs" />
     <Compile Include="Trees\TreeSubtreeOfAnother.cs" />
     <Compile Include="Trees\WalkTheBinaryTree.cs" />
+    <Compile Include="Trie\CreateAndSearchSimpleTrie.cs" />
+    <Compile Include="Trie\ShortestPrefix.cs" />
+    <Compile Include="Trie\TrieHelper\Trie.cs" />
+    <Compile Include="Trie\TrieHelper\TrieNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

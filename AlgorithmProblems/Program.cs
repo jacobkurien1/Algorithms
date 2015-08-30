@@ -8,6 +8,8 @@ using AlgorithmProblems.Stack_and_Queue;
 using AlgorithmProblems.StringProblems;
 using AlgorithmProblems.Trees;
 using AlgorithmProblems.Trees.TreeHelper;
+using AlgorithmProblems.Trie;
+using AlgorithmProblems.Trie.TrieHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,6 +94,11 @@ namespace AlgorithmProblems
             AncestorOfTwoNodesInBT.TestGetAncestorOfTwoNodesInBT();
             LinkedListFromLeavesOfBT.TestLinkedListFromLeavesOfBT();
             ExteriorOfBT.TestPrintExteriorOfBT();
+
+            // Trie problems
+            CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
+            // ToDo: have a problem of suffix trees
+            ShortestPrefix.TestGetShortestPrefixNotPresentInStringSet();
 
             Console.ReadLine();
         }

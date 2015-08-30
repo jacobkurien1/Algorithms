@@ -78,19 +78,124 @@ namespace AlgorithmProblems.Trees
         #region Algo2
         /// <summary>
         /// If the nodes have a knowledge of its parents, then trace the path back to the root
-        /// Push the nodes into 2 stacks and keep popping till we see a different node
-        /// and get the nodes popped just before the last one and that is the common ancestor.
+        /// Push the nodes to the dictionary and the first collision will be the ancestor node.
+        /// The running time here is max(depthOfNode1-depthOfAncestor, depthOfNode2-depthOfAncestor)
+        /// The space requirement is O(h) where h is the height of the tree.
         /// </summary>
+        public static BinaryTreeNodeWithParent<int> GetAncestorOfTwoNodesInBTAlgo2(BinaryTreeNodeWithParent<int> node1, BinaryTreeNodeWithParent<int> node2)
+        {
+            Dictionary<BinaryTreeNodeWithParent<int>, bool> dict = new Dictionary<BinaryTreeNodeWithParent<int>, bool>();
+
+            while(node1 !=null || node2!=null)
+            {
+                if(node1 !=null)
+                {
+                    if(dict.ContainsKey(node1))
+                    {
+                        // we got the ancestor
+                        return node1;
+                    }
+                    dict[node1] = true;
+                    node1 = node1.Parent;
+                }
+                if (node2 != null)
+                {
+                    if (dict.ContainsKey(node2))
+                    {
+                        // we got the ancestor
+                        return node2;
+                    }
+                    dict[node2] = true;
+                    node2 = node2.Parent;
+                }
+            }
+            return null;
+        }
+        #endregion
+
+        #region Algo3
+        /// <summary>
+        /// Step1: Find the depth of node1 and node2
+        /// Step2: Compute depth1 - depth2, if node1 is at a greater depth than node2
+        /// Step3: Move the pointer for node1 up by depth1-depth2.
+        /// Step4: Move both pointer for node1 and node2 till you hit the ancestor node
+        /// The running time is O(h), h is the hieght of the tree
+        /// The Space requirement is O(1)
+        /// </summary>
+        public static BinaryTreeNodeWithParent<int> GetAncestorOfTwoNodesInBTAlgo3(BinaryTreeNodeWithParent<int> node1, BinaryTreeNodeWithParent<int> node2)
+        {
+            //Step1: Find the depth of node1 and node2
+            int depth1 = GetDepth(node1);
+            int depth2 = GetDepth(node2);
+
+            //Step2: Compute depth1 - depth2, if node1 is at a greater depth than node2
+            int differenceOfDepths = 0;
+            BinaryTreeNodeWithParent<int> larger = node1;
+            BinaryTreeNodeWithParent<int> smaller = node2;
+            if(depth1>depth2)
+            {
+                differenceOfDepths = depth1 - depth2;
+            }
+            else
+            {
+                differenceOfDepths = depth2 - depth1;
+                larger = node2;
+                smaller = node1;
+            }
+
+            //Step3: Move the pointer for node1 up by depth1-depth2.
+            while(differenceOfDepths!=0)
+            {
+                larger = larger.Parent;
+                differenceOfDepths--;
+            }
+
+            //Step4: Move both pointer for node1 and node2 till you hit the ancestor node
+            while(larger != smaller )
+            {
+                larger = larger.Parent;
+                smaller = smaller.Parent;
+            }
+            return larger;
+        }
+
+        private static int GetDepth(BinaryTreeNodeWithParent<int> treeNode)
+        {
+            int depth = 0;
+            while(treeNode!=null)
+            {
+                depth++;
+                treeNode = treeNode.Parent;
+            }
+            return depth;
+        }
+
         #endregion
 
         public static void TestGetAncestorOfTwoNodesInBT()
         {
             BinaryTree<int> bt1 = new BinaryTree<int>(new int[] { 8, 4, 12, 1, 5, 9, 13, 0, 2 }, true);
-            Console.WriteLine("The common ancestor of 4,2 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(4), new BinaryTreeNode<int>(2), bt1.Head).Data);
-            Console.WriteLine("The common ancestor of 1,13 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(1), new BinaryTreeNode<int>(13), bt1.Head).Data);
-            Console.WriteLine("The common ancestor of 9,13 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(9), new BinaryTreeNode<int>(13), bt1.Head).Data);
+            Console.WriteLine("The common ancestor of 4,2 from Algo1 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(4), new BinaryTreeNode<int>(2), bt1.Head).Data);
+            Console.WriteLine("The common ancestor of 1,13 from Algo1 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(1), new BinaryTreeNode<int>(13), bt1.Head).Data);
+            Console.WriteLine("The common ancestor of 9,13 from Algo1 is : " + GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(9), new BinaryTreeNode<int>(13), bt1.Head).Data);
             BinaryTreeNode<int> ancestor = GetAncestorOfTwoNodesInBT(new BinaryTreeNode<int>(4), new BinaryTreeNode<int>(14), bt1.Head);
-            Console.WriteLine("The common ancestor of 4,14 is : {0}" , ancestor );
+            Console.WriteLine("The common ancestor of 4,14 from Algo1 is : {0}", ancestor);
+
+            //Algo2
+            BinaryTreeWithParent<int> bt2 = new BinaryTreeWithParent<int>(new int[] { 8, 4, 12, 1, 5, 9, 13, 0, 2 }, true);
+            Console.WriteLine("The common ancestor of 4,2 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt2.Search(4), bt2.Search(2)).Data);
+            Console.WriteLine("The common ancestor of 1,13 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt2.Search(1), bt2.Search(13)).Data);
+            Console.WriteLine("The common ancestor of 9,13 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt2.Search(9), bt2.Search(13)).Data);
+            BinaryTreeNodeWithParent<int> ancestor2 = GetAncestorOfTwoNodesInBTAlgo3(bt2.Search(4), bt2.Search(14));
+            Console.WriteLine("The common ancestor of 4,14 from Algo3 is : {0}", ancestor2);
+
+            // Algo3
+            BinaryTreeWithParent<int> bt3 = new BinaryTreeWithParent<int>(new int[] { 8, 4, 12, 1, 5, 9, 13, 0, 2 }, true);
+            Console.WriteLine("The common ancestor of 4,2 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt3.Search(4), bt3.Search(2)).Data);
+            Console.WriteLine("The common ancestor of 1,13 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt3.Search(1), bt3.Search(13)).Data);
+            Console.WriteLine("The common ancestor of 9,13 from Algo3 is : " + GetAncestorOfTwoNodesInBTAlgo3(bt3.Search(9), bt3.Search(13)).Data);
+            BinaryTreeNodeWithParent<int>  ancestor3 = GetAncestorOfTwoNodesInBTAlgo3(bt3.Search(4), bt3.Search(14));
+            Console.WriteLine("The common ancestor of 4,14 from Algo3 is : {0}", ancestor3);
         }
     }
 }
