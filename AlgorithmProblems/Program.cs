@@ -38,6 +38,8 @@ namespace AlgorithmProblems
             StringRotation.TestIsThisRotatedString();
             RemoveDuplicates.TestRemoveDuplicatesFromString();
             StringToLongConverter.TestStringToLong();
+            PatternMatching.TestPatternMatching();
+            RegexMatching.TestMatch();
 
             //Console.ReadLine();
 
@@ -56,6 +58,10 @@ namespace AlgorithmProblems
             DeleteNodeWithDirectReference.TestDeleteNode();
             AddNumbers.TestAddNumbersRepresentedByLinkedList();
             CopyLinkedListWithRandomNode.TestGetCopiedLinkedListWithRandomNode();
+            CommonElementInTwoLinkedList.TestCommonElement();
+            ReverseAdjacentNodesInLinkedList.TestReverseAdjacentNodes();
+            MergeSortedLinkedList.TestMerge();
+            CircularLinkedList.TestStartOfCircularLinkedList();
 
             // stack and queue problem
             ThreeStackWithOneArray.TestThreeStackWithOneArray();

@@ -9,7 +9,7 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
 {
     class LinkedListHelper
     {
-        public static SingleLinkedListNode<int> CreateSinglyLinkedList(int length)
+        public static SingleLinkedListNode<int> CreateSinglyLinkedList(int length, int startData, int endData)
         {
             // Error checking
             if (length <= 0)
@@ -23,12 +23,12 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
             {
                 if(head == null)
                 {
-                    head = new SingleLinkedListNode<int>(rnd.Next(0, 9));
+                    head = new SingleLinkedListNode<int>(rnd.Next(startData, endData));
                     currentNode = head;
                 }
                 else
                 {
-                    currentNode.NextNode = new SingleLinkedListNode<int>(rnd.Next(0, 9));
+                    currentNode.NextNode = new SingleLinkedListNode<int>(rnd.Next(startData, endData));
                     currentNode = currentNode.NextNode;
                 }
                 
@@ -36,6 +36,11 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
             }
 
             return head;
+        }
+
+        public static SingleLinkedListNode<int> CreateSinglyLinkedList(int length)
+        {
+            return CreateSinglyLinkedList(length, 0, 9);
         }
 
         public static void PrintSinglyLinkedList(SingleLinkedListNode<int> head)
@@ -61,6 +66,27 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
             }
             return randomNode;
         }
+
+        public static SingleLinkedListNode<int> SortedLinkedList(int linkedlistLength, int offset=0)
+        {
+            SingleLinkedListNode<int> head = null;
+            SingleLinkedListNode<int> currentNode = null;
+            for (int i=0; i<linkedlistLength; i++)
+            {
+                if(head==null)
+                {
+                    head = new SingleLinkedListNode<int>(i + offset);
+                    currentNode = head;
+                }
+                else
+                {
+                    currentNode.NextNode = new SingleLinkedListNode<int>(i + offset);
+                    currentNode = currentNode.NextNode;
+                }
+            }
+            return head;
+        }
+
 
         #region LinkedListWithRandomPointer
         public static LinkedListNodeWithRandomPointer<int> CreateSinglyLinkedListWithRandomPointer(int length)
