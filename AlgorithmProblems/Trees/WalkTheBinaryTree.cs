@@ -78,6 +78,34 @@ namespace AlgorithmProblems.Trees
             }
         }
 
+        /// <summary>
+        /// TBD
+        /// </summary>
+        /// <param name="treeNode"></param>
+        public static void PostOrderTraversalIteratively(BinaryTreeNode<int> treeNode)
+        {
+            if(treeNode == null)
+            {
+                // null check
+                return;
+            }
+            
+            // intialize the stack and populate it with the root->leftNode and root
+            Stack<BinaryTreeNode<int>> st = new Stack<BinaryTreeNode<int>>();
+            
+            while(st.Count > 0)
+            {
+                if (treeNode.Right != null)
+                {
+                    st.Push(treeNode.Right);
+                }
+                st.Push(treeNode);
+                treeNode = treeNode.Left;
+
+            }
+
+        }
+
         public static void InOrderTraversal(BinaryTreeNode<int> treeNode)
         {
             if (treeNode != null)

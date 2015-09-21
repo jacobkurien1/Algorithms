@@ -1,4 +1,5 @@
 ﻿using AlgorithmProblems.Arrays;
+using AlgorithmProblems.Dynamic_Programming;
 using AlgorithmProblems.Linked_List;
 using AlgorithmProblems.matrix_problems;
 using AlgorithmProblems.Misc;
@@ -43,6 +44,10 @@ namespace AlgorithmProblems
 
             //Console.ReadLine();
 
+            //Array Problems
+            ArrayOfNumsIncrement.TestIncrementArrayOfNumbers();
+            MajorityElement.TestFindMajorityElement();
+
 
             // Matrix Problem
             Rotate_Matrix_90_degree.TestRotateMatrix();
@@ -62,6 +67,7 @@ namespace AlgorithmProblems
             ReverseAdjacentNodesInLinkedList.TestReverseAdjacentNodes();
             MergeSortedLinkedList.TestMerge();
             CircularLinkedList.TestStartOfCircularLinkedList();
+            MedianForCircularLinkedList.TestGetMedian();
 
             // stack and queue problem
             ThreeStackWithOneArray.TestThreeStackWithOneArray();
@@ -82,6 +88,8 @@ namespace AlgorithmProblems
             SquareRoot.TestCalculateSquareRoot();
             CreditCardCheck.TestLuhnAlgo();
             ExcelFirstRowConversion.TestCovertExcelColumnToLong();
+            Skyline.TestSkyline();
+            SumOfSquaresWithoutMultiplication.TestSumOfSquares();
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();
@@ -105,6 +113,11 @@ namespace AlgorithmProblems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
             // ToDo: have a problem of suffix trees
             ShortestPrefix.TestGetShortestPrefixNotPresentInStringSet();
+
+            // Dynamic Programming problems
+            LongestCommonSubsequence.TestGetLongestCommonSubsequence();
+            LongestPalindromeSubString.TestGetLongestPalindromeSubString();
+            LongestPalindromicSubsequence.TestGetLongestPalindromicSubsequence();
 
             Console.ReadLine();
         }
