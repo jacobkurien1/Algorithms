@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs.GraphHelper
 {
-    class DirectedGraphVertex
+    class GraphVertex
     {
         public int Data { get; set; }
         public bool IsVisited { get; set; }
-        public List<DirectedGraphVertex> NeighbourVertices { get; set; }
+        public List<GraphVertex> NeighbourVertices { get; set; }
 
-        public DirectedGraphVertex(int data)
+        public GraphVertex(int data)
         {
             this.Data = data;
+            NeighbourVertices = new List<GraphVertex>();
         }
     }
 }

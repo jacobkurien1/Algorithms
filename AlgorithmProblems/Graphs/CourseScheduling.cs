@@ -19,20 +19,20 @@ namespace AlgorithmProblems.Graphs
     {
         public CourseScheduling(DirectedGraph graph)
         {
-            this.TopologicalOrderPerVertex = new Dictionary<DirectedGraphVertex, int>();
+            this.TopologicalOrderPerVertex = new Dictionary<GraphVertex, int>();
             this.Graph = graph;
-            this.TopologicalOrder = graph.AllNodes.Count;
+            this.TopologicalOrder = graph.AllVertices.Count;
         }
         public DirectedGraph Graph { get; set; }
         private int TopologicalOrder { get; set; }
-        private Dictionary<DirectedGraphVertex, int> TopologicalOrderPerVertex { get; set; }
+        private Dictionary<GraphVertex, int> TopologicalOrderPerVertex { get; set; }
 
         /// <summary>
         /// The main call which will make sure that all the elements are topologically ordered
         /// </summary>
         private void DFSTopologicalSort()
         {
-            foreach(DirectedGraphVertex vertex in Graph.AllNodes)
+            foreach(GraphVertex vertex in Graph.AllVertices)
             {
                 if(!vertex.IsVisited)
                 {
@@ -48,14 +48,14 @@ namespace AlgorithmProblems.Graphs
         /// The actual DFS operation takes place in this method
         /// </summary>
         /// <param name="currentVertex">current vertex on which the DFS needs to be performed</param>
-        private void DFS(DirectedGraphVertex currentVertex)
+        private void DFS(GraphVertex currentVertex)
         {
             if(currentVertex == null || currentVertex.IsVisited)
             {
                 return;
             }
             currentVertex.IsVisited = true;
-            foreach(DirectedGraphVertex neighbour in currentVertex.NeighbourVertices)
+            foreach(GraphVertex neighbour in currentVertex.NeighbourVertices)
             {
                 if(!neighbour.IsVisited)
                 {
@@ -74,7 +74,7 @@ namespace AlgorithmProblems.Graphs
         /// </summary>
         private void PrintTopologicalOrder()
         {
-            foreach (DirectedGraphVertex vertex in Graph.AllNodes)
+            foreach (GraphVertex vertex in Graph.AllVertices)
             {
                 Console.WriteLine("The topological order of vertex: {0} is {1}", vertex.Data, TopologicalOrderPerVertex[vertex]);
             }

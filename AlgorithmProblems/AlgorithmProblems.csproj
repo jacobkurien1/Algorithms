@@ -45,14 +45,28 @@
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
+    <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
+    <Compile Include="Dynamic Programming\LongestCommonSubString.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromeSubString.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromicSubsequence.cs" />
+    <Compile Include="Dynamic Programming\MaximumAs.cs" />
+    <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
+    <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
+    <Compile Include="Graphs\AllPaths.cs" />
+    <Compile Include="Graphs\AllPathsGivenStartEndVertex.cs" />
     <Compile Include="Graphs\ConnectedComponents.cs" />
     <Compile Include="Graphs\CourseScheduling.cs" />
+    <Compile Include="Graphs\CycleInDirectedGraph.cs" />
+    <Compile Include="Graphs\CycleInUnDirectedGraph.cs" />
     <Compile Include="Graphs\GraphHelper\DirectedGraph.cs" />
-    <Compile Include="Graphs\GraphHelper\DirectedGraphVertex.cs" />
-    <Compile Include="Graphs\GraphHelper\GraphHelper.cs" />
+    <Compile Include="Graphs\GraphHelper\GraphHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphs\GraphHelper\GraphVertex.cs" />
+    <Compile Include="Graphs\GraphHelper\UndirectedGraph.cs" />
+    <Compile Include="Graphs\ShortestPath.cs" />
+    <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
     <Compile Include="Linked List\CircularLinkedList.cs" />
     <Compile Include="Linked List\CommonElementInTwoLinkedList.cs" />
@@ -69,6 +83,7 @@
     <Compile Include="Linked List\MergeSortedLinkedList.cs" />
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="Linked List\ReverseAdjacentNodesInLinkedList.cs" />
+    <Compile Include="Linked List\ReverseLinkedList.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
@@ -87,6 +102,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
+    <Compile Include="Stack and Queue\EvaluateInflixNotation.cs" />
+    <Compile Include="Stack and Queue\EvaluatePrefixNotation.cs" />
     <Compile Include="Stack and Queue\LRUCache.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaDoublyLinkedList.cs" />
@@ -112,6 +129,7 @@
     <Compile Include="Trees\AncestorOfTwoNodesInBT.cs" />
     <Compile Include="Trees\CheckBTisBST.cs" />
     <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
+    <Compile Include="Trees\DepthOfTree.cs" />
     <Compile Include="Trees\ExteriorOfBT.cs" />
     <Compile Include="Trees\LinkedListFromLeavesOfBT.cs" />
     <Compile Include="Trees\LinkedListOfTreeNodesAtEachDepth.cs" />

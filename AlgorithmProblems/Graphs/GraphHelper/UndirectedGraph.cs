@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs.GraphHelper
 {
-    class DirectedGraph
+    class UndirectedGraph
     {
-        public List<GraphVertex> AllVertices { get; set; }
+        public List<GraphVertex> AllVertices { get; set; } 
 
-        public DirectedGraph()
+        public UndirectedGraph()
         {
             AllVertices = new List<GraphVertex>();
         }
@@ -20,6 +20,7 @@ namespace AlgorithmProblems.Graphs.GraphHelper
             if(AllVertices.Count> start && AllVertices.Count> end)
             {
                 AllVertices[start].NeighbourVertices.Add(AllVertices[end]);
+                AllVertices[end].NeighbourVertices.Add(AllVertices[start]);
             }
         }
     }

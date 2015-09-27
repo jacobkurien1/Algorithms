@@ -1,5 +1,6 @@
 ﻿using AlgorithmProblems.Arrays;
 using AlgorithmProblems.Dynamic_Programming;
+using AlgorithmProblems.Graphs;
 using AlgorithmProblems.Linked_List;
 using AlgorithmProblems.matrix_problems;
 using AlgorithmProblems.Misc;
@@ -68,6 +69,7 @@ namespace AlgorithmProblems
             MergeSortedLinkedList.TestMerge();
             CircularLinkedList.TestStartOfCircularLinkedList();
             MedianForCircularLinkedList.TestGetMedian();
+            ReverseLinkedList.TestReverseLinkedList();
 
             // stack and queue problem
             ThreeStackWithOneArray.TestThreeStackWithOneArray();
@@ -76,6 +78,7 @@ namespace AlgorithmProblems
             SortAStack.TestSortAStackAscending();
             QueueVia2Stack.TestQueueVia2Stack();
             LRUCache.TestLRUCache();
+            EvaluatePrefixNotation.TestGetPrefixNotationResult();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
@@ -108,6 +111,7 @@ namespace AlgorithmProblems
             AncestorOfTwoNodesInBT.TestGetAncestorOfTwoNodesInBT();
             LinkedListFromLeavesOfBT.TestLinkedListFromLeavesOfBT();
             ExteriorOfBT.TestPrintExteriorOfBT();
+            DepthOfTree.TestGetDepthOfTree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
@@ -118,6 +122,19 @@ namespace AlgorithmProblems
             LongestCommonSubsequence.TestGetLongestCommonSubsequence();
             LongestPalindromeSubString.TestGetLongestPalindromeSubString();
             LongestPalindromicSubsequence.TestGetLongestPalindromicSubsequence();
+            MaximumAs.TestGetMaximumAs();
+            MinNumberOfJumps.TestGetMinimumNumberOfJumps();
+            LongestCommonSubString.TestGetLongestCommonSubString();
+            KnapSackProblem.TestGetTheMaximumValueWithLimitedWeight();
+            TreeCuttingProblem.TestGetTreeCuttingToMaximizeProfits();
+
+            // Graph Problems
+            ShortestPath.TestGetShortestPathBetween2Vertex();
+            CycleInDirectedGraph.TestIsCycleInDirectedGraph();
+            CycleInUnDirectedGraph.TestIsCycleInUnDirectedGraph();
+            SolveAMaze.TestSolveAMaze();
+            AllPathsGivenStartEndVertex.TestGetAllPathsInGraphFromStartVertexToEndVertex();
+            AllPaths.TestGetAllPathsInGraphFromStartVertex();
 
             Console.ReadLine();
         }
