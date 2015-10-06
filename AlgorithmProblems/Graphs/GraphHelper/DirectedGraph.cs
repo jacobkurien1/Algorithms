@@ -22,5 +22,13 @@ namespace AlgorithmProblems.Graphs.GraphHelper
                 AllVertices[start].NeighbourVertices.Add(AllVertices[end]);
             }
         }
+
+        public void RemoveEdge(int start, int end)
+        {
+            if (AllVertices.Count > start && AllVertices.Count > end)
+            {
+                AllVertices[start].NeighbourVertices.Remove(AllVertices[end]);
+            }
+        }
     }
 }

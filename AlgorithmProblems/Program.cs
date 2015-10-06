@@ -79,6 +79,7 @@ namespace AlgorithmProblems
             QueueVia2Stack.TestQueueVia2Stack();
             LRUCache.TestLRUCache();
             EvaluatePrefixNotation.TestGetPrefixNotationResult();
+            EvaluateInflixNotation.TestGetInflixNotationResults();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
@@ -127,6 +128,7 @@ namespace AlgorithmProblems
             LongestCommonSubString.TestGetLongestCommonSubString();
             KnapSackProblem.TestGetTheMaximumValueWithLimitedWeight();
             TreeCuttingProblem.TestGetTreeCuttingToMaximizeProfits();
+            WordBreaking.TestBreakTheWords();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
@@ -135,6 +137,7 @@ namespace AlgorithmProblems
             SolveAMaze.TestSolveAMaze();
             AllPathsGivenStartEndVertex.TestGetAllPathsInGraphFromStartVertexToEndVertex();
             AllPaths.TestGetAllPathsInGraphFromStartVertex();
+            ColorVertices.TestColorVerticesWithDifferentColor();
 
             Console.ReadLine();
         }

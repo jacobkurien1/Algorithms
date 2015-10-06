@@ -45,6 +45,7 @@
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
+    <Compile Include="Dynamic Programming\DistanceOfWords.cs" />
     <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubString.cs" />
@@ -53,8 +54,10 @@
     <Compile Include="Dynamic Programming\MaximumAs.cs" />
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
+    <Compile Include="Dynamic Programming\WordBreaking.cs" />
     <Compile Include="Graphs\AllPaths.cs" />
     <Compile Include="Graphs\AllPathsGivenStartEndVertex.cs" />
+    <Compile Include="Graphs\ColorVertices.cs" />
     <Compile Include="Graphs\ConnectedComponents.cs" />
     <Compile Include="Graphs\CourseScheduling.cs" />
     <Compile Include="Graphs\CycleInDirectedGraph.cs" />
