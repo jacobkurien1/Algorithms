@@ -59,9 +59,11 @@
     <Compile Include="Graphs\AllPathsGivenStartEndVertex.cs" />
     <Compile Include="Graphs\ColorVertices.cs" />
     <Compile Include="Graphs\ConnectedComponents.cs" />
+    <Compile Include="Graphs\ConstraintsVerification.cs" />
     <Compile Include="Graphs\CourseScheduling.cs" />
     <Compile Include="Graphs\CycleInDirectedGraph.cs" />
     <Compile Include="Graphs\CycleInUnDirectedGraph.cs" />
+    <Compile Include="Graphs\ExtendedContactsInSocialNetwork.cs" />
     <Compile Include="Graphs\GraphHelper\DirectedGraph.cs" />
     <Compile Include="Graphs\GraphHelper\GraphHelper.cs">
       <SubType>Code</SubType>
@@ -70,6 +72,7 @@
     <Compile Include="Graphs\GraphHelper\UndirectedGraph.cs" />
     <Compile Include="Graphs\ShortestPath.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
+    <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
     <Compile Include="Linked List\CircularLinkedList.cs" />
     <Compile Include="Linked List\CommonElementInTwoLinkedList.cs" />

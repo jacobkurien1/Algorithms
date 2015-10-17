@@ -129,6 +129,7 @@ namespace AlgorithmProblems
             KnapSackProblem.TestGetTheMaximumValueWithLimitedWeight();
             TreeCuttingProblem.TestGetTreeCuttingToMaximizeProfits();
             WordBreaking.TestBreakTheWords();
+            DistanceOfWords.TestDistanceOfWords();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
@@ -138,6 +139,9 @@ namespace AlgorithmProblems
             AllPathsGivenStartEndVertex.TestGetAllPathsInGraphFromStartVertexToEndVertex();
             AllPaths.TestGetAllPathsInGraphFromStartVertex();
             ColorVertices.TestColorVerticesWithDifferentColor();
+            TransformOneWordToAnother.TestGetTransformation();
+            ConstraintsVerification.TestConstraintsVerification();
+            ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
 
             Console.ReadLine();
         }
