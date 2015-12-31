@@ -45,6 +45,8 @@
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
+    <Compile Include="Arrays\Median.cs" />
+    <Compile Include="Arrays\Merge2SortedArrays.cs" />
     <Compile Include="Dynamic Programming\DistanceOfWords.cs" />
     <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
@@ -108,7 +110,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
+    <Compile Include="Sorting\MergeSort.cs" />
+    <Compile Include="Sorting\QuickSort.cs" />
     <Compile Include="Stack and Queue\EvaluateInflixNotation.cs" />
+    <Compile Include="Stack and Queue\EvaluatePostfixNotation.cs" />
     <Compile Include="Stack and Queue\EvaluatePrefixNotation.cs" />
     <Compile Include="Stack and Queue\LRUCache.cs" />
     <Compile Include="Stack and Queue\Queue Helper\QueueViaArray.cs" />

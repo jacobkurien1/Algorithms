@@ -6,6 +6,7 @@ using AlgorithmProblems.matrix_problems;
 using AlgorithmProblems.Misc;
 using AlgorithmProblems.PermutationAndCombination;
 using AlgorithmProblems.Recursion;
+using AlgorithmProblems.Sorting;
 using AlgorithmProblems.Stack_and_Queue;
 using AlgorithmProblems.StringProblems;
 using AlgorithmProblems.Trees;
@@ -48,7 +49,12 @@ namespace AlgorithmProblems
             //Array Problems
             ArrayOfNumsIncrement.TestIncrementArrayOfNumbers();
             MajorityElement.TestFindMajorityElement();
+            Merge2SortedArrays.TestMergeSortedArrays();
+            //Median.TestGetMedianOf2SortedArray();
 
+            // Sorting Problems
+            MergeSort.TestMergeSort();
+            QuickSort.TestQuickSort();
 
             // Matrix Problem
             Rotate_Matrix_90_degree.TestRotateMatrix();
@@ -80,6 +86,7 @@ namespace AlgorithmProblems
             LRUCache.TestLRUCache();
             EvaluatePrefixNotation.TestGetPrefixNotationResult();
             EvaluateInflixNotation.TestGetInflixNotationResults();
+            EvaluatePostfixNotation.TestGetPostfixNotationResult();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
@@ -142,6 +149,7 @@ namespace AlgorithmProblems
             TransformOneWordToAnother.TestGetTransformation();
             ConstraintsVerification.TestConstraintsVerification();
             ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
+            CourseScheduling.TestCourseScheduling();
 
             Console.ReadLine();
         }

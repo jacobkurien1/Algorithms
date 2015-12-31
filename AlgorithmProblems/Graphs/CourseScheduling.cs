@@ -9,7 +9,7 @@ namespace AlgorithmProblems.Graphs
 {
     /// <summary>
     /// Course scheduling using topological sorting 
-    /// Topological sorting can be only done on directed acyclic graph
+    /// Topological sorting can be only done on directed acyclic graph(cause in case of cycle we cannot get a sink element)
     /// 1. Get the sink node(node which does not have any edge going to another node).
     /// 2. Give it the highest order (#graph_nodes)
     /// 3. Delete that node and all the edges.
@@ -21,7 +21,7 @@ namespace AlgorithmProblems.Graphs
         {
             this.TopologicalOrderPerVertex = new Dictionary<GraphVertex, int>();
             this.Graph = graph;
-            this.TopologicalOrder = graph.AllVertices.Count;
+            this.TopologicalOrder = 1;
         }
         public DirectedGraph Graph { get; set; }
         private int TopologicalOrder { get; set; }
@@ -65,7 +65,7 @@ namespace AlgorithmProblems.Graphs
 
             // This step will find the sink element and then put it in the dictionary
             this.TopologicalOrderPerVertex[currentVertex] = this.TopologicalOrder;
-            this.TopologicalOrder--;
+            this.TopologicalOrder++;
 
         }
 
@@ -84,9 +84,11 @@ namespace AlgorithmProblems.Graphs
         public static void TestCourseScheduling()
         {
             // Create a graph
+            DirectedGraph dg = GraphProbHelper.CreatedirectedGraphWithoutCycle();
 
-
-            //CourseScheduling cs = new CourseScheduling();
+            // Now schedule the order in which courses needed to be taken
+            CourseScheduling cs = new CourseScheduling(dg);
+            cs.DFSTopologicalSort();
         }
         #endregion
     }
