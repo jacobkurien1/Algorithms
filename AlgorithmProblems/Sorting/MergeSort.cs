@@ -12,6 +12,8 @@ namespace AlgorithmProblems.Sorting
     /// This is a divide and conquer approach.
     /// The running time is O(nlogn) in worst case and average case
     /// The space complexity is O(n)
+    /// 
+    /// Merge sort is not adaptive.
     /// </summary>
     class MergeSort
     {
@@ -63,7 +65,7 @@ namespace AlgorithmProblems.Sorting
                 // we have only one element, just return it
                 return new int[1] { arr[end] };
             }
-            int mid = (end + start) / 2;
+            int mid = start + ((end - start) / 2); // prevents overflow
             int[] left = MergeSortAlgo(arr, start, mid);
             int[] right = MergeSortAlgo(arr, mid + 1, end);
             return Merge(left, right);

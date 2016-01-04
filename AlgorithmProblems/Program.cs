@@ -8,6 +8,7 @@ using AlgorithmProblems.PermutationAndCombination;
 using AlgorithmProblems.Recursion;
 using AlgorithmProblems.Sorting;
 using AlgorithmProblems.Stack_and_Queue;
+using AlgorithmProblems.Stack_and_Queue.Queue_Helper;
 using AlgorithmProblems.StringProblems;
 using AlgorithmProblems.Trees;
 using AlgorithmProblems.Trees.TreeHelper;
@@ -53,6 +54,10 @@ namespace AlgorithmProblems
             //Median.TestGetMedianOf2SortedArray();
 
             // Sorting Problems
+            SelectionSort.TestSorting();
+            BubbleSort.TestSorting();
+            InsertionSort.TestSorting();
+            ShellSort.TestSorting();
             MergeSort.TestMergeSort();
             QuickSort.TestQuickSort();
 
@@ -82,11 +87,13 @@ namespace AlgorithmProblems
             StackWithMinElement.TestStackWithMinElement();
             StackOfPlates.TestStackOfPlates();
             SortAStack.TestSortAStackAscending();
+            WellFormedExpression.TestWellFormedExpression();
             QueueVia2Stack.TestQueueVia2Stack();
             LRUCache.TestLRUCache();
             EvaluatePrefixNotation.TestGetPrefixNotationResult();
             EvaluateInflixNotation.TestGetInflixNotationResults();
             EvaluatePostfixNotation.TestGetPostfixNotationResult();
+            TestCircularQueue.TestCircularQueueWithDifferentCases();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();

@@ -7,10 +7,24 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Sorting
 {
+    /// <summary>
+    /// Prefered Sorting algo when less time is a requirement.
+    /// Most of the standard libraries use this sorting mechanism.
+    /// 
+    /// Select a pivot randomly and fix the position of the pivot element by partitioning the entire list arround the pivot element.
+    /// Now do the same on the sublist [0-pivotelementFinalIndex-1] and [pivotelementFinalIndex+1 - arr.Length-1]
+    /// 
+    /// The running time is O(nlogn)
+    /// The space requirement is O(logn) due to need for call stack for recursion. The worst case could be O(n)
+    /// 
+    /// Quick sort is not adaptive.
+    /// 
+    /// 
+    /// </summary>
     class QuickSort
     {
 
-        private static void QuickSortAlgo(ref int[] arr, int startIndex, int endIndex)
+        private static void QuickSortAlgo(int[] arr, int startIndex, int endIndex)
         {
             // Base case
             if(startIndex >= endIndex)
@@ -22,11 +36,11 @@ namespace AlgorithmProblems.Sorting
             int pivotIndex = rnd.Next(startIndex, endIndex + 1);
 
             // parition the array arr based on the pivot arr[pivotIndex]
-            int finalPivotIndex = Partition(ref arr, startIndex, endIndex, pivotIndex);
+            int finalPivotIndex = Partition(arr, startIndex, endIndex, pivotIndex);
 
             // Now do quick sort on the 2 halves arr[startIndex, pivotIndex-1] and arr[pivotIndex+1, endIndex]
-            QuickSortAlgo(ref arr, startIndex, finalPivotIndex - 1);
-            QuickSortAlgo(ref arr, finalPivotIndex + 1, endIndex);
+            QuickSortAlgo(arr, startIndex, finalPivotIndex - 1);
+            QuickSortAlgo(arr, finalPivotIndex + 1, endIndex);
         }
 
         /// <summary>
@@ -40,22 +54,22 @@ namespace AlgorithmProblems.Sorting
         /// <param name="endIndex"></param>
         /// <param name="pivotIndex"></param>
         /// <returns>the final position of the pivot element(We always keep the pivot element in the start index)</returns>
-        private static int Partition(ref int[] arr, int startIndex, int endIndex, int pivotIndex)
+        private static int Partition(int[] arr, int startIndex, int endIndex, int pivotIndex)
         {
             // Put the partition element at startIndex 
             // We will always store the pivot element in the startIndex
-            SwapInArray(ref arr, startIndex, pivotIndex);
+            SwapInArray(arr, startIndex, pivotIndex);
             
             while(endIndex>startIndex)
             {
                 if (arr[startIndex] >= arr[startIndex+1])
                 {
-                    SwapInArray(ref arr, startIndex, startIndex+1);
+                    SwapInArray(arr, startIndex, startIndex+1);
                     startIndex++;
                 }
                 else
                 {
-                    SwapInArray(ref arr, endIndex, startIndex + 1);
+                    SwapInArray(arr, endIndex, startIndex + 1);
                     endIndex--;
                 }
             }
@@ -68,7 +82,7 @@ namespace AlgorithmProblems.Sorting
         /// <param name="arr"></param>
         /// <param name="indexToSwap1"></param>
         /// <param name="indexToSwap2"></param>
-        private static void SwapInArray(ref int[] arr, int indexToSwap1, int indexToSwap2)
+        private static void SwapInArray(int[] arr, int indexToSwap1, int indexToSwap2)
         {
             int temp = arr[indexToSwap1];
             arr[indexToSwap1] = arr[indexToSwap2];
@@ -81,7 +95,7 @@ namespace AlgorithmProblems.Sorting
             Console.WriteLine("The array before sorting is :");
             ArrayHelper.PrintArray(arr);
 
-            QuickSortAlgo(ref arr, 0, arr.Length - 1);
+            QuickSortAlgo(arr, 0, arr.Length - 1);
             Console.WriteLine("The array after sorting is :");
             ArrayHelper.PrintArray(arr);
         }
