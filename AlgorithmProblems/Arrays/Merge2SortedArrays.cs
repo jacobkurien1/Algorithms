@@ -49,23 +49,23 @@ namespace AlgorithmProblems.Arrays
         {
             int[] largerArr = new int[10] { 5, 6, 7, 8, 0, 0, 0, 0, 0, 0 };
             int[] smallerArr = new int[6] { 1, 2, 3, 4, 5, 6 };
-            int[] mergedArr = MergeSortedArrays(largerArr, smallerArr);
-
-            Console.WriteLine("The larger array is : " );
+            Console.WriteLine("The larger array is : ");
             ArrayHelper.PrintArray(largerArr);
             Console.WriteLine("The smaller array is : ");
             ArrayHelper.PrintArray(smallerArr);
+
+            int[] mergedArr = MergeSortedArrays(largerArr, smallerArr);
             Console.WriteLine("The merged array is : ");
             ArrayHelper.PrintArray(mergedArr);
 
             largerArr = new int[10] { 5, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             smallerArr = new int[9] { 1, 2, 3, 4, 6, 7, 8, 9, 10 };
-            mergedArr = MergeSortedArrays(largerArr, smallerArr);
-
             Console.WriteLine("The larger array is : ");
             ArrayHelper.PrintArray(largerArr);
             Console.WriteLine("The smaller array is : ");
             ArrayHelper.PrintArray(smallerArr);
+
+            mergedArr = MergeSortedArrays(largerArr, smallerArr);
             Console.WriteLine("The merged array is : ");
             ArrayHelper.PrintArray(mergedArr);
         }
