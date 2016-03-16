@@ -108,6 +108,7 @@ namespace AlgorithmProblems
             ExcelFirstRowConversion.TestCovertExcelColumnToLong();
             Skyline.TestSkyline();
             SumOfSquaresWithoutMultiplication.TestSumOfSquares();
+            MergeIntervals.TestMergeIntervals();
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();

@@ -99,7 +99,9 @@
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Misc\CreditCardCheck.cs" />
     <Compile Include="Misc\ExcelFirstRowConversion.cs" />
+    <Compile Include="Misc\InsertIntervalInMergedAndOverlappedIntervals.cs" />
     <Compile Include="Misc\IsPrime.cs" />
+    <Compile Include="Misc\MergeIntervals.cs" />
     <Compile Include="Misc\MinNumOfCoins.cs" />
     <Compile Include="Misc\Skyline.cs" />
     <Compile Include="Misc\SquareRoot.cs" />
