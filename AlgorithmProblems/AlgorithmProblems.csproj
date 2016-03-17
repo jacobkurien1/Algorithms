@@ -51,6 +51,7 @@
     <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubString.cs" />
+    <Compile Include="Dynamic Programming\LongestIncreasingSubSequence.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromeSubString.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromicSubsequence.cs" />
     <Compile Include="Dynamic Programming\MaximumAs.cs" />
@@ -99,7 +100,6 @@
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Misc\CreditCardCheck.cs" />
     <Compile Include="Misc\ExcelFirstRowConversion.cs" />
-    <Compile Include="Misc\InsertIntervalInMergedAndOverlappedIntervals.cs" />
     <Compile Include="Misc\IsPrime.cs" />
     <Compile Include="Misc\MergeIntervals.cs" />
     <Compile Include="Misc\MinNumOfCoins.cs" />

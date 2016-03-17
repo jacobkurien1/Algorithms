@@ -145,6 +145,7 @@ namespace AlgorithmProblems
             TreeCuttingProblem.TestGetTreeCuttingToMaximizeProfits();
             WordBreaking.TestBreakTheWords();
             DistanceOfWords.TestDistanceOfWords();
+            LongestIncreasingSubSequence.TestLongestIncreasingSubSequence();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
