@@ -58,6 +58,7 @@ namespace AlgorithmProblems.Dynamic_Programming
                 index = backtrack[index];
             }
 
+            ret.Reverse();
             return ret;
         }
 
@@ -123,6 +124,7 @@ namespace AlgorithmProblems.Dynamic_Programming
                     index = trackParent[index];
                 }
             }
+            lis.Reverse();
             return lis;
         }
 
@@ -168,62 +170,130 @@ namespace AlgorithmProblems.Dynamic_Programming
         /// </summary>
         #endregion
 
+        #region Algo4: recursive method -Running time O(n^3)
+
+        private static Dictionary<int, int> parentTrack = new Dictionary<int, int>();
+        public List<int> GetLISAlgo4(int[] inputArr)
+        {
+            List<int> ret = new List<int>();
+            int maxLis = 0;
+            int lastElementIndexOfLis = -1;
+            for(int i=0; i<inputArr.Length; i++)
+            {
+                int currentLis = GetLISForAnIndex(inputArr, i);
+                if (maxLis< currentLis)
+                {
+                    maxLis = currentLis;
+                    lastElementIndexOfLis = i;
+                }
+            }
+            Console.WriteLine("The longest increasing subsequence contains {0} charaters", maxLis);
+
+            // Now we need to backtrack and get the longest increasing subsequence
+            while(lastElementIndexOfLis>=0)
+            {
+                ret.Add(inputArr[lastElementIndexOfLis]);
+                if (parentTrack.ContainsKey(lastElementIndexOfLis))
+                {
+                    lastElementIndexOfLis = parentTrack[lastElementIndexOfLis];
+                }
+                else
+                {
+                    // we have reached the end of the subsequence
+                    break;
+                }
+            }
+            ret.Reverse();
+            return ret;
+        }
+
+        private int GetLISForAnIndex(int[] inputArr, int index)
+        {
+            int lis = 1;
+            for(int j=0; j<index; j++)
+            {
+                if (inputArr[index] > inputArr[j])
+                {
+                    // Get the maximum
+                    int currentLis = 1 + GetLISForAnIndex(inputArr, j); // because we need to do 1+Max(lis[j])
+                    if (currentLis>lis)
+                    {
+                        lis = currentLis;
+                        parentTrack[index] = j;
+                    }
+                }
+            }
+            return lis; 
+        }
+        #endregion
+
         public static void TestLongestIncreasingSubSequence()
         {
             LongestIncreasingSubSequence lis = new LongestIncreasingSubSequence();
             int[] arr = new int[] { 21, 11, 3, 4, 6, 32, 6, 4, 43, 91 };
-            List<int> lisArr = lis.GetLIS(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo1");
+            List<int> lisArr = lis.GetLIS(arr);
             PrintList(lisArr);
 
-            lisArr = lis.GetLISAlgo2(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo2");
+            lisArr = lis.GetLISAlgo2(arr);
+            PrintList(lisArr);
+
+            Console.WriteLine("LIS from algo4");
+            lisArr = lis.GetLISAlgo4(arr);
             PrintList(lisArr);
 
             arr = new int[] { 21};
-            lisArr = lis.GetLIS(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo1");
+            lisArr = lis.GetLIS(arr);
             PrintList(lisArr);
 
-            lisArr = lis.GetLISAlgo2(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo2");
+            lisArr = lis.GetLISAlgo2(arr);
+            PrintList(lisArr);
+
+            Console.WriteLine("LIS from algo4");
+            lisArr = lis.GetLISAlgo4(arr);
             PrintList(lisArr);
 
             arr = new int[] { };
-            lisArr = lis.GetLIS(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo1");
+            lisArr = lis.GetLIS(arr);
             PrintList(lisArr);
 
             lisArr = lis.GetLISAlgo2(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo2");
+            lisArr.Reverse();
+            PrintList(lisArr);
+
+            Console.WriteLine("LIS from algo4");
+            lisArr = lis.GetLISAlgo4(arr);
             PrintList(lisArr);
 
             arr = new int[] { 21,20,19,18,17,16,15,14,13,12,11,10 };
-            lisArr = lis.GetLIS(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo1");
+            lisArr = lis.GetLIS(arr);
             PrintList(lisArr);
 
-            lisArr = lis.GetLISAlgo2(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo2");
+            lisArr = lis.GetLISAlgo2(arr);
+            PrintList(lisArr);
+
+            Console.WriteLine("LIS from algo4");
+            lisArr = lis.GetLISAlgo4(arr);
             PrintList(lisArr);
 
             arr = new int[] {1,2,3,4,5,6,7,78,91,103 };
-            lisArr = lis.GetLIS(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo1");
+            lisArr = lis.GetLIS(arr);
             PrintList(lisArr);
 
-            lisArr = lis.GetLISAlgo2(arr);
-            lisArr.Reverse();
             Console.WriteLine("LIS from algo2");
+            lisArr = lis.GetLISAlgo2(arr);
+            PrintList(lisArr);
+
+            Console.WriteLine("LIS from algo4");
+            lisArr = lis.GetLISAlgo4(arr);
             PrintList(lisArr);
         }
 
