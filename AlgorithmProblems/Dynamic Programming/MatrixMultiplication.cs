@@ -37,6 +37,9 @@ namespace AlgorithmProblems.Dynamic_Programming
         /// 
         /// Also costMatrix will be filled in the upper right portion from  the diagonal.
         /// We need to first fill the elements closer to the diagonals and move up.
+        /// 
+        /// the running time here is O(n^3)
+        /// and the space requirement is O(n^2)
         /// </summary>
         /// <param name="mats"></param>
         /// <returns></returns>

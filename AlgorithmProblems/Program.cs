@@ -149,6 +149,7 @@ namespace AlgorithmProblems
             MinCostPath.TestMinCostPath();
             DifferentWaysForCoinChange.TestDifferentWaysForCoinChange();
             MatrixMultiplication.TestMatrixMultiplication();
+            BinomialCoefficient.TestBinomialCoefficient();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
