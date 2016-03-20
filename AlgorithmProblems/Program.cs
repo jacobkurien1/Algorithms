@@ -148,6 +148,7 @@ namespace AlgorithmProblems
             LongestIncreasingSubSequence.TestLongestIncreasingSubSequence();
             MinCostPath.TestMinCostPath();
             DifferentWaysForCoinChange.TestDifferentWaysForCoinChange();
+            MatrixMultiplication.TestMatrixMultiplication();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
