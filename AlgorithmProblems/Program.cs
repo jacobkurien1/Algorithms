@@ -150,6 +150,7 @@ namespace AlgorithmProblems
             DifferentWaysForCoinChange.TestDifferentWaysForCoinChange();
             MatrixMultiplication.TestMatrixMultiplication();
             BinomialCoefficient.TestBinomialCoefficient();
+            BoxStacking.TestBoxStacking();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();

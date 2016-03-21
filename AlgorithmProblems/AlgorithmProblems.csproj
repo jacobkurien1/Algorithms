@@ -48,6 +48,7 @@
     <Compile Include="Arrays\Median.cs" />
     <Compile Include="Arrays\Merge2SortedArrays.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
+    <Compile Include="Dynamic Programming\BoxStacking.cs" />
     <Compile Include="Dynamic Programming\DifferentWaysForCoinChange.cs" />
     <Compile Include="Dynamic Programming\DistanceOfWords.cs" />
     <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
