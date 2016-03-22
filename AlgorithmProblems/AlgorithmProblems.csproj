@@ -63,6 +63,7 @@
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
     <Compile Include="Dynamic Programming\WordBreaking.cs" />
+    <Compile Include="Dynamic Programming\WordWrapping.cs" />
     <Compile Include="Graphs\AllPaths.cs" />
     <Compile Include="Graphs\AllPathsGivenStartEndVertex.cs" />
     <Compile Include="Graphs\ColorVertices.cs" />

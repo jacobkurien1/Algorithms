@@ -65,6 +65,8 @@ namespace AlgorithmProblems.Dynamic_Programming
         /// 3. maxHeight[i] = { max     {maxHeight[j]} + height(i)} when box[j].Length > box[i].Length and box[j].Width > box[i].Width
         ///                     j=0->i-1
         ///                     height(i) , otherwise if we could not find any j which satisfies the above condition
+        /// 
+        /// The running time is O(n^2)
         /// </summary>
         /// <param name="boxes"></param>
         /// <returns></returns>
