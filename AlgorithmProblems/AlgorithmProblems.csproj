@@ -59,6 +59,7 @@
     <Compile Include="Dynamic Programming\LongestPalindromicSubsequence.cs" />
     <Compile Include="Dynamic Programming\MatrixMultiplication.cs" />
     <Compile Include="Dynamic Programming\MaximumAs.cs" />
+    <Compile Include="Dynamic Programming\MaxSubMatrixWithAllOnes.cs" />
     <Compile Include="Dynamic Programming\MinCostPath.cs" />
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />

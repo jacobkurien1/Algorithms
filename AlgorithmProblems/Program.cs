@@ -152,6 +152,7 @@ namespace AlgorithmProblems
             BinomialCoefficient.TestBinomialCoefficient();
             BoxStacking.TestBoxStacking();
             WordWrapping.TestWordWrapping();
+            MaxSubMatrixWithAllOnes.TestMaxSubMatrixWithAllOnes();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
