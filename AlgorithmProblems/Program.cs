@@ -1,6 +1,7 @@
 ﻿using AlgorithmProblems.Arrays;
 using AlgorithmProblems.Dynamic_Programming;
 using AlgorithmProblems.Graphs;
+using AlgorithmProblems.Graphs.ShortestPathAlgos;
 using AlgorithmProblems.Linked_List;
 using AlgorithmProblems.matrix_problems;
 using AlgorithmProblems.Misc;
@@ -166,6 +167,8 @@ namespace AlgorithmProblems
             ConstraintsVerification.TestConstraintsVerification();
             ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
             CourseScheduling.TestCourseScheduling();
+            // ShortestPathAlgo
+            FloydWarshall.TestFloydWarshall();
 
             Console.ReadLine();
         }

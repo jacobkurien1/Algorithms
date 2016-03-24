@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs
 {
+    /// <summary>
+    /// This is a shortest path algorithm using BFS for graphs with unweighted edges
+    /// </summary>
     class ShortestPath
     {
         /// <summary>

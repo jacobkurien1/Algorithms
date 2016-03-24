@@ -80,7 +80,8 @@
     </Compile>
     <Compile Include="Graphs\GraphHelper\GraphVertex.cs" />
     <Compile Include="Graphs\GraphHelper\UndirectedGraph.cs" />
-    <Compile Include="Graphs\ShortestPath.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
