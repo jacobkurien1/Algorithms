@@ -86,6 +86,7 @@
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Heaps\BasicMaxHeap.cs" />
+    <Compile Include="Heaps\BasicMinHeap.cs" />
     <Compile Include="Heaps\HeapHelper\MaxHeap.cs" />
     <Compile Include="Heaps\HeapHelper\MinHeap.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
