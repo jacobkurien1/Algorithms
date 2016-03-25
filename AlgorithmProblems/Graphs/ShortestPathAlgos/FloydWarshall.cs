@@ -8,12 +8,20 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos
 {
     /// <summary>
     /// Given a directed graph and we want to calculate the shortest distance from any node i
-    /// to another node j we should use this dynamic programming approach of floyd warshall algorithm
+    /// to another node j we should use this dynamic programming approach of floyd warshall algorithm.
+    /// 
+    /// Note: we could use this algorithm on a Directed graph with negative weighted edges but
+    /// the graph should not have any negative cycles
+    /// This algorithm will give the shortest distance between all pairs of vertices
     /// 
     /// We need to iterate from k = 0 -> n-1
     /// and mat[i,j] =  mat[i,k]+mat[k,j] if(mat[i,j] > mat[i,k]+mat[k,j])
     ///                 0 if i==j;
     ///                 
+    /// The running time for this algorithm is O(V^3)
+    ///
+    /// We can also check whether there is a negative cycle present or not.
+    /// 
     /// </summary>
     public class FloydWarshall
     {
@@ -87,16 +95,45 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos
             return ret;
         }
 
+        /// <summary>
+        /// We can check whether there is a negative weight cycle present or not
+        /// 
+        /// We can do this by checking Distance[i,j] + Distance[j,i] <0 means we have a negative cycle
+        /// </summary>
+        /// <returns></returns>
+        public bool IsNegativeCyclePresent()
+        {
+            int numberOfGraphVertex = Distance.GetLength(0);
+            for (int i = 0; i < numberOfGraphVertex; i++)
+            {
+                for (int j = i+1; j < numberOfGraphVertex; j++)
+                {
+                    if(Distance[i,j] +Distance[j,i]<0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
         public static void TestFloydWarshall()
         {
             int inf = int.MaxValue;
             int[,] adjacencyMatrix = new int[,] { { 0, 3, 6, 15 }, { inf, 0, -2, inf }, { inf, inf, 0, 2 }, { 1, inf, inf, 0 } };
             FloydWarshall fw = new FloydWarshall(adjacencyMatrix);
+            Console.WriteLine("Is there a negative cycle present: {0}, Expected: false",fw.IsNegativeCyclePresent());
             Console.WriteLine("The min distance from {0} to {1} is {2}", 3, 2, fw.Distance[3,2]);
             PrintPath(fw.PathFromUToV(3, 2));
 
             Console.WriteLine("The min distance from {0} to {1} is {2}", 2, 0, fw.Distance[2, 0]);
             PrintPath(fw.PathFromUToV(2, 0));
+
+            // lets introduce a negative cycle
+            adjacencyMatrix[2, 3] = -3;
+            fw = new FloydWarshall(adjacencyMatrix);
+            Console.WriteLine("Is there a negative cycle present: {0}, Expected: true", fw.IsNegativeCyclePresent());
         }
 
         private static void PrintPath(List<int> path)

@@ -80,10 +80,14 @@
     </Compile>
     <Compile Include="Graphs\GraphHelper\GraphVertex.cs" />
     <Compile Include="Graphs\GraphHelper\UndirectedGraph.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\DijkstraAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
+    <Compile Include="Heaps\BasicMaxHeap.cs" />
+    <Compile Include="Heaps\HeapHelper\MaxHeap.cs" />
+    <Compile Include="Heaps\HeapHelper\MinHeap.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
     <Compile Include="Linked List\CircularLinkedList.cs" />
     <Compile Include="Linked List\CommonElementInTwoLinkedList.cs" />
@@ -121,6 +125,7 @@
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\HeapSort.cs" />
     <Compile Include="Sorting\InsertionSort.cs" />
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
