@@ -13,9 +13,9 @@ namespace AlgorithmProblems.Heaps.HeapHelper
     /// We are not going to construct a tree but just have a tree in the array form.
     /// This will save us lot of space. 
     /// 
-    /// So in array: index of left subtree of ith node= 2*i 
-    ///              index of right subtree of the ith node = 2*i+1;
-    ///              parent of the ith node = Math.Floor(i/2)
+    /// So in array: index of left subtree of ith node= 2*i +1
+    ///              index of right subtree of the ith node = 2*i+2;
+    ///              parent of the ith node = Math.Floor((i-1)/2)
     /// 
     /// </summary>
     public class MaxHeap<T> where T : IComparable
@@ -23,11 +23,11 @@ namespace AlgorithmProblems.Heaps.HeapHelper
         /// <summary>
         /// we will store the complete binary tree in this array
         /// 0th index gives the root element
-        /// So in array: index of left subtree of ith node= 2*i 
-        ///              index of right subtree of the ith node = 2*i+1;
-        ///              parent of the ith node = Math.Floor(i/2)
+        /// So in array: index of left subtree of ith node= 2*i +1
+        ///              index of right subtree of the ith node = 2*i+2;
+        ///              parent of the ith node = Math.Floor((i-1)/2)
         /// </summary>
-        private T[] _arrayToStoreTree { get; set; }
+        protected T[] _arrayToStoreTree { get; set; }
         private int _currentNumberOfElements { get; set; }
 
         public int HeapSize
@@ -96,31 +96,45 @@ namespace AlgorithmProblems.Heaps.HeapHelper
         /// </summary>
         /// <param name="arr"></param>
         /// <param name="index"></param>
-        private void MaxHeapify(T[] arr, int index)
+        protected void MaxHeapify(T[] arr, int index)
         {
-            int leftSubtreeIndex = 2 * index; // we can also use the shift all bits to left to achieve this
-            int rightSubtreeIndex = 2 * index + 1;
+            MaxHeapifyWithLeafNode(arr, index, _currentNumberOfElements);
+        }
 
-            if(leftSubtreeIndex>=_currentNumberOfElements || rightSubtreeIndex>=_currentNumberOfElements)
-            {
-                // this is a leaf node and it is already maxheapified
-                return;
-            }
+        /// <summary>
+        /// This method assumes that the left and right subtree from node at index 
+        /// is following the max heap property but arr[i] might not be following the 
+        /// maxheap property correctly.
+        /// 
+        /// So we get the index in which the largest value is present and if largestIndex != index,
+        /// we swap the value at index with value at largestIndex and now we need to call MaxHeapify again.
+        /// 
+        /// The running time is height of the tree = O(logn)
+        /// The space requirement is O(1)
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="index"></param>
+        /// <param name="leafNodeIndex"> the index till which we want to heapify</param>
+        protected void MaxHeapifyWithLeafNode(T[] arr, int index, int leafNodeIndex)
+        {
+            int leftSubtreeIndex = 2 * index + 1; // we can also use the shift all bits to left to achieve this
+            int rightSubtreeIndex = 2 * index + 2;
 
             int largerIndex = index;
-            if (arr[leftSubtreeIndex].CompareTo(arr[largerIndex]) > 0)
+            if (leftSubtreeIndex < leafNodeIndex && arr[leftSubtreeIndex].CompareTo(arr[largerIndex]) > 0)
             {
                 largerIndex = leftSubtreeIndex;
             }
-            if (arr[rightSubtreeIndex].CompareTo(arr[largerIndex]) > 0)
+            if (rightSubtreeIndex < leafNodeIndex && arr[rightSubtreeIndex].CompareTo(arr[largerIndex]) > 0)
             {
                 largerIndex = rightSubtreeIndex;
             }
 
             if (largerIndex != index)
             {
+                // this condition will lead the heap recursion to converge
                 Swap(arr, index, largerIndex);
-                MaxHeapify(arr, largerIndex);
+                MaxHeapifyWithLeafNode(arr, largerIndex, leafNodeIndex);
             }
         }
 
@@ -140,11 +154,11 @@ namespace AlgorithmProblems.Heaps.HeapHelper
             _arrayToStoreTree[_currentNumberOfElements] = newVal;
             int currentIndex = _currentNumberOfElements;
 
-            // the parent of currentIndex will be present at currentIndex/2
-            while (currentIndex!=currentIndex/2 && _arrayToStoreTree[currentIndex/2].CompareTo(_arrayToStoreTree[currentIndex])<0)
+            // the parent of currentIndex will be present at (currentIndex-1)/2
+            while (currentIndex!=((currentIndex-1)/2) && _arrayToStoreTree[(currentIndex-1)/2].CompareTo(_arrayToStoreTree[currentIndex])<0)
             {
-                Swap(_arrayToStoreTree, currentIndex/2, currentIndex);
-                currentIndex = currentIndex / 2;
+                Swap(_arrayToStoreTree, (currentIndex-1)/2, currentIndex);
+                currentIndex = (currentIndex-1) / 2;
             }
             _currentNumberOfElements++;
         }
@@ -186,7 +200,7 @@ namespace AlgorithmProblems.Heaps.HeapHelper
             return retVal;
         }
 
-        private void Swap(T[] arr, int index1, int index2)
+        protected void Swap(T[] arr, int index1, int index2)
         {
             T temp = arr[index1];
             arr[index1] = arr[index2];

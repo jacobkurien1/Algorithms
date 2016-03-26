@@ -12,18 +12,18 @@ namespace AlgorithmProblems.Heaps.HeapHelper
     /// We are not going to construct a tree but just have a tree in the array form.
     /// This will save us lot of space. 
     /// 
-    /// So in array: index of left subtree of ith node= 2*i 
-    ///              index of right subtree of the ith node = 2*i+1;
-    ///              parent of the ith node = Math.Floor(i/2)
+    /// So in array: index of left subtree of ith node= 2*i +1 
+    ///              index of right subtree of the ith node = 2*i+2;
+    ///              parent of the ith node = Math.Floor(i-1/2)
     /// </summary>
     public class MinHeap<T> where T :IComparable
     {
         /// <summary>
         /// we will store the complete binary tree in this array
         /// 0th index gives the root element
-        /// So in array: index of left subtree of ith node= 2*i 
-        ///              index of right subtree of the ith node = 2*i+1;
-        ///              parent of the ith node = Math.Floor(i/2)
+        /// So in array: index of left subtree of ith node= 2*i +1
+        ///              index of right subtree of the ith node = 2*i+2;
+        ///              parent of the ith node = Math.Floor((i-1)/2)
         /// </summary>
         private T[] _arrayToStoreTree { get; set; }
         private int _currentNumberOfElements { get; set; }
@@ -96,27 +96,22 @@ namespace AlgorithmProblems.Heaps.HeapHelper
         /// <param name="index"></param>
         private void MinHeapify(T[] arr, int index)
         {
-            int leftSubtreeIndex = 2 * index; // we can also use the shift all bits to left to achieve this
-            int rightSubtreeIndex = 2 * index + 1;
-
-            if (leftSubtreeIndex >= _currentNumberOfElements || rightSubtreeIndex >= _currentNumberOfElements)
-            {
-                // this is a leaf node and it is already minheapified
-                return;
-            }
+            int leftSubtreeIndex = 2 * index + 1; // we can also use the shift all bits to left to achieve this
+            int rightSubtreeIndex = 2 * index + 2;
 
             int smallestIndex = index;
-            if (arr[leftSubtreeIndex].CompareTo(arr[smallestIndex]) < 0)
+            if (leftSubtreeIndex < _currentNumberOfElements && arr[leftSubtreeIndex].CompareTo(arr[smallestIndex]) < 0)
             {
                 smallestIndex = leftSubtreeIndex;
             }
-            if (arr[rightSubtreeIndex].CompareTo(arr[smallestIndex]) < 0)
+            if (rightSubtreeIndex < _currentNumberOfElements && arr[rightSubtreeIndex].CompareTo(arr[smallestIndex]) < 0)
             {
                 smallestIndex = rightSubtreeIndex;
             }
 
             if (smallestIndex != index)
             {
+                // this will make sure that the recursion converges
                 Swap(arr, index, smallestIndex);
                 MinHeapify(arr, smallestIndex);
             }
@@ -138,11 +133,11 @@ namespace AlgorithmProblems.Heaps.HeapHelper
             _arrayToStoreTree[_currentNumberOfElements] = newVal;
             int currentIndex = _currentNumberOfElements;
 
-            // the parent of currentIndex will be present at currentIndex/2
-            while (currentIndex != currentIndex / 2 && _arrayToStoreTree[currentIndex / 2].CompareTo(_arrayToStoreTree[currentIndex]) > 0)
+            // the parent of currentIndex will be present at (currentIndex-1)/2
+            while (currentIndex != (currentIndex - 1) / 2 && _arrayToStoreTree[(currentIndex - 1) / 2].CompareTo(_arrayToStoreTree[currentIndex]) > 0)
             {
-                Swap(_arrayToStoreTree, currentIndex / 2, currentIndex);
-                currentIndex = currentIndex / 2;
+                Swap(_arrayToStoreTree, (currentIndex - 1) / 2, currentIndex);
+                currentIndex = (currentIndex - 1) / 2;
             }
             _currentNumberOfElements++;
         }
