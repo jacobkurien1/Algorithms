@@ -12,6 +12,8 @@ namespace AlgorithmProblems.Sorting
     /// Like merge sort the Heap sort algorithm has O(nlogn) running time.
     /// But unlike merge sort it does the sort inplace and hence space is O(1).
     /// 
+    /// This is a good algorithm but a good implementation of quick sort beats this algo
+    /// 
     /// This uses a data structure called heap to achieve this goal
     /// For heap sort we will use MaxHeap
     /// </summary>

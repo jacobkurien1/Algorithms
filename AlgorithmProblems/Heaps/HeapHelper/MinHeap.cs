@@ -82,6 +82,27 @@ namespace AlgorithmProblems.Heaps.HeapHelper
         }
 
         /// <summary>
+        /// This is basically used to change the value of the array at index and 
+        /// rebalance the tree to follow the min heap property
+        /// </summary>
+        /// <param name="newVal"></param>
+        /// <param name="index"></param>
+        public void ChangePriority(T newVal, int index)
+        {
+            if(index<0 || index>=_currentNumberOfElements)
+            {
+                throw new Exception("Illegal operation");
+            }
+            _arrayToStoreTree[index] = newVal;
+            while(index >=0)
+            {
+                MinHeapify(_arrayToStoreTree, index);
+                index = (int)Math.Floor((index - 1) / 2.0);
+            }
+
+        }
+
+        /// <summary>
         /// This method assumes that the left and right subtree from node at index 
         /// is following the min heap property but arr[i] might not be following the 
         /// minheap property correctly.

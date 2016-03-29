@@ -175,6 +175,7 @@ namespace AlgorithmProblems
             //Heap problems
             BasicMaxHeap.TestMaxHeap();
             BasicMinHeap.TestMinHeap();
+            TestMinHeapMap.DoTest();
 
             Console.ReadLine();
         }

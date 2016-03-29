@@ -89,6 +89,7 @@
     <Compile Include="Heaps\BasicMinHeap.cs" />
     <Compile Include="Heaps\HeapHelper\MaxHeap.cs" />
     <Compile Include="Heaps\HeapHelper\MinHeap.cs" />
+    <Compile Include="Heaps\MinHeapMap.cs" />
     <Compile Include="Linked List\AddNumbers.cs" />
     <Compile Include="Linked List\CircularLinkedList.cs" />
     <Compile Include="Linked List\CommonElementInTwoLinkedList.cs" />

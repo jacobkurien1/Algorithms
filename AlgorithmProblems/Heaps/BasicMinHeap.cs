@@ -41,6 +41,18 @@ namespace AlgorithmProblems.Heaps
                     Console.WriteLine("Exception:{0} i:{1}", e.Message, i);
                 }
             }
+            // -------------------change priority -----------------------------------------------
+            Console.WriteLine("Change 5 -> 10");
+            mh.ChangePriority(10, 5);
+            ArrayHelper.PrintArray(mh.HeapArray);
+
+            Console.WriteLine("Change 10 -> -1");
+            mh.ChangePriority(-1, 5);
+            ArrayHelper.PrintArray(mh.HeapArray);
+
+            Console.WriteLine("Change 4 -> 100");
+            mh.ChangePriority(100, 4);
+            ArrayHelper.PrintArray(mh.HeapArray);
 
             // ------------------extract min value------------------------------------------
             for (int i = 0; i <= 10; i++)
@@ -56,6 +68,7 @@ namespace AlgorithmProblems.Heaps
                     Console.WriteLine("Exception:{0} index:{1}", e.Message, i);
                 }
             }
+
         }
     }
 }
