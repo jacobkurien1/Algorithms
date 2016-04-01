@@ -115,6 +115,7 @@ namespace AlgorithmProblems
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();
+            CombinationsOfBinaryString.TestCombinationsOfBinaryString();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();
