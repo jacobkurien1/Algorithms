@@ -122,6 +122,7 @@
     <Compile Include="Misc\SquareRoot.cs" />
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\ZerosInFactorial.cs" />
+    <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
     <Compile Include="PermutationAndCombination\CombinationsOfBinaryString.cs" />
     <Compile Include="PermutationAndCombination\ShuffleAList.cs" />
     <Compile Include="Program.cs" />
