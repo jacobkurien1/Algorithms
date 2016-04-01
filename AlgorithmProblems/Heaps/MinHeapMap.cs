@@ -12,13 +12,15 @@ namespace AlgorithmProblems.Heaps
     /// This data structure is used in Dijkstra's shortest path algorithm
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class MinHeapMap<T> where T : IComparable
+    public class MinHeapMap<T> where T : IComparable, IKey
     {
         /// <summary>
         /// This will help to get the O(1) lookup for all the entities's index in heap
         /// We need a list<int> to take care of duplicates in the value type
         /// </summary>
-        private Dictionary<T, List<int>> AllEntitiesIndex { get; set; }
+        private Dictionary<int, int> AllEntitiesIndex { get; set; }
+
+        public Dictionary<int, T> AllEntities { get; set; }
 
         /// <summary>
         /// we will store the complete binary tree in this array
@@ -31,25 +33,24 @@ namespace AlgorithmProblems.Heaps
 
         private void ChangeValueAtIndex(int arrayIndex, T newVal)
         {
-            if(AllEntitiesIndex.ContainsKey(_arrayToStoreTree[arrayIndex]))
-            {
-                AllEntitiesIndex[_arrayToStoreTree[arrayIndex]].Remove(arrayIndex);
-            }
             _arrayToStoreTree[arrayIndex] = newVal;
-            if(AllEntitiesIndex.ContainsKey(newVal))
-            {
-                AllEntitiesIndex[newVal].Add(arrayIndex);
-            }
-            else
-            {
-                AllEntitiesIndex[newVal] = new List<int> { arrayIndex };
-            }
+            AllEntitiesIndex[newVal.Id] = arrayIndex;
+
         }
         private int _currentNumberOfElements { get; set; }
 
+        public int Count
+        {
+            get
+            {
+                return _currentNumberOfElements;
+            }
+        }
+
         public MinHeapMap(int size)
         {
-            AllEntitiesIndex = new Dictionary<T, List<int>>();  
+            AllEntitiesIndex = new Dictionary<int, int>();
+            AllEntities = new Dictionary<int, T>();
             _arrayToStoreTree = new T[size];
         }
 
@@ -88,13 +89,20 @@ namespace AlgorithmProblems.Heaps
 
         public void ChangePriority(T oldVal, T newVal)
         {
-            if (!AllEntitiesIndex.ContainsKey(oldVal))
+            if (!AllEntitiesIndex.ContainsKey(oldVal.Id))
             {
                 throw new Exception("Illegal operation");
             }
             //get index in which old val is present
-            int oldIndex = AllEntitiesIndex[oldVal][0];
+            int oldIndex = AllEntitiesIndex[oldVal.Id];
+            if(oldIndex>=_currentNumberOfElements)
+            {
+                // we should not care about this 
+            }
             ChangeValueAtIndex(oldIndex, newVal);
+            // make corresponding changes to the AllEntities
+            AllEntities.Remove(oldVal.Id);
+            AllEntities[newVal.Id] = newVal;
             while (oldIndex >= 0)
             {
                 MinHeapify(oldIndex);
@@ -152,6 +160,7 @@ namespace AlgorithmProblems.Heaps
                 throw new Exception("Heap overflow");
             }
             ChangeValueAtIndex(_currentNumberOfElements, newVal);
+            AllEntities[newVal.Id] = newVal;
             int currentIndex = _currentNumberOfElements;
 
             // the parent of currentIndex will be present at (currentIndex-1)/2
@@ -194,16 +203,9 @@ namespace AlgorithmProblems.Heaps
             T retVal = _arrayToStoreTree[0];
             _arrayToStoreTree[0] = _arrayToStoreTree[_currentNumberOfElements - 1];
             _arrayToStoreTree[_currentNumberOfElements - 1] = default(T);
-            if(AllEntitiesIndex[retVal].Count>1)
-            {
-                // Duplicate case: we have more than one index with the same value type
-                AllEntitiesIndex[retVal].Remove(0);
-            }
-            else
-            {
-                // we can safely remove the whole object from the dictionary
-                AllEntitiesIndex.Remove(retVal);
-            }
+            AllEntities.Remove(retVal.Id);
+            AllEntitiesIndex.Remove(retVal.Id);
+            
             _currentNumberOfElements--;
             MinHeapify(0);
             return retVal;
@@ -218,6 +220,43 @@ namespace AlgorithmProblems.Heaps
 
     }
 
+    public interface IKey
+    {
+        int Id { get; }
+    }
+
+    public class FakeClassForTest : IKey, IComparable
+    {
+        public FakeClassForTest(int id, int distance)
+        {
+            Id = id;
+            Distance = distance;
+        }
+        public int Id { get; set; }
+        public int Distance { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            return Distance.CompareTo(((FakeClassForTest)obj).Distance);
+        }
+        public override string ToString()
+        {
+            return Distance.ToString();
+        }
+        public static void PrintArray(FakeClassForTest[] ft)
+        {
+            for(int i=0; i<ft.Length; i++)
+            {
+                Console.Write("{0} ", ft[i].ToString());
+            }
+            Console.WriteLine();
+        }
+        public FakeClassForTest ShallowClone()
+        {
+            return new FakeClassForTest(Id, Distance);
+        }
+    }
+
     public class TestMinHeapMap
     {
         public static void DoTest()
@@ -226,27 +265,36 @@ namespace AlgorithmProblems.Heaps
             int[] arr = ArrayHelper.CreateArray(10);
             Console.WriteLine("The array before heapifying");
             ArrayHelper.PrintArray(arr);
-            MinHeapMap<int> mhm = new MinHeapMap<int>(10);
+            MinHeapMap<FakeClassForTest> mhm = new MinHeapMap<FakeClassForTest>(10);
             for(int i=0; i<arr.Length; i++)
             {
                 
-                mhm.Insert(arr[i]);
-                ArrayHelper.PrintArray(mhm.HeapArray);
+                mhm.Insert(new FakeClassForTest(i, arr[i]));
+                FakeClassForTest.PrintArray(mhm.HeapArray);
                 Console.WriteLine("The min value in the heap is {0}", mhm.PeekMin());
 
             }
             // -------------------change priority -----------------------------------------------
             Console.WriteLine("Change {0} -> {1}", mhm.HeapArray[4], 888);
-            mhm.ChangePriority(oldVal: mhm.HeapArray[4], newVal: 888);
-            ArrayHelper.PrintArray(mhm.HeapArray);
+            FakeClassForTest oldObj = mhm.HeapArray[4];
+            FakeClassForTest newObj = oldObj.ShallowClone();
+            newObj.Distance = 888;
+            mhm.ChangePriority(oldVal: oldObj, newVal: newObj);
+            FakeClassForTest.PrintArray(mhm.HeapArray);
 
+            oldObj = mhm.HeapArray[4];
+            newObj = oldObj.ShallowClone();
+            newObj.Distance = -1;
             Console.WriteLine("Change {0} -> {1}", mhm.HeapArray[4], -1);
-            mhm.ChangePriority(oldVal: mhm.HeapArray[4], newVal: -1);
-            ArrayHelper.PrintArray(mhm.HeapArray);
+            mhm.ChangePriority(oldVal: oldObj, newVal: newObj);
+            FakeClassForTest.PrintArray(mhm.HeapArray);
 
+            oldObj = mhm.HeapArray[4];
+            newObj = oldObj.ShallowClone();
+            newObj.Distance = 21;
             Console.WriteLine("Change {0} -> {1}", mhm.HeapArray[4], 21);
-            mhm.ChangePriority(oldVal: mhm.HeapArray[4], newVal: 21);
-            ArrayHelper.PrintArray(mhm.HeapArray);
+            mhm.ChangePriority(oldVal: oldObj, newVal: newObj);
+            FakeClassForTest.PrintArray(mhm.HeapArray);
 
             // ------------------extract min value------------------------------------------
             for (int i = 0; i <= 10; i++)
@@ -255,7 +303,7 @@ namespace AlgorithmProblems.Heaps
                 {
                     Console.WriteLine("Extracting the min value in the MinHeap: {0}", mhm.ExtractMin());
                     Console.WriteLine("The elements in the heap is as follows:");
-                    ArrayHelper.PrintArray(mhm.HeapArray);
+                    FakeClassForTest.PrintArray(mhm.HeapArray);
                 }
                 catch (Exception e)
                 {

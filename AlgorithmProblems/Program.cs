@@ -171,6 +171,7 @@ namespace AlgorithmProblems
             CourseScheduling.TestCourseScheduling();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
+            DijkstraAlgorithm.TestDijkstraAlgorithm();
 
             //Heap problems
             BasicMaxHeap.TestMaxHeap();
