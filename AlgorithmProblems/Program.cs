@@ -172,6 +172,7 @@ namespace AlgorithmProblems
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
+            BellmanFord.TestBellmanFord();
 
             //Heap problems
             BasicMaxHeap.TestMaxHeap();
