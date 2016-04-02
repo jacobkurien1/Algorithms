@@ -36,6 +36,29 @@ namespace AlgorithmProblems.PermutationAndCombination
         }
 
         /// <summary>
+        /// This is the same recursive algo same as above but here we start from the index originalStr.Length-1
+        /// Hence we will not have to send the perms as parameters
+        /// </summary>
+        /// <param name="originalStr"></param>
+        /// <param name="currentIndex"></param>
+        /// <returns></returns>
+        public List<string> GetAllPermutationsFromEndIndex(string originalStr, int currentIndex)
+        {
+            if (currentIndex < 0)
+            {
+                //base condition to stop the recursion
+                return new List<string>() { string.Empty };
+            }
+            List<string> ret = new List<string>();
+            List<string> allPerms = GetAllPermutationsFromEndIndex(originalStr, currentIndex-1);
+            foreach (string str in allPerms)
+            {
+                ret.AddRange(GetPermutationsForTheCharater(originalStr[currentIndex].ToString(), str));
+            }
+            return ret;
+        }
+
+        /// <summary>
         /// inserts the singleCharater into each index og the completeString
         /// </summary>
         /// <param name="singleCharacter">the character that needs to be inserted</param>
@@ -59,12 +82,16 @@ namespace AlgorithmProblems.PermutationAndCombination
         {
             AllPermutationsOfString allPerms = new AllPermutationsOfString();
             string originalStr = "jacob";
-            Console.WriteLine("The different combinations of {0} are as shown below", originalStr);
+            Console.WriteLine("The different permutations of {0} are as shown below", originalStr);
             PrintPermutations(allPerms.GetAllPermutations(originalStr, 0));
+            Console.WriteLine("The different permutations are as shown below");
+            PrintPermutations(allPerms.GetAllPermutationsFromEndIndex(originalStr, originalStr.Length-1));
 
             originalStr = "gak";
-            Console.WriteLine("The different combinations of {0} are as shown below", originalStr);
+            Console.WriteLine("The different permutations of {0} are as shown below", originalStr);
             PrintPermutations(allPerms.GetAllPermutations(originalStr, 0));
+            Console.WriteLine("The different permutations are as shown below");
+            PrintPermutations(allPerms.GetAllPermutationsFromEndIndex(originalStr, originalStr.Length - 1));
         }
         private static void PrintPermutations(List<string> combinations)
         {
