@@ -40,6 +40,28 @@ namespace AlgorithmProblems.PermutationAndCombination
             return GetAllCombinations(++currentIndex, originalStr, allCombinations);
         }
 
+        /// <summary>
+        /// this is the second algorithm which is a cleaner recursive implementation
+        /// here we start from the end of the string, index = originalStr.Length-1
+        /// </summary>
+        /// <param name="currentIndex">index of originalStr under consideration</param>
+        /// <param name="originalStr">the string whose combinations needs to be calculated</param>
+        /// <returns></returns>
+        public List<string> GetAllCombinationsFromEndIndex(int currentIndex, string originalStr)
+        {
+            if (currentIndex<0)
+            {
+                return new List<string> { string.Empty };
+            }
+            List<string> allCombinations = GetAllCombinationsFromEndIndex(currentIndex - 1, originalStr);
+            List<string> cloneList = CloneList(allCombinations);
+            foreach (string str in cloneList)
+            {
+                allCombinations.Add(str + originalStr[currentIndex]);
+            }
+            return allCombinations;
+        }
+
         private List<string> CloneList(List<string> originalList)
         {
             List<string> cloneList = new List<string>();
@@ -56,6 +78,9 @@ namespace AlgorithmProblems.PermutationAndCombination
             string originalStr = "jacob";
             Console.WriteLine("The different combinations of {0} are as shown below", originalStr);
             PrintCombinations(allCombs.GetAllCombinations(0,originalStr));
+            Console.WriteLine("The different combinations of {0} from algo2 are as shown below", originalStr);
+            PrintCombinations(allCombs.GetAllCombinationsFromEndIndex(originalStr.Length-1, originalStr));
+
         }
         private static void PrintCombinations(List<string> combinations)
         {
