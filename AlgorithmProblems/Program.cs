@@ -118,6 +118,7 @@ namespace AlgorithmProblems
             CombinationsOfBinaryString.TestCombinationsOfBinaryString();
             AllCombinationsOfString.TestAllCombinationsOfString();
             AllPermutationsOfString.TestAllPermutationsOfString();
+            PhoneNumberToWords.TestPhoneNumberToWords();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();

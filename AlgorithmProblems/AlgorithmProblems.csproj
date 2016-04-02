@@ -125,6 +125,7 @@
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
     <Compile Include="PermutationAndCombination\AllPermutationsOfString.cs" />
     <Compile Include="PermutationAndCombination\CombinationsOfBinaryString.cs" />
+    <Compile Include="PermutationAndCombination\PhoneNumberToWords.cs" />
     <Compile Include="PermutationAndCombination\ShuffleAList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
