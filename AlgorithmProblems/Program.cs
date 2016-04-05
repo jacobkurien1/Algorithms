@@ -70,6 +70,7 @@ namespace AlgorithmProblems
             Matrix_Column_Rows_0.TestMakeRowColZero2();
             RotateMatrix180.TestRotateMatrix180();
             SumOfMatrixElementsFormedByRectangleWithCoordinates.TestSumOfMatrixElements();
+            SortedArrayFromSortedMatrix.TestSortedArrayFromSortedMatrix();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
