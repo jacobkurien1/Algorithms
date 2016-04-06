@@ -16,6 +16,7 @@ using AlgorithmProblems.Trees;
 using AlgorithmProblems.Trees.TreeHelper;
 using AlgorithmProblems.Trie;
 using AlgorithmProblems.Trie.TrieHelper;
+using AlgorithmProblems.DisjointSets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -178,11 +179,16 @@ namespace AlgorithmProblems
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
             BellmanFord.TestBellmanFord();
+            //Minimum Spanning Tree
+
 
             //Heap problems
             BasicMaxHeap.TestMaxHeap();
             BasicMinHeap.TestMinHeap();
             TestMinHeapMap.DoTest();
+
+            //DisjointSets
+            TestingDisjointSet.Run();
 
             Console.ReadLine();
         }
