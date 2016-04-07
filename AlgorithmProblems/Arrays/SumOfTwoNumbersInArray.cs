@@ -89,6 +89,81 @@ namespace AlgorithmProblems.Arrays
             return ret;
         }
 
+        /// <summary>
+        /// Instead of using a dictionary(as shown in algo2), we can use an int[] if we know the range of numbers in the arr.
+        /// each bit in the int[] will tell us whether this number was present in the array or not.
+        /// So the space requirement will drastically reduce to Range/32 ints in the array, since each int can have 32 bits.
+        /// 
+        /// This will get us the run time of O(n) and almost constant space requirement
+        /// </summary>
+        /// <param name="arr">array from which the sum needs to be calculated</param>
+        /// <param name="sum">sum value</param>
+        /// <returns>list of array value pairs, where addition of each pair yields sum</returns>
+        public static List<ArrayPair> GetIndiciesWhenSumIsFoundAlgo3(int[] arr, int sum)
+        {
+            List<ArrayPair> ret = new List<ArrayPair>();
+
+            // We need to find the Range. to do that we need to find the max and min
+            int minVal = int.MaxValue;
+            int maxVal = int.MinValue;
+            for (int i = 0; i < arr.Length; i++ )
+            {
+                if(arr[i]>maxVal)
+                {
+                    // get the max value
+                    maxVal = arr[i];
+                }
+                if (arr[i] < minVal)
+                {
+                    // get the min Value
+                    minVal = arr[i];
+                }
+            }
+            //So the number of bits needed are equal to Range
+            int Range = maxVal - minVal + 1;//overflow can happen here
+            int[] bitDictionary = new int[(int)Math.Ceiling((double)Range / (sizeof(int)*8))];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (IsValuePresent(bitDictionary, sum - arr[i]))
+                {
+                    ret.Add(new ArrayPair(sum - arr[i], arr[i]));
+                }
+                else
+                {
+                    SetABit(bitDictionary,arr[i]);
+                }
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// This method will find the bit corresponding to value and return whether the bit is set or not
+        /// </summary>
+        /// <param name="bitDictionary"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private static bool IsValuePresent(int[] bitDictionary, int value)
+        {
+            int arrayIndex = value / (sizeof(int) * 8);
+            int bitIndex = value % (sizeof(int) * 8);
+            int flag = bitDictionary[arrayIndex] & (1 << bitIndex);
+            return !(flag == 0);
+        }
+
+        /// <summary>
+        /// This method sets the bit corresponding to value as 1 in the bitDictionary
+        /// </summary>
+        /// <param name="bitDictionary"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private static void SetABit(int[] bitDictionary, int value)
+        {
+            int arrayIndex = value / (sizeof(int) * 8);
+            int bitIndex = value % (sizeof(int) * 8);
+            bitDictionary[arrayIndex] |= (1 << bitIndex);
+        }
+
         public static void TestSumOfTwoNumbersInArray()
         {
             int[] arr = new int[]{2,5,2,6,3,5,6,2,5,1,0,9,3};
@@ -100,6 +175,22 @@ namespace AlgorithmProblems.Arrays
 
             list = GetIndiciesWhenSumIsFoundAlgo2(arr, 5);
             Console.WriteLine("Algo2: The array value pairs which sum upto 5 are as shown below");
+            PrintArrayValuePairs(list);
+
+            list = GetIndiciesWhenSumIsFoundAlgo3(arr, 5);
+            Console.WriteLine("Algo3: The array value pairs which sum upto 5 are as shown below");
+            PrintArrayValuePairs(list);
+
+            list = GetIndiciesWhenSumIsFoundAlgo1(arr, 3);
+            Console.WriteLine("Algo1: The array value pairs which sum upto 3 are as shown below");
+            PrintArrayValuePairs(list);
+
+            list = GetIndiciesWhenSumIsFoundAlgo2(arr, 3);
+            Console.WriteLine("Algo2: The array value pairs which sum upto 3 are as shown below");
+            PrintArrayValuePairs(list);
+
+            list = GetIndiciesWhenSumIsFoundAlgo3(arr, 3);
+            Console.WriteLine("Algo3: The array value pairs which sum upto 3 are as shown below");
             PrintArrayValuePairs(list);
         }
         private static void PrintArrayValuePairs(List<ArrayPair> list)
