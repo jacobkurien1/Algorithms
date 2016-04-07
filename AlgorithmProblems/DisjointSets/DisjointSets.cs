@@ -81,7 +81,7 @@ namespace AlgorithmProblems.DisjointSets
             ds.Union('e', 'd');
             Console.WriteLine(ds.Find('e'));
             Console.WriteLine(ds.Find('a'));
-            ds.Union('a', 'd');
+            ds.Union(ds.Find('a'), ds.Find('d'));
             Console.WriteLine(ds.Find('a'));
         }
     }

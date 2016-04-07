@@ -47,6 +47,7 @@ namespace AlgorithmProblems
             StringToLongConverter.TestStringToLong();
             PatternMatching.TestPatternMatching();
             RegexMatching.TestMatch();
+            SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
 
             //Console.ReadLine();
 
