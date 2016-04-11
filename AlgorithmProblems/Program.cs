@@ -48,6 +48,7 @@ namespace AlgorithmProblems
             PatternMatching.TestPatternMatching();
             RegexMatching.TestMatch();
             SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
+            SumOfThreeNumbersInArray.TestSumOfThreeNumbersInArray();
 
             //Console.ReadLine();
 
