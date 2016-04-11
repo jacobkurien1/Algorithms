@@ -16,6 +16,7 @@ using AlgorithmProblems.Trees;
 using AlgorithmProblems.Trees.TreeHelper;
 using AlgorithmProblems.Trie;
 using AlgorithmProblems.Trie.TrieHelper;
+using AlgorithmProblems.DisjointSets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,7 @@ namespace AlgorithmProblems
             StringToLongConverter.TestStringToLong();
             PatternMatching.TestPatternMatching();
             RegexMatching.TestMatch();
+            SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
 
             //Console.ReadLine();
 
@@ -70,6 +72,7 @@ namespace AlgorithmProblems
             Matrix_Column_Rows_0.TestMakeRowColZero2();
             RotateMatrix180.TestRotateMatrix180();
             SumOfMatrixElementsFormedByRectangleWithCoordinates.TestSumOfMatrixElements();
+            SortedArrayFromSortedMatrix.TestSortedArrayFromSortedMatrix();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
@@ -178,11 +181,16 @@ namespace AlgorithmProblems
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
             BellmanFord.TestBellmanFord();
+            //Minimum Spanning Tree
+
 
             //Heap problems
             BasicMaxHeap.TestMaxHeap();
             BasicMinHeap.TestMinHeap();
             TestMinHeapMap.DoTest();
+
+            //DisjointSets
+            TestingDisjointSet.Run();
 
             Console.ReadLine();
         }

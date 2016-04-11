@@ -47,6 +47,8 @@
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
     <Compile Include="Arrays\Median.cs" />
     <Compile Include="Arrays\Merge2SortedArrays.cs" />
+    <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
+    <Compile Include="DisjointSets\DisjointSets.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
     <Compile Include="Dynamic Programming\BoxStacking.cs" />
     <Compile Include="Dynamic Programming\DifferentWaysForCoinChange.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
     <Compile Include="matrix problems\Rotate_Matrix_90_degree.cs" />
+    <Compile Include="matrix problems\SortedArrayFromSortedMatrix.cs" />
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Misc\CreditCardCheck.cs" />
     <Compile Include="Misc\ExcelFirstRowConversion.cs" />
