@@ -119,6 +119,7 @@ namespace AlgorithmProblems
             AllCombinationsOfString.TestAllCombinationsOfString();
             AllPermutationsOfString.TestAllPermutationsOfString();
             PhoneNumberToWords.TestPhoneNumberToWords();
+            AllNumbersInRangeWithDifferentDigits.TestAllNumbersInRangeWithDifferentDigits();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();

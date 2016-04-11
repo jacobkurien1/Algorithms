@@ -123,6 +123,7 @@
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\ZerosInFactorial.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
+    <Compile Include="PermutationAndCombination\AllNumbersInRangeWithDifferentDigits.cs" />
     <Compile Include="PermutationAndCombination\AllPermutationsOfString.cs" />
     <Compile Include="PermutationAndCombination\CombinationsOfBinaryString.cs" />
     <Compile Include="PermutationAndCombination\PhoneNumberToWords.cs" />
