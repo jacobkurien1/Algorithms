@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmProblems.Geometry;
 
 namespace AlgorithmProblems
 {
@@ -192,6 +193,9 @@ namespace AlgorithmProblems
 
             //DisjointSets
             TestingDisjointSet.Run();
+
+            //Geometry
+            ClosestPairOfPoints.TestClosestPairOfPoints();
 
             Console.ReadLine();
         }
