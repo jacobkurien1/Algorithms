@@ -196,6 +196,7 @@ namespace AlgorithmProblems
 
             //Geometry
             ClosestPairOfPoints.TestClosestPairOfPoints();
+            RectangleIntersection.TestRectangleIntersection();
 
             Console.ReadLine();
         }
