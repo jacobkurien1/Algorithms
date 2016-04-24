@@ -81,6 +81,8 @@
     <Compile Include="Graphs\CycleInUnDirectedGraph.cs" />
     <Compile Include="Graphs\ExtendedContactsInSocialNetwork.cs" />
     <Compile Include="Graphs\GraphHelper\DirectedGraph.cs" />
+    <Compile Include="Graphs\GraphHelper\DirectedGraphWithVertexDictionary.cs" />
+    <Compile Include="Graphs\GraphHelper\GraphEdge.cs" />
     <Compile Include="Graphs\GraphHelper\GraphHelper.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -90,6 +92,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\DijkstraAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
+    <Compile Include="Graphs\SnakeAndLadder.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Heaps\BasicMaxHeap.cs" />

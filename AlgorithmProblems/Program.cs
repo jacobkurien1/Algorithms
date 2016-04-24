@@ -179,6 +179,7 @@ namespace AlgorithmProblems
             ConstraintsVerification.TestConstraintsVerification();
             ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
             CourseScheduling.TestCourseScheduling();
+            SnakeAndLadder.TestSnakeAndLadder();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
