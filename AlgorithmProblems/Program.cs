@@ -68,6 +68,7 @@ namespace AlgorithmProblems
             QuickSort.TestQuickSort();
             HeapSortTester.TestHeapSort();
             CountingSort.TestSorting();
+            RadixSort.TestRadixSort();
 
             // Matrix Problem
             Rotate_Matrix_90_degree.TestRotateMatrix();
