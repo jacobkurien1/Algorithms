@@ -140,6 +140,7 @@
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\CountingSort.cs" />
     <Compile Include="Sorting\HeapSort.cs" />
     <Compile Include="Sorting\InsertionSort.cs" />
     <Compile Include="Sorting\MergeSort.cs" />

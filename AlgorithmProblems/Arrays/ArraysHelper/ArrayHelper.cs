@@ -10,11 +10,20 @@ namespace AlgorithmProblems.Arrays.ArraysHelper
     {
         public static int[] CreateArray(int size)
         {
+            return CreateArray(size,0, 100);
+        }
+        public static int[] CreateArray(int size, int maxVal)
+        {
+            return CreateArray(size,0,maxVal);
+        }
+
+        public static int[] CreateArray(int size, int minVal, int maxVal)
+        {
             Random rnd = new Random();
             int[] retArr = new int[size];
-            for(int i=0; i<size; i++)
+            for (int i = 0; i < size; i++)
             {
-                retArr[i] = rnd.Next(0, 100);
+                retArr[i] = rnd.Next(minVal, maxVal);
             }
             return retArr;
         }
