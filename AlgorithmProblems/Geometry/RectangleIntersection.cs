@@ -28,7 +28,8 @@ namespace AlgorithmProblems.Geometry
         {
             Rectangle rect1 = new Rectangle(new Point(1, 5), new Point(7, 2));
             Rectangle rect2 = new Rectangle(new Point(5, 3), new Point(10, 1));
-            Console.WriteLine("The intersection is : {0}", RectangleIntersection.IsIntersecting(rect1, rect2));
+            Console.WriteLine("The intersection is : {0}", IsIntersecting(rect1, rect2));
+            Console.WriteLine("The intersection is : {0}", IsIntersecting(rect2, rect1));
         }
     }
 

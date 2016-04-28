@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs.GraphHelper
 {
-    class GraphVertex
+    public class GraphVertex
     {
         public int Data { get; set; }
         public bool IsVisited { get; set; }
