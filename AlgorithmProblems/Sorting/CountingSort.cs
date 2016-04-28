@@ -13,8 +13,9 @@ namespace AlgorithmProblems.Sorting
         /// 1. we first need to get the range of elements in the input array
         /// 2. Create an array(countArr) of size equal to the range of the elements in the input array
         /// 3. Whenever we encounter an element in the inputarray increment the element in countArr at the correct index
-        /// 4. After that scan the input array and foreach element find the value in countArr(which will be the index in the sorted arr)
-        /// 5. Decrement the count of the element after adding it to the sorted array
+        /// 4. Do a cummulative addition on the whole countArr
+        /// 5. After that scan the input array and foreach element find the value in countArr(which will be the index in the sorted arr)
+        /// 6. Decrement the count of the element after adding it to the sorted array
         /// </summary>
         /// <param name="inputArr"></param>
         /// <returns></returns>
@@ -48,18 +49,19 @@ namespace AlgorithmProblems.Sorting
                 ++countArr[inputArr[i] - (min)];
             }
 
+            //4. Do a cummulative addition on the whole countArr
             for(int i=1; i<countArr.Length; i++)
             {
                 countArr[i] += countArr[i - 1];
             }
-            //4. After that scan the input array and foreach element find the value in countArr(which will be the index in the sorted arr)
-            //5. Decrement the count of the element after adding it to the sorted array
+            //5. After that scan the input array and foreach element find the value in countArr(which will be the index in the sorted arr)
             int[] sortedArr = new int[inputArr.Length];
             for(int i= 0; i<inputArr.Length; i++)
             {
                 if (countArr[inputArr[i] - min] != 0)
                 {
                     sortedArr[countArr[inputArr[i] - (min)]-1] = inputArr[i];
+                    //6. Decrement the count of the element after adding it to the sorted array
                     --countArr[inputArr[i] - (min)];
                 }
                 else
