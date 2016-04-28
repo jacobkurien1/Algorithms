@@ -16,6 +16,13 @@ namespace AlgorithmProblems.Sorting
         /// 4. Do a cummulative addition on the whole countArr
         /// 5. After that scan the input array and foreach element find the value in countArr(which will be the index in the sorted arr)
         /// 6. Decrement the count of the element after adding it to the sorted array
+        /// 
+        /// The running time for this algo is O(n+k) where k is the range.
+        /// The space requirement is also O(n+k)
+        /// We should be using this algorithm when k<<n
+        /// 
+        /// This is not a comparison based sorting, hence its running time is O(n) with range proportional to n
+        /// This algo is not stable and online
         /// </summary>
         /// <param name="inputArr"></param>
         /// <returns></returns>
