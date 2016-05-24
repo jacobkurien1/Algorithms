@@ -79,10 +79,19 @@ namespace AlgorithmProblems.Trees
         }
 
         /// <summary>
-        /// TBD
+        /// Post order traversal iteratively is the complicated one among the traversals
+        /// due to its non tail recursion
+        /// 
+        /// We can solve this by using 2 stacks
+        /// Steps are as follows:
+        /// 1. Push the root to stack1
+        /// 2. while stack1 is not empty
+        ///     *pop element from stack1
+        ///     *push the element to stack 2 and push the left and right child into the stack1
+        /// 3. Print the contents of stack2 which will be the postorder
         /// </summary>
         /// <param name="treeNode"></param>
-        public static void PostOrderTraversalIteratively(BinaryTreeNode<int> treeNode)
+        public static void PostOrderTraversalIterativelyWith2Stacks(BinaryTreeNode<int> treeNode)
         {
             if(treeNode == null)
             {
@@ -90,20 +99,84 @@ namespace AlgorithmProblems.Trees
                 return;
             }
             
-            // intialize the stack and populate it with the root->leftNode and root
-            Stack<BinaryTreeNode<int>> st = new Stack<BinaryTreeNode<int>>();
-            
-            while(st.Count > 0)
+            // intialize the two stacks
+            Stack<BinaryTreeNode<int>> st1 = new Stack<BinaryTreeNode<int>>();
+            Stack<BinaryTreeNode<int>> st2 = new Stack<BinaryTreeNode<int>>();
+            st1.Push(treeNode);
+            while(st1.Count > 0)
             {
-                if (treeNode.Right != null)
+                st2.Push(st1.Pop());
+                if (st2.Peek().Left != null)
                 {
-                    st.Push(treeNode.Right);
+                    // if left child is not null, add it
+                    st1.Push(st2.Peek().Left);
                 }
-                st.Push(treeNode);
-                treeNode = treeNode.Left;
+                if (st2.Peek().Right != null)
+                {
+                    // if right child is not null, add it
+                    st1.Push(st2.Peek().Right);
+                }
+            }
+            // Print st2 for the postorder traversal
+            while(st2.Count>0)
+            {
+                Console.Write(st2.Pop().Data + " ");
+            }
+            Console.WriteLine();
+        }
 
+        /// <summary>
+        /// We can do the post order traversal with a single stack
+        /// 
+        /// 1. Set the currentNode as root
+        /// 2. push right node and current Node into stack
+        /// 3. make the currentNode.left as the new currentNode
+        /// 4. if the currentNode == null, pop the node from the stack if stack.Peek() is the right child of the popped node
+        ///     make currentNode = right child and push the popped node back into the stack
+        /// 5. Else print the currentNode and set the currentNode = null
+        /// 
+        /// </summary>
+        /// <param name="treeNode"></param>
+        public static void PostOrderTraversalIterativelySingleStack(BinaryTreeNode<int> treeNode)
+        {
+            if (treeNode == null)
+            {
+                // null check
+                return;
             }
 
+            BinaryTreeNode<int> currentNode = treeNode;
+            // intialize the stack
+            Stack<BinaryTreeNode<int>> st = new Stack<BinaryTreeNode<int>>();
+            do
+            {
+                if (currentNode != null)
+                {
+                    if (currentNode.Right != null)
+                    {
+                        st.Push(currentNode.Right);
+                    }
+                    st.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+                else
+                {
+                    currentNode = st.Pop();
+                    if (st.Count>0 && currentNode.Right == st.Peek())
+                    {
+                        BinaryTreeNode<int> currentNodeActual = st.Pop();
+                        st.Push(currentNode);
+                        currentNode = currentNodeActual;
+                    }
+                    else
+                    {
+                        Console.Write(currentNode.Data + " ");
+
+                        currentNode = null;
+                    }
+                }
+            } while (st.Count > 0);
+            Console.WriteLine();
         }
 
         public static void InOrderTraversal(BinaryTreeNode<int> treeNode)
@@ -185,6 +258,10 @@ namespace AlgorithmProblems.Trees
             Console.WriteLine();
             PreOrderTraversal(bt1.Head);
             Console.WriteLine();
+
+            PostOrderTraversalIterativelyWith2Stacks(bt1.Head);
+            PostOrderTraversalIterativelySingleStack(bt1.Head);
+            PostOrderTraversal(bt1.Head);
 
         }
     }
