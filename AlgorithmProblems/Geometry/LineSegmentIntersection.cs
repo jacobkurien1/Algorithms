@@ -121,6 +121,11 @@ namespace AlgorithmProblems.Geometry
             ls2 = new LineSegment(new Point(0, 0), new Point(20, 20));
 
             Console.WriteLine("The 2 line segments {0} and {1} is {2}", ls1, ls2, IsIntersecting(ls1, ls2));
+
+            ls1 = new LineSegment(new Point(1, 1), new Point(4, 6));
+            ls2 = new LineSegment(new Point(2, 3), new Point(5, 2));
+
+            Console.WriteLine("The 2 line segments {0} and {1} is {2}", ls1, ls2, IsIntersecting(ls1, ls2));
         }
     }
 }
