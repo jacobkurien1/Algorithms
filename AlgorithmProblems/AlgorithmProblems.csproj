@@ -150,10 +150,12 @@
     <Compile Include="Recursion\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\CountingSort.cs" />
     <Compile Include="Sorting\HeapSort.cs" />
     <Compile Include="Sorting\InsertionSort.cs" />
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
+    <Compile Include="Sorting\RadixSort.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
     <Compile Include="Sorting\ShellSort.cs" />
     <Compile Include="Stack and Queue\EvaluateInflixNotation.cs" />
