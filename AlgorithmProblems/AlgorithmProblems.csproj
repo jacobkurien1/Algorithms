@@ -60,6 +60,7 @@
     <Compile Include="Dynamic Programming\LongestIncreasingSubSequence.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromeSubString.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromicSubsequence.cs" />
+    <Compile Include="Dynamic Programming\LongestSubStringWithEqualSum.cs" />
     <Compile Include="Dynamic Programming\MatrixMultiplication.cs" />
     <Compile Include="Dynamic Programming\MaximumAs.cs" />
     <Compile Include="Dynamic Programming\MaxSubMatrixWithAllOnes.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Dynamic Programming\WordBreaking.cs" />
     <Compile Include="Dynamic Programming\WordWrapping.cs" />
     <Compile Include="Geometry\ClosestPairOfPoints.cs" />
+    <Compile Include="Geometry\ConvexHull.cs" />
     <Compile Include="Geometry\GeometryHelper\LineSegment.cs" />
     <Compile Include="Geometry\GeometryHelper\PairOfPoints.cs" />
     <Compile Include="Geometry\GeometryHelper\Point.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Graphs\SnakeAndLadder.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
+    <Compile Include="Greedy Algorithm\HuffmanCoding.cs" />
     <Compile Include="Heaps\BasicMaxHeap.cs" />
     <Compile Include="Heaps\BasicMinHeap.cs" />
     <Compile Include="Heaps\HeapHelper\MaxHeap.cs" />
@@ -198,6 +201,7 @@
     <Compile Include="Trees\TreeHelper\TreeHelper.cs" />
     <Compile Include="Trees\TreeHelper\TreeNode.cs" />
     <Compile Include="Trees\TreeSubtreeOfAnother.cs" />
+    <Compile Include="Trees\TreeToColumns.cs" />
     <Compile Include="Trees\WalkTheBinaryTree.cs" />
     <Compile Include="Trie\CreateAndSearchSimpleTrie.cs" />
     <Compile Include="Trie\ShortestPrefix.cs" />

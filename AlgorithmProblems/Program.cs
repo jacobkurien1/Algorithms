@@ -23,6 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AlgorithmProblems.Geometry;
+using AlgorithmProblems.Greedy_Algorithm;
 
 namespace AlgorithmProblems
 {
@@ -141,6 +142,7 @@ namespace AlgorithmProblems
             LinkedListFromLeavesOfBT.TestLinkedListFromLeavesOfBT();
             ExteriorOfBT.TestPrintExteriorOfBT();
             DepthOfTree.TestGetDepthOfTree();
+            TreeToColumns.TestTreeToColumns();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
@@ -166,6 +168,7 @@ namespace AlgorithmProblems
             BoxStacking.TestBoxStacking();
             WordWrapping.TestWordWrapping();
             MaxSubMatrixWithAllOnes.TestMaxSubMatrixWithAllOnes();
+            LongestSubStringWithEqualSum.TestLongestSubStringWithEqualSum();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
@@ -199,6 +202,10 @@ namespace AlgorithmProblems
             ClosestPairOfPoints.TestClosestPairOfPoints();
             RectangleIntersection.TestRectangleIntersection();
             LineSegmentIntersection.TestLineSegmentIntersection();
+            ConvexHull.TestConvexHull();
+
+            //Greedy Algorithm
+            HuffmanCoding.TestHuffmanCoding();
 
             Console.ReadLine();
         }
