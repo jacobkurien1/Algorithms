@@ -24,6 +24,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AlgorithmProblems.Geometry;
 using AlgorithmProblems.Greedy_Algorithm;
+using AlgorithmProblems.BackTracking;
 
 namespace AlgorithmProblems
 {
@@ -108,8 +109,11 @@ namespace AlgorithmProblems
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
-            Sudoku.TestSudokuSolver();
             MaxSumOfConsecutiveNums.TestMaxSumOfConsecutiveNums();
+
+            // Back tracking problems
+            Sudoku.TestSudokuSolver();
+            HamiltonianCycle.TestHamiltonianCycle();
 
             //Misc Problem
             MinNumOfCoins.TestMinNumOfCoins();

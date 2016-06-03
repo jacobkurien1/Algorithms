@@ -49,6 +49,7 @@
     <Compile Include="Arrays\Merge2SortedArrays.cs" />
     <Compile Include="Arrays\SumOfThreeNumbersInArray.cs" />
     <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
+    <Compile Include="BackTracking\HamiltonianCycle.cs" />
     <Compile Include="DisjointSets\DisjointSets.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
     <Compile Include="Dynamic Programming\BoxStacking.cs" />
@@ -94,6 +95,7 @@
     </Compile>
     <Compile Include="Graphs\GraphHelper\GraphVertex.cs" />
     <Compile Include="Graphs\GraphHelper\UndirectedGraph.cs" />
+    <Compile Include="Graphs\GraphHelper\UndirectedGraphWithVertexDictionary.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\BellmanFord.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\DijkstraAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
@@ -147,7 +149,7 @@
     <Compile Include="PermutationAndCombination\ShuffleAList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursion\Sudoku.cs" />
+    <Compile Include="BackTracking\Sudoku.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
     <Compile Include="Sorting\CountingSort.cs" />

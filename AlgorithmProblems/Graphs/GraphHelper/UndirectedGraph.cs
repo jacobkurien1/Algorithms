@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs.GraphHelper
 {
-    class UndirectedGraph
+    public class UndirectedGraph
     {
         public List<GraphVertex> AllVertices { get; set; } 
 
