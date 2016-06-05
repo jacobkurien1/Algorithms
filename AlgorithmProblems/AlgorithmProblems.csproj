@@ -145,6 +145,7 @@
     <Compile Include="PermutationAndCombination\AllNumbersInRangeWithDifferentDigits.cs" />
     <Compile Include="PermutationAndCombination\AllPermutationsOfString.cs" />
     <Compile Include="PermutationAndCombination\CombinationsOfBinaryString.cs" />
+    <Compile Include="PermutationAndCombination\DivideSetIntoTwoEqaulSetsWithMinSumDiff.cs" />
     <Compile Include="PermutationAndCombination\PhoneNumberToWords.cs" />
     <Compile Include="PermutationAndCombination\ShuffleAList.cs" />
     <Compile Include="Program.cs" />
