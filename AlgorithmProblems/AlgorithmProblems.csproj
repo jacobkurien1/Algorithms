@@ -67,6 +67,7 @@
     <Compile Include="Dynamic Programming\MaxSubMatrixWithAllOnes.cs" />
     <Compile Include="Dynamic Programming\MinCostPath.cs" />
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
+    <Compile Include="Dynamic Programming\PartitionArrayIntoEqualSumSets.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
     <Compile Include="Dynamic Programming\WordBreaking.cs" />
     <Compile Include="Dynamic Programming\WordWrapping.cs" />
