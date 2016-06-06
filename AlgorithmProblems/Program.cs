@@ -132,7 +132,7 @@ namespace AlgorithmProblems
             AllPermutationsOfString.TestAllPermutationsOfString();
             PhoneNumberToWords.TestPhoneNumberToWords();
             AllNumbersInRangeWithDifferentDigits.TestAllNumbersInRangeWithDifferentDigits();
-            DivideSetIntoTwoEqaulSetsWithMinSumDiff.TestDivideSetIntoTwoEqaulSetsWithMinSumDiff();
+            DivideSetIntoTwoEqualSetsWithMinSumDiff.TestDivideSetIntoTwoEqualSetsWithMinSumDiff();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();
