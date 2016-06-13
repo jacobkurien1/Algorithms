@@ -177,6 +177,7 @@ namespace AlgorithmProblems
             MaxSubMatrixWithAllOnes.TestMaxSubMatrixWithAllOnes();
             LongestSubStringWithEqualSum.TestLongestSubStringWithEqualSum();
             PartitionArrayIntoEqualSumSets.TestPartitionArrayIntoEqualSumSets();
+            MaxSumRectangle.TestMaxSumRectangle();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
