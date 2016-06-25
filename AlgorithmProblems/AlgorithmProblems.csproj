@@ -69,6 +69,7 @@
     <Compile Include="Dynamic Programming\MinCostPath.cs" />
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
     <Compile Include="Dynamic Programming\PartitionArrayIntoEqualSumSets.cs" />
+    <Compile Include="Dynamic Programming\RegularExpressionMatch.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
     <Compile Include="Dynamic Programming\WordBreaking.cs" />
     <Compile Include="Dynamic Programming\WordWrapping.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
     <Compile Include="Trees\DepthOfTree.cs" />
     <Compile Include="Trees\ExteriorOfBT.cs" />
+    <Compile Include="Trees\KthSmallestElementFromBST.cs" />
     <Compile Include="Trees\LinkedListFromLeavesOfBT.cs" />
     <Compile Include="Trees\LinkedListOfTreeNodesAtEachDepth.cs" />
     <Compile Include="Trees\MaxSumOnTreeBranch.cs" />

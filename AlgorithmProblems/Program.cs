@@ -150,6 +150,7 @@ namespace AlgorithmProblems
             ExteriorOfBT.TestPrintExteriorOfBT();
             DepthOfTree.TestGetDepthOfTree();
             TreeToColumns.TestTreeToColumns();
+            KthSmallestElementFromBST.TestKthSmallestElementFromBST();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
