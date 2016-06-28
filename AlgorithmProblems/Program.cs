@@ -52,6 +52,7 @@ namespace AlgorithmProblems
             RegexMatching.TestMatch();
             SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
             SumOfThreeNumbersInArray.TestSumOfThreeNumbersInArray();
+            PairInSortedArrayClosestToAParticularValue.TestPairInSortedArrayClosestToAParticularValue();
 
             //Console.ReadLine();
 
