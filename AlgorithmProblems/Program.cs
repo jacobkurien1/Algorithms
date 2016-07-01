@@ -195,6 +195,7 @@ namespace AlgorithmProblems
             ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
             CourseScheduling.TestCourseScheduling();
             SnakeAndLadder.TestSnakeAndLadder();
+            IsGraphATree.TestIsGraphATree();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
