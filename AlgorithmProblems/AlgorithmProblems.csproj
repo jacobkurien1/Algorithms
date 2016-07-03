@@ -156,6 +156,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BackTracking\Sudoku.cs" />
+    <Compile Include="RandomizedAlgo\RandomGeneration.cs" />
     <Compile Include="Recursion\TowerOfHanoi.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
     <Compile Include="Sorting\CountingSort.cs" />

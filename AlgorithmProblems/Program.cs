@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using AlgorithmProblems.Geometry;
 using AlgorithmProblems.Greedy_Algorithm;
 using AlgorithmProblems.BackTracking;
+using AlgorithmProblems.RandomizedAlgo;
 
 namespace AlgorithmProblems
 {
@@ -219,6 +220,9 @@ namespace AlgorithmProblems
 
             //Greedy Algorithm
             HuffmanCoding.TestHuffmanCoding();
+
+            //Randomized Algorithm
+            RandomGeneration.TestRandomGeneration();
 
             Console.ReadLine();
         }
