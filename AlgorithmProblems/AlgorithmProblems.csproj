@@ -69,6 +69,7 @@
     <Compile Include="Dynamic Programming\MaxSumRectangle.cs" />
     <Compile Include="Dynamic Programming\MinCostPath.cs" />
     <Compile Include="Dynamic Programming\MinNumberOfJumps.cs" />
+    <Compile Include="Dynamic Programming\NumRepresentedByPerfectSquares.cs" />
     <Compile Include="Dynamic Programming\PartitionArrayIntoEqualSumSets.cs" />
     <Compile Include="Dynamic Programming\RegularExpressionMatch.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />

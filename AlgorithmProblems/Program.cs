@@ -182,6 +182,7 @@ namespace AlgorithmProblems
             PartitionArrayIntoEqualSumSets.TestPartitionArrayIntoEqualSumSets();
             MaxSumRectangle.TestMaxSumRectangle();
             RegularExpressionMatch.TestRegularExpressionMatch();
+            NumRepresentedByPerfectSquares.TestNumRepresentedByPerfectSquares();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
