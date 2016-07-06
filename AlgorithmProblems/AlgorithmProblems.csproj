@@ -58,6 +58,7 @@
     <Compile Include="Dynamic Programming\DistanceOfWords.cs" />
     <Compile Include="Dynamic Programming\KnapSackProblem.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
+    <Compile Include="Dynamic Programming\LongestCommonSubsequenceInSameString.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubString.cs" />
     <Compile Include="Dynamic Programming\LongestIncreasingSubSequence.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromeSubString.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="Stack and Queue\ThreeStackWithOneArray.cs" />
     <Compile Include="Stack and Queue\WellFormedExpression.cs" />
     <Compile Include="StringProblems\Anagrams.cs" />
+    <Compile Include="StringProblems\PalindromeInStringPermutation.cs" />
     <Compile Include="StringProblems\PatternMatching.cs" />
     <Compile Include="StringProblems\RegexMatching.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />

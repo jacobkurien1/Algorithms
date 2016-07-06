@@ -20,6 +20,8 @@ namespace AlgorithmProblems.Dynamic_Programming
         /// 
         /// We need a backtrack[i,j] to get the perfect squares which are used to represent num
         /// 
+        /// The running time for this algo is O(num * sqrt(num))
+        /// and the space required is O(num * sqrt(num))
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>

@@ -54,6 +54,7 @@ namespace AlgorithmProblems
             SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
             SumOfThreeNumbersInArray.TestSumOfThreeNumbersInArray();
             PairInSortedArrayClosestToAParticularValue.TestPairInSortedArrayClosestToAParticularValue();
+            PalindromeInStringPermutation.TestPalindromeInStringPermutation();
 
             //Console.ReadLine();
 
@@ -183,6 +184,7 @@ namespace AlgorithmProblems
             MaxSumRectangle.TestMaxSumRectangle();
             RegularExpressionMatch.TestRegularExpressionMatch();
             NumRepresentedByPerfectSquares.TestNumRepresentedByPerfectSquares();
+            LongestCommonSubsequenceInSameString.TestLongestCommonSubsequenceInSameString();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
