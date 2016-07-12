@@ -200,6 +200,8 @@ namespace AlgorithmProblems
             CourseScheduling.TestCourseScheduling();
             SnakeAndLadder.TestSnakeAndLadder();
             IsGraphATree.TestIsGraphATree();
+            ReverseGraph.TestReverseGraph();
+            ConnectedComponents.TestConnectedComponents();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();

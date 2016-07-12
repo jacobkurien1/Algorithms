@@ -154,14 +154,27 @@ namespace AlgorithmProblems.Graphs.GraphHelper
         public static void PrintDirectedGraphInAdjacencyMatrix(DirectedGraph dg)
         {
             int matLength = dg.AllVertices.Count;
-            string[,] readableAdjMat = new string[matLength+1, matLength+1];
-            for(int i = 1; i< matLength+1; i++)
+            int[,] readableAdjMat = new int[matLength + 1, matLength + 1];
+            foreach (GraphVertex vertex in dg.AllVertices)
             {
-                readableAdjMat[i, 0] = dg.AllVertices[i-1].Data.ToString();
-                readableAdjMat[0, i] = dg.AllVertices[i-1].Data.ToString();
+                if (vertex.NeighbourVertices != null)
+                {
+                    foreach (GraphVertex neighbour in vertex.NeighbourVertices)
+                    {
+                        readableAdjMat[vertex.Data, neighbour.Data] = 1;
+                    }
+                }
+            }
+
+            for(int i = 0; i<=matLength; i++)
+            {
+                for(int j = 0; j<=matLength; j++)
+                {
+                    Console.Write("{0} ", readableAdjMat[i, j]);
+                }
+                Console.WriteLine();
             }
         }
-
         
     }
 }
