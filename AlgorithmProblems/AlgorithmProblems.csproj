@@ -110,6 +110,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
     <Compile Include="Graphs\SnakeAndLadder.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
+    <Compile Include="Graphs\StronglyConnectedGraph.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Greedy Algorithm\HuffmanCoding.cs" />
     <Compile Include="Heaps\BasicMaxHeap.cs" />

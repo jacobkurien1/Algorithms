@@ -12,6 +12,7 @@ namespace AlgorithmProblems.Graphs
     /// </summary>
     public static class ReverseGraph
     {
+        
         public static DirectedGraph ReverseDirectedGraph(this DirectedGraph dg)
         {
             // Add all edges to this dictionary where for an edge u->v add it as dict[v].Add(u)
@@ -37,6 +38,45 @@ namespace AlgorithmProblems.Graphs
 
             // Make the changes to all the vertices in the directed graph
             foreach(GraphVertex vertex in dg.AllVertices)
+            {
+                if (allVertices.ContainsKey(vertex))
+                {
+                    vertex.NeighbourVertices = allVertices[vertex];
+                }
+                else
+                {
+                    vertex.NeighbourVertices = null;
+                }
+            }
+
+            return dg;
+        }
+
+        public static DirectedGraphWithVertexDictionary ReverseDirectedGraphWithVertexDictionary(this DirectedGraphWithVertexDictionary dg)
+        {
+            // Add all edges to this dictionary where for an edge u->v add it as dict[v].Add(u)
+            Dictionary<GraphVertex, List<GraphVertex>> allVertices = new Dictionary<GraphVertex, List<GraphVertex>>();
+
+            foreach (GraphVertex vertex in dg.AllVertices.Values)
+            {
+                if (vertex.NeighbourVertices != null)
+                {
+                    foreach (GraphVertex neighbour in vertex.NeighbourVertices)
+                    {
+                        if (!allVertices.ContainsKey(neighbour))
+                        {
+                            allVertices.Add(neighbour, new List<GraphVertex> { vertex });
+                        }
+                        else
+                        {
+                            allVertices[neighbour].Add(vertex);
+                        }
+                    }
+                }
+            }
+
+            // Make the changes to all the vertices in the directed graph
+            foreach (GraphVertex vertex in dg.AllVertices.Values)
             {
                 if (allVertices.ContainsKey(vertex))
                 {

@@ -134,6 +134,60 @@ namespace AlgorithmProblems.Graphs.GraphHelper
             return udg;
         }
 
+        public static UndirectedGraph CreateUndirectedGraphStronglyConnected()
+        {
+            UndirectedGraph udg = new UndirectedGraph();
+            for (int i = 0; i < 6; i++)
+            {
+                udg.AllVertices.Add(new GraphVertex(i));
+            }
+
+            udg.AddEdge(0, 1);
+            udg.AddEdge(1, 2);
+            udg.AddEdge(3, 2);
+            udg.AddEdge(2, 4);
+            udg.AddEdge(2, 5);
+
+            return udg;
+        }
+
+        public static UndirectedGraph CreateUndirectedGraphNotStronglyConnected()
+        {
+            UndirectedGraph udg = new UndirectedGraph();
+            for (int i = 0; i < 6; i++)
+            {
+                udg.AllVertices.Add(new GraphVertex(i));
+            }
+
+            udg.AddEdge(0, 1);
+            udg.AddEdge(1, 2);
+            udg.AddEdge(3, 2);
+            udg.AddEdge(2, 4);
+
+            return udg;
+        }
+
+        public static DirectedGraphWithVertexDictionary CreateDirectedGraphWithVertexDictNotStronglyConnected()
+        {
+            DirectedGraphWithVertexDictionary dg = new DirectedGraphWithVertexDictionary();
+            dg.AddEdge(0, 1);
+            dg.AddEdge(1, 2);
+            dg.AddEdge(2, 3);
+            dg.AddEdge(3, 4);
+            return dg;
+        }
+
+        public static DirectedGraphWithVertexDictionary CreateDirectedGraphWithVertexDictStronglyConnected()
+        {
+            DirectedGraphWithVertexDictionary dg = new DirectedGraphWithVertexDictionary();
+            dg.AddEdge(0, 1);
+            dg.AddEdge(1, 2);
+            dg.AddEdge(2, 3);
+            dg.AddEdge(3, 4);
+            dg.AddEdge(4, 0);
+            return dg;
+        }
+
         internal static UndirectedGraph CreateUndirectedGraphWithCycle()
         {
             UndirectedGraph udg = new UndirectedGraph();

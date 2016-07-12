@@ -201,6 +201,7 @@ namespace AlgorithmProblems
             SnakeAndLadder.TestSnakeAndLadder();
             IsGraphATree.TestIsGraphATree();
             ReverseGraph.TestReverseGraph();
+            StronglyConnectedGraph.TestStronglyConnectedGraph();
             ConnectedComponents.TestConnectedComponents();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
