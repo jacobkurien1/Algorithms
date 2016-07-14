@@ -41,11 +41,131 @@ namespace AlgorithmProblems.Graphs
         /// <returns></returns>
         public List<List<int>> GetStronglyConnectedComponents(DirectedGraph dg)
         {
+            if (dg.AllVertices.Count == 0)
+            {
+                // error condition
+                throw new ArgumentException("The graph is empty");
+            }
+            List<List<int>> allSCC = new List<List<int>>();
 
+            // 1. Initialize all vertices' isvisited as false
+            foreach (GraphVertex vertex in dg.AllVertices)
+            {
+                vertex.IsVisited = false;
+            }
+
+            // 2.Do DFS on an arbitarily selected vertex v.And push the vertex into a stack once all its neighbours are visited
+            Stack<GraphVertex> st = new Stack<GraphVertex>();
+            foreach (GraphVertex vertex in dg.AllVertices)
+            {
+                if(!vertex.IsVisited)
+                {
+                    DFS(vertex, st);
+                }
+            }
+
+            // 3. Initialize all vertices' isvisited as false
+            foreach (GraphVertex vertex in dg.AllVertices)
+            {
+                vertex.IsVisited = false;
+            }
+
+            // 4. Reverse all the edges of the graph
+            dg = dg.ReverseDirectedGraph();
+
+            // 5. Pop vertex from stack and do DFS if the vertex is not visited. All the vertices reached by DFS will for one SCC
+            while(st.Count>0)
+            {
+                GraphVertex vertex = st.Pop();
+                if (!vertex.IsVisited)
+                {
+                    List<int> oneSCC = new List<int>();
+                    DFS(vertex, oneSCC);
+                    allSCC.Add(oneSCC);
+                }
+
+            }
+            return allSCC;
+        }
+
+        /// <summary>
+        /// This is the DFS subroutine
+        /// </summary>
+        /// <param name="vertex"></param>
+        private void DFS(GraphVertex vertex, Stack<GraphVertex> st)
+        {
+            if (vertex != null)
+            {
+                vertex.IsVisited = true;
+                if (vertex.NeighbourVertices != null)
+                {
+                    foreach (GraphVertex neighbour in vertex.NeighbourVertices)
+                    {
+                        if (!neighbour.IsVisited)
+                        {
+                            DFS(neighbour, st);
+                        }
+                    }
+                }
+                st.Push(vertex);
+            }
+        }
+
+        private void DFS(GraphVertex vertex, List<int> scc)
+        {
+            if (vertex != null)
+            {
+                vertex.IsVisited = true;
+                scc.Add(vertex.Data);
+                if (vertex.NeighbourVertices != null)
+                {
+                    foreach (GraphVertex neighbour in vertex.NeighbourVertices)
+                    {
+                        if (!neighbour.IsVisited)
+                        {
+                            DFS(neighbour, scc);
+                        }
+                    }
+                }
+            }
         }
 
         public static void TestConnectedComponents()
         {
+            DirectedGraph dg = new DirectedGraph();
+            for(int i=0; i<=7; i++)
+            {
+                dg.AllVertices.Add(new GraphVertex(i));
+            }
+            dg.AddEdge(1, 0);
+            dg.AddEdge(0, 2);
+            dg.AddEdge(2, 1);
+            dg.AddEdge(0, 5);
+            dg.AddEdge(5, 6);
+            dg.AddEdge(6, 7);
+            dg.AddEdge(7, 5);
+            ConnectedComponents cc = new ConnectedComponents();
+            List<List<int>> allSCC = cc.GetStronglyConnectedComponents(dg);
+            Console.WriteLine("The SCC are as shown below:");
+            PrintSCC(allSCC);
         }
+
+        private static void PrintSCC(List<List<int>> allSCC)
+        {
+            int sccCount = 1;
+            
+            foreach (List<int> oneSCC in allSCC)
+            {
+                Console.Write("{0} : ", sccCount);
+                foreach (int graphVertex in oneSCC)
+                {
+                    Console.Write("{0}, ", graphVertex);
+                }
+                Console.WriteLine();
+                sccCount++;
+            }
+
+        }
+
     }
 }
