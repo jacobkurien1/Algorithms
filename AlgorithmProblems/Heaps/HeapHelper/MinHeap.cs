@@ -103,6 +103,30 @@ namespace AlgorithmProblems.Heaps.HeapHelper
         }
 
         /// <summary>
+        /// Change the oldValue with a newVal
+        /// </summary>
+        /// <param name="newVal"></param>
+        /// <param name="oldVal"></param>
+        public void Replace(T newVal, T oldVal)
+        {
+            int index = -1;
+            for(int i=0; i< _currentNumberOfElements; i++)
+            {
+                if(_arrayToStoreTree[i].CompareTo(oldVal) ==0)
+                {
+                    //found the oldValue Node
+                    index = i;
+                }
+            }
+            if(index ==-1)
+            {
+                // We have not found the oldVal hence return
+                return;
+            }
+            ChangePriority(newVal, index);
+        }
+
+        /// <summary>
         /// This method assumes that the left and right subtree from node at index 
         /// is following the min heap property but arr[i] might not be following the 
         /// minheap property correctly.

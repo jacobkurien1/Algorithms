@@ -26,6 +26,7 @@ using AlgorithmProblems.Geometry;
 using AlgorithmProblems.Greedy_Algorithm;
 using AlgorithmProblems.BackTracking;
 using AlgorithmProblems.RandomizedAlgo;
+using AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix;
 
 namespace AlgorithmProblems
 {
@@ -207,6 +208,7 @@ namespace AlgorithmProblems
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
             BellmanFord.TestBellmanFord();
+            TravelFromLeftToRightInMatrix.TestTravelFromLeftToRightInMatrix();
             //Minimum Spanning Tree
 
 

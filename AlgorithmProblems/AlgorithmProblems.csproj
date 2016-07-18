@@ -108,6 +108,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\DijkstraAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\TravelFromLeftToRightInMatrix.cs" />
     <Compile Include="Graphs\SnakeAndLadder.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
     <Compile Include="Graphs\StronglyConnectedGraph.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="Linked List\ReverseAdjacentNodesInLinkedList.cs" />
     <Compile Include="Linked List\ReverseLinkedList.cs" />
+    <Compile Include="matrix problems\CountZerosInMatrix.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
