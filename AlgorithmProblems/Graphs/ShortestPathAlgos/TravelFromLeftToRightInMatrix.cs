@@ -28,7 +28,8 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix
         /// Lets define a source cell which has edges which connect to all the cells on the left axis ie mat[i,0]
         /// Also define a destination cell which has all edges connected to all the cells on the right axis ie mat[i,mat.Length-1]
         /// 
-        /// Then we can do a djkstra's shortest path algorithm to figure out the 
+        /// Then we can do a djkstra's shortest path algorithm to figure out the shortest path.
+        /// The running time of this algo is O(V+E) in worse case E = O(V^2)
         /// </summary>
         /// <param name="mat"></param>
         /// <returns></returns>

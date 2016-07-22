@@ -27,6 +27,7 @@ using AlgorithmProblems.Greedy_Algorithm;
 using AlgorithmProblems.BackTracking;
 using AlgorithmProblems.RandomizedAlgo;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix;
+using AlgorithmProblems.Bit_Algorithms;
 
 namespace AlgorithmProblems
 {
@@ -231,6 +232,9 @@ namespace AlgorithmProblems
 
             //Randomized Algorithm
             RandomGeneration.TestRandomGeneration();
+
+            // Bit Algorithms
+            IntHaveOppositeSigns.TestIntHaveOppositeSigns();
 
             Console.ReadLine();
         }

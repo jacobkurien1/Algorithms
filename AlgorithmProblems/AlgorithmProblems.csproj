@@ -51,6 +51,7 @@
     <Compile Include="Arrays\SumOfThreeNumbersInArray.cs" />
     <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
     <Compile Include="BackTracking\HamiltonianCycle.cs" />
+    <Compile Include="Bit Algorithms\IntHaveOppositeSigns.cs" />
     <Compile Include="DisjointSets\DisjointSets.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
     <Compile Include="Dynamic Programming\BoxStacking.cs" />
@@ -230,9 +231,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bit Algorithms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
