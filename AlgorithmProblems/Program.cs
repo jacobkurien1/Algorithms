@@ -84,6 +84,7 @@ namespace AlgorithmProblems
             RotateMatrix180.TestRotateMatrix180();
             SumOfMatrixElementsFormedByRectangleWithCoordinates.TestSumOfMatrixElements();
             SortedArrayFromSortedMatrix.TestSortedArrayFromSortedMatrix();
+            SearchWordInMatrix.TestSearchWordInMatrix();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
