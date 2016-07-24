@@ -195,6 +195,7 @@
     <Compile Include="Stack and Queue\ThreeStackWithOneArray.cs" />
     <Compile Include="Stack and Queue\WellFormedExpression.cs" />
     <Compile Include="StringProblems\Anagrams.cs" />
+    <Compile Include="StringProblems\EditDistanceBetweenStrings.cs" />
     <Compile Include="StringProblems\PalindromeInStringPermutation.cs" />
     <Compile Include="StringProblems\PatternMatching.cs" />
     <Compile Include="StringProblems\RegexMatching.cs" />

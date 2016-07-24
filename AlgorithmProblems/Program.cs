@@ -57,6 +57,7 @@ namespace AlgorithmProblems
             SumOfThreeNumbersInArray.TestSumOfThreeNumbersInArray();
             PairInSortedArrayClosestToAParticularValue.TestPairInSortedArrayClosestToAParticularValue();
             PalindromeInStringPermutation.TestPalindromeInStringPermutation();
+            EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
 
             //Console.ReadLine();
 
