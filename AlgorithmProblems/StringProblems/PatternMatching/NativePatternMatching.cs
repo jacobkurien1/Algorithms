@@ -11,6 +11,15 @@ namespace AlgorithmProblems.PatternMatching
     /// </summary>
     class NativePatternMatching
     {
+
+        /// <summary>
+        /// This is a native pattern searching algorithm.
+        /// Where we check for the pattern in each index of the text.
+        /// The running time of this algorithm is O(textLength* patternLength)
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="pattern"></param>
+        /// <returns></returns>
         private static List<int> GetAllMatches(string text, string pattern)
         {
             List<int> ret = new List<int>();
