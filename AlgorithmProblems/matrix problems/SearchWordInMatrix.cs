@@ -15,6 +15,7 @@ namespace AlgorithmProblems.matrix_problems
         /// <summary>
         /// Traverse the complete matrix and whenever the text[0] matches with the mat[i,j]
         /// go in all the 8 directions to see whether there is a match.
+        /// The running time of this algorithm is O(rowlength*colLength*text.Length)
         /// </summary>
         /// <param name="mat">matrix from which we need to search the string</param>
         /// <param name="text">string to search for</param>

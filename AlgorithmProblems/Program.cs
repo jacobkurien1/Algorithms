@@ -130,6 +130,7 @@ namespace AlgorithmProblems
             Skyline.TestSkyline();
             SumOfSquaresWithoutMultiplication.TestSumOfSquares();
             MergeIntervals.TestMergeIntervals();
+            WidthOfCalendar.TestWidthOfCalendar();
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();
