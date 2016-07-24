@@ -28,6 +28,7 @@ using AlgorithmProblems.BackTracking;
 using AlgorithmProblems.RandomizedAlgo;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix;
 using AlgorithmProblems.Bit_Algorithms;
+using AlgorithmProblems.PatternMatching;
 
 namespace AlgorithmProblems
 {
@@ -51,13 +52,15 @@ namespace AlgorithmProblems
             StringRotation.TestIsThisRotatedString();
             RemoveDuplicates.TestRemoveDuplicatesFromString();
             StringToLongConverter.TestStringToLong();
-            PatternMatching.TestPatternMatching();
             RegexMatching.TestMatch();
             SumOfTwoNumbersInArray.TestSumOfTwoNumbersInArray();
             SumOfThreeNumbersInArray.TestSumOfThreeNumbersInArray();
             PairInSortedArrayClosestToAParticularValue.TestPairInSortedArrayClosestToAParticularValue();
             PalindromeInStringPermutation.TestPalindromeInStringPermutation();
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
+            // Pattern Matching
+            NativePatternMatching.TestNativePatternMatching();
+            BoyerMoorePatternMatching.TestPatternMatching();
 
             //Console.ReadLine();
 
@@ -238,6 +241,9 @@ namespace AlgorithmProblems
 
             // Bit Algorithms
             IntHaveOppositeSigns.TestIntHaveOppositeSigns();
+
+            
+
 
             Console.ReadLine();
         }

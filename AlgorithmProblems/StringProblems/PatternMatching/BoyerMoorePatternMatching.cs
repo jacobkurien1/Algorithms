@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.StringProblems
 {
-    class PatternMatching
+    class BoyerMoorePatternMatching
     {
         private static List<int> BoyerMooreHorsePoolAlgo(string textStr, string searchStr)
         {

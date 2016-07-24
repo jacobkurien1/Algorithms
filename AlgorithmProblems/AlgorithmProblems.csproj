@@ -155,6 +155,7 @@
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\WidthOfCalendar.cs" />
     <Compile Include="Misc\ZerosInFactorial.cs" />
+    <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
     <Compile Include="PermutationAndCombination\AllNumbersInRangeWithDifferentDigits.cs" />
     <Compile Include="PermutationAndCombination\AllPermutationsOfString.cs" />
@@ -197,7 +198,7 @@
     <Compile Include="StringProblems\Anagrams.cs" />
     <Compile Include="StringProblems\EditDistanceBetweenStrings.cs" />
     <Compile Include="StringProblems\PalindromeInStringPermutation.cs" />
-    <Compile Include="StringProblems\PatternMatching.cs" />
+    <Compile Include="StringProblems\PatternMatching\BoyerMoorePatternMatching.cs" />
     <Compile Include="StringProblems\RegexMatching.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
