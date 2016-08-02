@@ -63,6 +63,7 @@ namespace AlgorithmProblems
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();
             BoyerMoorePatternMatching.TestPatternMatching();
+            RabinKarp.TestRabinKarp();
 
             //Console.ReadLine();
 

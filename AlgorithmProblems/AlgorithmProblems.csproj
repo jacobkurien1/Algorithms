@@ -200,6 +200,7 @@
     <Compile Include="StringProblems\EditDistanceBetweenStrings.cs" />
     <Compile Include="StringProblems\PalindromeInStringPermutation.cs" />
     <Compile Include="StringProblems\PatternMatching\BoyerMoorePatternMatching.cs" />
+    <Compile Include="StringProblems\PatternMatching\RabinKarp.cs" />
     <Compile Include="StringProblems\RegexMatching.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
