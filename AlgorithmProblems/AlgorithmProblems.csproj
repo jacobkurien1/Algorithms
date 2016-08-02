@@ -155,6 +155,7 @@
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\WidthOfCalendar.cs" />
     <Compile Include="Misc\ZerosInFactorial.cs" />
+    <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
     <Compile Include="PermutationAndCombination\AllNumbersInRangeWithDifferentDigits.cs" />

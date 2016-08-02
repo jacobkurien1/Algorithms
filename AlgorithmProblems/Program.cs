@@ -29,6 +29,7 @@ using AlgorithmProblems.RandomizedAlgo;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix;
 using AlgorithmProblems.Bit_Algorithms;
 using AlgorithmProblems.PatternMatching;
+using AlgorithmProblems.StringProblems.PatternMatching;
 
 namespace AlgorithmProblems
 {
@@ -60,6 +61,7 @@ namespace AlgorithmProblems
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
+            KMPPatternMatching.TestKMPPatternMatching();
             BoyerMoorePatternMatching.TestPatternMatching();
 
             //Console.ReadLine();
