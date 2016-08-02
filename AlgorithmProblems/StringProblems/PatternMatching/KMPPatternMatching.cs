@@ -92,19 +92,23 @@ namespace AlgorithmProblems.StringProblems.PatternMatching
             {
                 if(pattern[suffixIndex] == pattern[prefixIndex])
                 {
+                    // When a match happens
                     prefixArr[suffixIndex] = prefixIndex + 1;
                     prefixIndex++;
                     suffixIndex++;
                 }
                 else
                 {
+                    // There is a mismatch
                     if (prefixIndex == 0)
                     {
+                        // We should end as the prefix which is also a suffix is not found
                         prefixArr[suffixIndex] = 0;
                         suffixIndex++;
                     }
                     else
                     {
+                        // get the new prefixIndex to start checking for the match again
                         prefixIndex = prefixArr[prefixIndex - 1];
                     }
                 }
@@ -120,15 +124,15 @@ namespace AlgorithmProblems.StringProblems.PatternMatching
             Console.WriteLine("The pattern:{0} is present in the text:{1}", pattern, text);
             PrintMatches(GetAllMatches(text, pattern));
 
-            //text = "Get all textext in the string tex";
-            //pattern = "textx";
-            //Console.WriteLine("The pattern:{0} is present in the text:{1}", pattern, text);
-            //PrintMatches(GetAllMatches(text, pattern));
+            text = "Get all textext in the string tex";
+            pattern = "textx";
+            Console.WriteLine("The pattern:{0} is present in the text:{1}", pattern, text);
+            PrintMatches(GetAllMatches(text, pattern));
 
-            //text = "tttttttt";
-            //pattern = "t";
-            //Console.WriteLine("The pattern:{0} is present in the text:{1}", pattern, text);
-            //PrintMatches(GetAllMatches(text, pattern));
+            text = "tttttttt";
+            pattern = "t";
+            Console.WriteLine("The pattern:{0} is present in the text:{1}", pattern, text);
+            PrintMatches(GetAllMatches(text, pattern));
 
             text = "abxabcabcaby";
             pattern = "abcaby";
