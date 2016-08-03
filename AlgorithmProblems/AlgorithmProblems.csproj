@@ -87,8 +87,8 @@
     <Compile Include="Geometry\LineSegmentIntersection.cs" />
     <Compile Include="Graphs\AllPaths.cs" />
     <Compile Include="Graphs\AllPathsGivenStartEndVertex.cs" />
-    <Compile Include="Graphs\ColorVertices.cs" />
-    <Compile Include="Graphs\ConnectedComponents.cs" />
+    <Compile Include="Graphs\GraphColoring\ColorVertices.cs" />
+    <Compile Include="Graphs\ConnectedComponents\ConnectedComponents.cs" />
     <Compile Include="Graphs\ConstraintsVerification.cs" />
     <Compile Include="Graphs\CourseScheduling.cs" />
     <Compile Include="Graphs\CycleInDirectedGraph.cs" />
@@ -112,7 +112,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\TravelFromLeftToRightInMatrix.cs" />
     <Compile Include="Graphs\SnakeAndLadder.cs" />
     <Compile Include="Graphs\SolveAMaze.cs" />
-    <Compile Include="Graphs\StronglyConnectedGraph.cs" />
+    <Compile Include="Graphs\ConnectedComponents\StronglyConnectedGraph.cs" />
     <Compile Include="Graphs\TransformOneWordToAnother.cs" />
     <Compile Include="Greedy Algorithm\HuffmanCoding.cs" />
     <Compile Include="Heaps\BasicMaxHeap.cs" />
