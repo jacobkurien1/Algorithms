@@ -127,6 +127,7 @@ namespace AlgorithmProblems
             // Back tracking problems
             Sudoku.TestSudokuSolver();
             HamiltonianCycle.TestHamiltonianCycle();
+            GraphColoringWithMColors.TestGraphColoringWithMColors();
 
             //Misc Problem
             MinNumOfCoins.TestMinNumOfCoins();

@@ -50,6 +50,7 @@
     <Compile Include="Arrays\PairInSortedArrayClosestToAParticularValue.cs" />
     <Compile Include="Arrays\SumOfThreeNumbersInArray.cs" />
     <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
+    <Compile Include="BackTracking\GraphColoringWithMColors.cs" />
     <Compile Include="BackTracking\HamiltonianCycle.cs" />
     <Compile Include="Bit Algorithms\IntHaveOppositeSigns.cs" />
     <Compile Include="DisjointSets\DisjointSets.cs" />
