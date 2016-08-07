@@ -217,6 +217,7 @@
     <Compile Include="Trees\KthSmallestElementFromBST.cs" />
     <Compile Include="Trees\LinkedListFromLeavesOfBT.cs" />
     <Compile Include="Trees\LinkedListOfTreeNodesAtEachDepth.cs" />
+    <Compile Include="Trees\MakeBSTFromPreOrder.cs" />
     <Compile Include="Trees\MaxSumOnTreeBranch.cs" />
     <Compile Include="Trees\SkewedBSTToCompleteBST.cs" />
     <Compile Include="Trees\TreeHelper\BinarySearchTree.cs" />

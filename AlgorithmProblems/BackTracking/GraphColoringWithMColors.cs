@@ -13,7 +13,11 @@ namespace AlgorithmProblems.BackTracking
     {
 
         /// <summary>
-        /// Coloring the graph is a 
+        /// Coloring the graph is an NP complete problem. We will solve this in the similar way we solve the Sudoku problem
+        /// Color node with each of the available color and check whether all the other nodes can be colored with one of the colors in maxColors
+        /// 
+        /// The running time of this algo is O(maxColors^(n)) where n is the number of vertices
+        /// Recurence relation T(n) = maxColors*T(n-1)
         /// </summary>
         /// <param name="vertex">start vertex of a graph. This can be any vertex in the graph</param>
         /// <returns>whether the whole graph can be colored using MaxColors different color</returns>

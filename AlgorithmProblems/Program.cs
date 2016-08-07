@@ -166,6 +166,7 @@ namespace AlgorithmProblems
             DepthOfTree.TestGetDepthOfTree();
             TreeToColumns.TestTreeToColumns();
             KthSmallestElementFromBST.TestKthSmallestElementFromBST();
+            MakeBSTFromPreOrder.TestMakeBSTFromPreOrder();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
