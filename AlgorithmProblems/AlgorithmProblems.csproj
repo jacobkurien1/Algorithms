@@ -141,6 +141,7 @@
     <Compile Include="matrix problems\CountZerosInMatrix.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
+    <Compile Include="matrix problems\MaxOnesInRow.cs" />
     <Compile Include="matrix problems\RotateMatrix180.cs" />
     <Compile Include="matrix problems\Rotate_Matrix_90_degree.cs" />
     <Compile Include="matrix problems\SearchWordInMatrix.cs" />

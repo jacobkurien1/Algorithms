@@ -92,6 +92,7 @@ namespace AlgorithmProblems
             SumOfMatrixElementsFormedByRectangleWithCoordinates.TestSumOfMatrixElements();
             SortedArrayFromSortedMatrix.TestSortedArrayFromSortedMatrix();
             SearchWordInMatrix.TestSearchWordInMatrix();
+            MaxOnesInRow.TestMaxOnesInRow();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
