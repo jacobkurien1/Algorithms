@@ -30,6 +30,7 @@ using AlgorithmProblems.Graphs.ShortestPathAlgos.TravelInMatrix;
 using AlgorithmProblems.Bit_Algorithms;
 using AlgorithmProblems.PatternMatching;
 using AlgorithmProblems.StringProblems.PatternMatching;
+using AlgorithmProblems.Math_Problems;
 
 namespace AlgorithmProblems
 {
@@ -199,6 +200,7 @@ namespace AlgorithmProblems
             RegularExpressionMatch.TestRegularExpressionMatch();
             NumRepresentedByPerfectSquares.TestNumRepresentedByPerfectSquares();
             LongestCommonSubsequenceInSameString.TestLongestCommonSubsequenceInSameString();
+            StringDecodeAsAlphabets.TestStringDecodeAsAlphabets();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
@@ -248,7 +250,10 @@ namespace AlgorithmProblems
             // Bit Algorithms
             IntHaveOppositeSigns.TestIntHaveOppositeSigns();
 
-            
+            //Math Problem
+            ZerosInFactorial.TestZerosInFactorial();
+            GetAllPrimeFactors.TestGetAllPrimeFactors();
+            NumberOfFactors.TestNumberOfFactors();
 
 
             Console.ReadLine();

@@ -75,6 +75,7 @@
     <Compile Include="Dynamic Programming\NumRepresentedByPerfectSquares.cs" />
     <Compile Include="Dynamic Programming\PartitionArrayIntoEqualSumSets.cs" />
     <Compile Include="Dynamic Programming\RegularExpressionMatch.cs" />
+    <Compile Include="Dynamic Programming\StringDecodeAsAlphabets.cs" />
     <Compile Include="Dynamic Programming\TreeCuttingProblem.cs" />
     <Compile Include="Dynamic Programming\WordBreaking.cs" />
     <Compile Include="Dynamic Programming\WordWrapping.cs" />
@@ -138,6 +139,8 @@
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="Linked List\ReverseAdjacentNodesInLinkedList.cs" />
     <Compile Include="Linked List\ReverseLinkedList.cs" />
+    <Compile Include="Math Problems\GetAllPrimeFactors.cs" />
+    <Compile Include="Math Problems\NumberOfFactors.cs" />
     <Compile Include="matrix problems\CountZerosInMatrix.cs" />
     <Compile Include="matrix problems\MatrixProblemHelper.cs" />
     <Compile Include="matrix problems\Matrix_Column_Rows_0.cs" />
@@ -149,14 +152,14 @@
     <Compile Include="matrix problems\SumOfMatrixElementsFormedByRectangleWithCoordinates.cs" />
     <Compile Include="Misc\CreditCardCheck.cs" />
     <Compile Include="Misc\ExcelFirstRowConversion.cs" />
-    <Compile Include="Misc\IsPrime.cs" />
+    <Compile Include="Math Problems\IsPrime.cs" />
     <Compile Include="Misc\MergeIntervals.cs" />
     <Compile Include="Misc\MinNumOfCoins.cs" />
     <Compile Include="Misc\Skyline.cs" />
-    <Compile Include="Misc\SquareRoot.cs" />
+    <Compile Include="Math Problems\SquareRoot.cs" />
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\WidthOfCalendar.cs" />
-    <Compile Include="Misc\ZerosInFactorial.cs" />
+    <Compile Include="Math Problems\ZerosInFactorial.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />

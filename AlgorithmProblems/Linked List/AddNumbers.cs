@@ -59,6 +59,7 @@ namespace AlgorithmProblems.Linked_List
             return head;
         }
 
+        #region Algo2: recursion
         public SingleLinkedListNode<int> AddNumbersRepresentedByLinkedListAlgo2(SingleLinkedListNode<int> num1, SingleLinkedListNode<int> num2, int carry)
         {
             // Recursion base condition
@@ -82,6 +83,7 @@ namespace AlgorithmProblems.Linked_List
             sumNode.NextNode = AddNumbersRepresentedByLinkedListAlgo2((num1!=null)?num1.NextNode:null, (num2!=null)?num2.NextNode:null, carry);
             return sumNode;
         }
+        #endregion
 
         #region Algo3: naive approach
         /// <summary>
