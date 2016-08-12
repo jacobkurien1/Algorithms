@@ -139,6 +139,7 @@
     <Compile Include="Linked List\NthLastElementOfLinkedList.cs" />
     <Compile Include="Linked List\ReverseAdjacentNodesInLinkedList.cs" />
     <Compile Include="Linked List\ReverseLinkedList.cs" />
+    <Compile Include="Math Problems\AllFactors.cs" />
     <Compile Include="Math Problems\GetAllPrimeFactors.cs" />
     <Compile Include="Math Problems\NumberOfFactors.cs" />
     <Compile Include="matrix problems\CountZerosInMatrix.cs" />

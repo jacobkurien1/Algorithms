@@ -254,6 +254,7 @@ namespace AlgorithmProblems
             ZerosInFactorial.TestZerosInFactorial();
             GetAllPrimeFactors.TestGetAllPrimeFactors();
             NumberOfFactors.TestNumberOfFactors();
+            AllFactors.TestAllFactors();
 
 
             Console.ReadLine();
