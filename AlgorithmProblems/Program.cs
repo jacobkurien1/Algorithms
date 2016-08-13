@@ -150,6 +150,7 @@ namespace AlgorithmProblems
             PhoneNumberToWords.TestPhoneNumberToWords();
             AllNumbersInRangeWithDifferentDigits.TestAllNumbersInRangeWithDifferentDigits();
             DivideSetIntoTwoEqualSetsWithMinSumDiff.TestDivideSetIntoTwoEqualSetsWithMinSumDiff();
+            PowerSet.TestPowerSet();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();

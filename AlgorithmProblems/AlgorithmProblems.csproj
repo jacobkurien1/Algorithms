@@ -161,6 +161,7 @@
     <Compile Include="Misc\SumOfSquaresWithoutMultiplication.cs" />
     <Compile Include="Misc\WidthOfCalendar.cs" />
     <Compile Include="Math Problems\ZerosInFactorial.cs" />
+    <Compile Include="PermutationAndCombination\PowerSet.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
