@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
+    <Compile Include="Sorting\DutchNationalFlag.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
     <Compile Include="Arrays\Median.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
     <Compile Include="BackTracking\GraphColoringWithMColors.cs" />
     <Compile Include="BackTracking\HamiltonianCycle.cs" />
+    <Compile Include="Bit Algorithms\BitHelper.cs" />
     <Compile Include="Bit Algorithms\IntHaveOppositeSigns.cs" />
     <Compile Include="DisjointSets\DisjointSets.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
@@ -107,9 +109,11 @@
     <Compile Include="Graphs\GraphHelper\UndirectedGraphWithVertexDictionary.cs" />
     <Compile Include="Graphs\IsGraphATree.cs" />
     <Compile Include="Graphs\ReverseGraph.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\AStar.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\BellmanFord.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\DijkstraAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\FloydWarshall.cs" />
+    <Compile Include="Graphs\ShortestPathAlgos\HeuristicSearch.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPath.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\TravelFromLeftToRightInMatrix.cs" />
     <Compile Include="Graphs\SnakeAndLadder.cs" />

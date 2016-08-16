@@ -84,6 +84,7 @@ namespace AlgorithmProblems
             HeapSortTester.TestHeapSort();
             CountingSort.TestSorting();
             RadixSort.TestRadixSort();
+            DutchNationalFlag.TestDutchNationalFlag();
 
             // Matrix Problem
             Rotate_Matrix_90_degree.TestRotateMatrix();
