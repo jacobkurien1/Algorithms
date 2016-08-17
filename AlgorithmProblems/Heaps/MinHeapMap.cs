@@ -70,44 +70,62 @@ namespace AlgorithmProblems.Heaps
         /// <summary>
         /// This is basically used to change the value of the array at index and 
         /// rebalance the tree to follow the min heap property
+        /// 
+        /// We will first check whether we are increasing the priority or decreasing it,
+        /// If we are increasing the priority, we should percolate downwards
+        /// if we are decreasing the priority, we should percolate upwards
+        /// 
+        /// The running time needed for this operation is O(log(n))
         /// </summary>
         /// <param name="newVal"></param>
         /// <param name="index"></param>
-        public void ChangePriority(T newVal, int index)
+        public void ChangePriority(T newVal, int Id)
         {
-            if (index < 0 || index >= _currentNumberOfElements)
+            
+            if (!AllEntitiesIndex.ContainsKey(Id))
             {
                 throw new Exception("Illegal operation");
             }
-            ChangeValueAtIndex(index, newVal);
-            while (index >= 0)
+            int index = AllEntitiesIndex[Id];
+            if(_arrayToStoreTree[index].CompareTo(newVal)>0)
             {
-                MinHeapify(index);
-                index = (int)Math.Floor((index - 1) / 2.0);
+                // We have decreased the priority
+                // We need to percolate upwards
+                ChangeValueAtIndex(index, newVal);
+
+                while (index>0)
+                {
+                    int parentIndex = (int)Math.Floor((index - 1) / 2.0);
+                    if (parentIndex>=0 && _arrayToStoreTree[parentIndex].CompareTo(_arrayToStoreTree[index]) >0)
+                    {
+                        // We need to swap the element at index with its parent
+                        Swap(index, parentIndex);
+                        index = parentIndex;
+                    }
+                    else
+                    {
+                        // The new added value is still greater than its parent, hence break
+                        break;
+                    }
+                }
             }
+            else
+            {
+                //We have increased the priority
+                // we need to percolate the changes downwards
+                ChangeValueAtIndex(index, newVal);
+                MinHeapify(index);
+            }
+            
         }
 
         public void ChangePriority(T oldVal, T newVal)
         {
-            if (!AllEntitiesIndex.ContainsKey(oldVal.Id))
+            if (oldVal == null || newVal == null)
             {
-                throw new Exception("Illegal operation");
+                throw new ArgumentException("Arguments are null");
             }
-            //get index in which old val is present
-            int oldIndex = AllEntitiesIndex[oldVal.Id];
-            if(oldIndex>=_currentNumberOfElements)
-            {
-                // we should not care about this 
-            }
-            ChangeValueAtIndex(oldIndex, newVal);
-            // make corresponding changes to the AllEntities
-            AllEntities.Remove(oldVal.Id);
-            AllEntities[newVal.Id] = newVal;
-            while (oldIndex >= 0)
-            {
-                MinHeapify(oldIndex);
-                oldIndex = (int)Math.Floor((oldIndex - 1) / 2.0);
-            }
+            ChangePriority(newVal, oldVal.Id);
         }
 
         /// <summary>
@@ -201,7 +219,7 @@ namespace AlgorithmProblems.Heaps
                 throw new Exception("The heap is empty");
             }
             T retVal = _arrayToStoreTree[0];
-            _arrayToStoreTree[0] = _arrayToStoreTree[_currentNumberOfElements - 1];
+            Swap(0, _currentNumberOfElements - 1);
             _arrayToStoreTree[_currentNumberOfElements - 1] = default(T);
             AllEntities.Remove(retVal.Id);
             AllEntitiesIndex.Remove(retVal.Id);
@@ -280,6 +298,7 @@ namespace AlgorithmProblems.Heaps
             FakeClassForTest newObj = oldObj.ShallowClone();
             newObj.Distance = 888;
             mhm.ChangePriority(oldVal: oldObj, newVal: newObj);
+            //mhm.ChangePriority(newObj, oldObj.Id);
             FakeClassForTest.PrintArray(mhm.HeapArray);
 
             oldObj = mhm.HeapArray[4];

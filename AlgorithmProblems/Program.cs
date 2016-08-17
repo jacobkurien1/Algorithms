@@ -226,6 +226,7 @@ namespace AlgorithmProblems
             DijkstraAlgorithm.TestDijkstraAlgorithm();
             BellmanFord.TestBellmanFord();
             TravelFromLeftToRightInMatrix.TestTravelFromLeftToRightInMatrix();
+            HeuristicSearch.TestHeuristicSearch();
             //Minimum Spanning Tree
 
 
