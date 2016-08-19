@@ -21,9 +21,9 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos.AStar
     /// b is the branching factor (average number of neighbours per node)
     /// d is the depth of the shortest path
     /// 
-    /// Good Heuristic function will prune away many of the b^(d) nodes that dijkstra would expand
-    /// 
     /// So Worst case running time is O(b^(d))
+    /// 
+    /// Good Heuristic function will prune away many of the b^(d) nodes that dijkstra would expand
     /// 
     /// </summary>
     class AStar
