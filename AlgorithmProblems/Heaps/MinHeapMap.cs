@@ -129,6 +129,24 @@ namespace AlgorithmProblems.Heaps
         }
 
         /// <summary>
+        /// Add if the input T is not present in the minheap map
+        /// and if the input T is present then change the priority according the the 
+        /// priority of the input
+        /// </summary>
+        /// <param name="val"></param>
+        public void AddOrChangePriority(T val)
+        {
+            if (!AllEntitiesIndex.ContainsKey(val.Id))
+            {
+                Insert(val);
+            }
+            else
+            {
+                ChangePriority(val, val.Id);
+            }
+        }
+
+        /// <summary>
         /// This method assumes that the left and right subtree from node at index 
         /// is following the min heap property but arr[i] might not be following the 
         /// minheap property correctly.

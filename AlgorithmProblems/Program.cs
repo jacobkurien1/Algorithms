@@ -31,6 +31,7 @@ using AlgorithmProblems.Bit_Algorithms;
 using AlgorithmProblems.PatternMatching;
 using AlgorithmProblems.StringProblems.PatternMatching;
 using AlgorithmProblems.Math_Problems;
+using AlgorithmProblems.Graphs.ShortestPathAlgos.AStar;
 
 namespace AlgorithmProblems
 {
@@ -227,6 +228,7 @@ namespace AlgorithmProblems
             BellmanFord.TestBellmanFord();
             TravelFromLeftToRightInMatrix.TestTravelFromLeftToRightInMatrix();
             HeuristicSearch.TestHeuristicSearch();
+            AStar.TestAStar();
             //Minimum Spanning Tree
 
 

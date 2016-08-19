@@ -148,19 +148,11 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos
         /// <summary>
         /// Represents the graph vertex
         /// </summary>
-        internal class GraphVertex : IComparable, IKey
+        internal class GraphVertex : IComparable
         {
             public int Row { get; set; }
             public int Column { get; set; }
             public int ManhattanDistance { get; set; }
-
-            public int Id
-            {
-                get
-                {
-                    return Row.GetHashCode() ^ Column.GetHashCode();
-                }
-            }
             public List<GraphVertex> Neighbours { get; set; }
 
             public GraphVertex(int row, int column)
