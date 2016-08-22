@@ -32,6 +32,7 @@ using AlgorithmProblems.PatternMatching;
 using AlgorithmProblems.StringProblems.PatternMatching;
 using AlgorithmProblems.Math_Problems;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.AStar;
+using AlgorithmProblems.Graphs.ShortestPathAlgos.ShortestPathWhenObstaclesRemoved;
 
 namespace AlgorithmProblems
 {
@@ -229,6 +230,7 @@ namespace AlgorithmProblems
             TravelFromLeftToRightInMatrix.TestTravelFromLeftToRightInMatrix();
             HeuristicSearch.TestHeuristicSearch();
             AStar.TestAStar();
+            ShortestPathWhenObstaclesRemoved.TestShortestPathWhenObstaclesRemoved();
             //Minimum Spanning Tree
 
 
