@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
+    <Compile Include="Graphs\MaxFlow\FordFulkersonEdmondKarp.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
     <Compile Include="Sorting\DutchNationalFlag.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />

@@ -33,6 +33,7 @@ using AlgorithmProblems.StringProblems.PatternMatching;
 using AlgorithmProblems.Math_Problems;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.AStar;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.ShortestPathWhenObstaclesRemoved;
+using AlgorithmProblems.Graphs.MaxFlow;
 
 namespace AlgorithmProblems
 {
@@ -231,6 +232,8 @@ namespace AlgorithmProblems
             HeuristicSearch.TestHeuristicSearch();
             AStar.TestAStar();
             ShortestPathWhenObstaclesRemoved.TestShortestPathWhenObstaclesRemoved();
+            //MaxFlow
+            FordFulkersonEdmondKarp.TestFordFulkersonEdmondKarp();
             //Minimum Spanning Tree
 
 
