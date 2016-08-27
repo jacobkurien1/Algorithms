@@ -206,6 +206,7 @@ namespace AlgorithmProblems
             NumRepresentedByPerfectSquares.TestNumRepresentedByPerfectSquares();
             LongestCommonSubsequenceInSameString.TestLongestCommonSubsequenceInSameString();
             StringDecodeAsAlphabets.TestStringDecodeAsAlphabets();
+            BalloonBursting.TestBalloonBursting();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
