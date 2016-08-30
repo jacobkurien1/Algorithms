@@ -223,6 +223,7 @@
     <Compile Include="StringProblems\StringToLongConverter.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInBST.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInBT.cs" />
+    <Compile Include="Trees\BalancedBST\RedBlackTree.cs" />
     <Compile Include="Trees\CheckBTisBST.cs" />
     <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
     <Compile Include="Trees\DepthOfTree.cs" />

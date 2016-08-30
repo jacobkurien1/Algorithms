@@ -44,6 +44,7 @@ namespace AlgorithmProblems.BackTracking
                 }
 
             }
+            vertex.Color = -1; // Need for back tracking
             return false;
         }
 
