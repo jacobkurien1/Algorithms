@@ -44,6 +44,7 @@
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
+    <Compile Include="Graphs\GraphColoring\CheckBipartiteGraph.cs" />
     <Compile Include="Graphs\MaxFlow\FordFulkersonEdmondKarp.cs" />
     <Compile Include="Graphs\MaxFlow\MinCut.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />

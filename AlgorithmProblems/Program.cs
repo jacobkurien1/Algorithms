@@ -34,6 +34,7 @@ using AlgorithmProblems.Math_Problems;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.AStar;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.ShortestPathWhenObstaclesRemoved;
 using AlgorithmProblems.Graphs.MaxFlow;
+using AlgorithmProblems.Graphs.GraphColoring;
 
 namespace AlgorithmProblems
 {
@@ -216,6 +217,7 @@ namespace AlgorithmProblems
             AllPathsGivenStartEndVertex.TestGetAllPathsInGraphFromStartVertexToEndVertex();
             AllPaths.TestGetAllPathsInGraphFromStartVertex();
             ColorVertices.TestColorVerticesWithDifferentColor();
+            CheckBipartiteGraph.TestCheckBipartiteGraph();
             TransformOneWordToAnother.TestGetTransformation();
             ConstraintsVerification.TestConstraintsVerification();
             ExtendedContactsInSocialNetwork.TestComputeExtendedContacts();
