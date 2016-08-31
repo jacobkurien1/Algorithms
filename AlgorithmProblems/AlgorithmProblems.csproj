@@ -45,6 +45,7 @@
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
     <Compile Include="Graphs\MaxFlow\FordFulkersonEdmondKarp.cs" />
+    <Compile Include="Graphs\MaxFlow\MinCut.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
     <Compile Include="Sorting\DutchNationalFlag.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />

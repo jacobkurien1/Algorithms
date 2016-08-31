@@ -235,6 +235,7 @@ namespace AlgorithmProblems
             ShortestPathWhenObstaclesRemoved.TestShortestPathWhenObstaclesRemoved();
             //MaxFlow
             FordFulkersonEdmondKarp.TestFordFulkersonEdmondKarp();
+            MinCut.TestMinCut();
             //Minimum Spanning Tree
 
 
