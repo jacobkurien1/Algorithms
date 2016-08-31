@@ -25,6 +25,8 @@ namespace AlgorithmProblems.Graphs.GraphColoring
         /// 
         /// 
         /// Instead of color we can just add the graph vertex to the dictionary as the key and the set number as the value.
+        /// 
+        /// The running time is O(V+E)
         /// </summary>
         /// <returns></returns>
         public static bool IsBiPartiteGraph(GraphVertex source)
