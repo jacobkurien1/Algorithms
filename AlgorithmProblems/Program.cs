@@ -64,6 +64,7 @@ namespace AlgorithmProblems
             PairInSortedArrayClosestToAParticularValue.TestPairInSortedArrayClosestToAParticularValue();
             PalindromeInStringPermutation.TestPalindromeInStringPermutation();
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
+            AnagramIsPalindrome.TestAnagramIsPalindrome();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();
