@@ -180,23 +180,5 @@ namespace AlgorithmProblems.Graphs.MaxFlow
         }
 
         #endregion
-
-        /// <summary>
-        /// Graph with the indication whether an edge is a forward edge or backward edge
-        /// </summary>
-        internal class GraphWithFwdEdges : Graph
-        {
-            public Dictionary<string, bool> IsEdgeFwd { get; }
-            public GraphWithFwdEdges()
-            {
-                IsEdgeFwd = new Dictionary<string, bool>();
-            }
-
-            public void AddEdge(string startId, string endId, int weight, bool IsFwdEdge = true)
-            {
-                IsEdgeFwd[startId + "#" + endId] = IsFwdEdge;
-                base.AddEdge(startId, endId, weight);
-            }
-        }
     }
 }

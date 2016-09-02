@@ -239,6 +239,7 @@ namespace AlgorithmProblems
             //MaxFlow
             FordFulkersonEdmondKarp.TestFordFulkersonEdmondKarp();
             MinCut.TestMinCut();
+            MaximumBipartiteMatching.TestMaximumBipartiteMatching();
             //Minimum Spanning Tree
 
 
