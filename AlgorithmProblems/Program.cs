@@ -147,6 +147,7 @@ namespace AlgorithmProblems
             SumOfSquaresWithoutMultiplication.TestSumOfSquares();
             MergeIntervals.TestMergeIntervals();
             WidthOfCalendar.TestWidthOfCalendar();
+            JosephusProblem.TestJosephusProblem();
 
             // Permutation and Combination problem
             ShuffleAList.TestFisherYatesAlgo();
