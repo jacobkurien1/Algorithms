@@ -158,6 +158,83 @@ namespace AlgorithmProblems.Dynamic_Programming
         }
 
         #endregion
+
+        #region Algo3: Dynamic Programming Space Efficient Approach
+        /// <summary>
+        /// In this approach we have a table array which is a list<string>
+        /// Eg: table[5] contains a list<string> such that all the combinations from denominations[0,k] are present which sum upto 5
+        /// k goes from 0 to denominations.Length.
+        /// 
+        /// Dynamic programming formulae is:
+        /// table[i] = append denominations[denomIndex] to all elements of table[i-denominations[denomIndex]] when i-denominations[denomIndex]>=0
+        /// 
+        /// The running time here is O(finalValue*denominations.Length)
+        /// The space requirement is O(finalValue*(2^denominations.Length))
+        /// </summary>
+        /// <param name="denominations"></param>
+        /// <param name="finalValue"></param>
+        /// <returns></returns>
+        public int CoinChangeAlgo3(int[] denominations, int finalValue)
+        {
+            // initialization
+            List<string>[] table = new List<string>[finalValue + 1];
+            for(int i=0; i< table.Length; i++)
+            {
+                table[i] = new List<string>();
+            }
+            table[0].Add("");
+
+
+            for (int denomIndex = 0; denomIndex < denominations.Length; denomIndex++)
+            {
+                for(int i = denominations[denomIndex]; i<=finalValue; i++)
+                {
+                    if(i - denominations[denomIndex]>= 0)
+                    {
+                        // Add to table[i] list after appending "denominations[denomIndex]" to all elements of list "table[i - denominations[denomIndex]]"
+                        table[i].AddRange(AddDenominationToList(table[i - denominations[denomIndex]], denominations[denomIndex]));
+                    }
+                }
+            }
+
+            // Print all combinations
+            PrintAllCombinations(table[finalValue]);
+
+            // return the count of combinations
+            return table[finalValue].Count;
+        }
+
+        /// <summary>
+        /// We need to append a particular denomination to all the combination of denominations in the list
+        /// </summary>
+        /// <param name="list">all combination of denominations</param>
+        /// <param name="denomination">denomination to add</param>
+        /// <returns>list which has denomination appeneded to all elements of list</returns>
+        private List<string> AddDenominationToList(List<string> list, int denomination)
+        {
+            // Make clone of the list else the original list will be manipulated cause list<string> is a reference type and not a value type
+            List<string> ret = new List<string>(list);
+
+            for (int i = 0; i < ret.Count; i++)
+            {
+                ret[i] += (denomination.ToString());
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Print all the different combination which will add up to finalValue
+        /// </summary>
+        /// <param name="combinations"></param>
+        private void PrintAllCombinations(List<string> combinations)
+        {
+            Console.WriteLine("All the combinations of change is as follows:");
+            foreach(string combination in combinations)
+            {
+                Console.WriteLine(combination);
+            }
+        }
+        #endregion
         public static void TestDifferentWaysForCoinChange()
         {
             DifferentWaysForCoinChange coinChange = new DifferentWaysForCoinChange();
@@ -169,6 +246,7 @@ namespace AlgorithmProblems.Dynamic_Programming
             int totalNumOFDifferentWays = coinChange.NumberOfDifferntWaysForCoinChange(denominations, numOfCoinsOfDifferentDenominations, finalValue, denominations.Length - 1);
             Console.WriteLine("The total number of different ways in which change can be made is {0}", totalNumOFDifferentWays);
             Console.WriteLine("Ago2:The total number of different ways in which change can be made is {0}", coinChange.NumberOfDifferntWaysForCoinChangeAgo2(denominations, finalValue));
+            Console.WriteLine("Ago3:The total number of different ways in which change can be made is {0}", coinChange.CoinChangeAlgo3(denominations, finalValue));
 
             denominations = new int[] { 2,5,3,6};
             numOfCoinsOfDifferentDenominations = new int[4];
@@ -178,6 +256,7 @@ namespace AlgorithmProblems.Dynamic_Programming
             totalNumOFDifferentWays = coinChange.NumberOfDifferntWaysForCoinChange(denominations, numOfCoinsOfDifferentDenominations, finalValue, denominations.Length - 1);
             Console.WriteLine("The total number of different ways in which change can be made is {0}", totalNumOFDifferentWays);
             Console.WriteLine("Algo2:The total number of different ways in which change can be made is {0}", coinChange.NumberOfDifferntWaysForCoinChangeAgo2(denominations, finalValue));
+            Console.WriteLine("Algo3:The total number of different ways in which change can be made is {0}", coinChange.CoinChangeAlgo3(denominations, finalValue));
         }
     }
 }
