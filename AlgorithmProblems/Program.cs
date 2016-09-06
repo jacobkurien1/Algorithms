@@ -267,6 +267,7 @@ namespace AlgorithmProblems
 
             // Bit Algorithms
             IntHaveOppositeSigns.TestIntHaveOppositeSigns();
+            Parity.TestParity();
 
             //Math Problem
             ZerosInFactorial.TestZerosInFactorial();
