@@ -210,6 +210,7 @@ namespace AlgorithmProblems
             LongestCommonSubsequenceInSameString.TestLongestCommonSubsequenceInSameString();
             StringDecodeAsAlphabets.TestStringDecodeAsAlphabets();
             BalloonBursting.TestBalloonBursting();
+            TravellingSalesmanProblem.TestTravellingSalesmanProblem();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
