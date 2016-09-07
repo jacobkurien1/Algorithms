@@ -177,6 +177,7 @@ namespace AlgorithmProblems
             TreeToColumns.TestTreeToColumns();
             KthSmallestElementFromBST.TestKthSmallestElementFromBST();
             MakeBSTFromPreOrder.TestMakeBSTFromPreOrder();
+            MirrorATree.TestMirrorATree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();

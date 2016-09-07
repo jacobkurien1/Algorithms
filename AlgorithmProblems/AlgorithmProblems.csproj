@@ -44,6 +44,7 @@
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Bit Algorithms\Parity.cs" />
+    <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
     <Compile Include="Dynamic Programming\TravellingSalesmanProblem.cs" />
     <Compile Include="Graphs\GraphColoring\CheckBipartiteGraph.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Trees\LinkedListOfTreeNodesAtEachDepth.cs" />
     <Compile Include="Trees\MakeBSTFromPreOrder.cs" />
     <Compile Include="Trees\MaxSumOnTreeBranch.cs" />
+    <Compile Include="Trees\MirrorATree.cs" />
     <Compile Include="Trees\SkewedBSTToCompleteBST.cs" />
     <Compile Include="Trees\TreeHelper\BinarySearchTree.cs" />
     <Compile Include="Trees\TreeHelper\BinarySearchTreeNode.cs" />
@@ -255,6 +257,7 @@
     <Compile Include="Trees\WalkTheBinaryTree.cs" />
     <Compile Include="Trie\CreateAndSearchSimpleTrie.cs" />
     <Compile Include="Trie\ShortestPrefix.cs" />
+    <Compile Include="Trie\SuffixTree.cs" />
     <Compile Include="Trie\TrieHelper\Trie.cs" />
     <Compile Include="Trie\TrieHelper\TrieNode.cs" />
   </ItemGroup>
