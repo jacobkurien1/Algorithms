@@ -53,7 +53,9 @@
     <Compile Include="Graphs\MaxFlow\MaximumBipartiteMatching.cs" />
     <Compile Include="Graphs\MaxFlow\MinCut.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
+    <Compile Include="matrix problems\MatrixAsTriangle.cs" />
     <Compile Include="Misc\JosephusProblem.cs" />
+    <Compile Include="Search\SearchInSortedRotatedArray.cs" />
     <Compile Include="Sorting\DutchNationalFlag.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />

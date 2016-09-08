@@ -100,6 +100,7 @@ namespace AlgorithmProblems
             SortedArrayFromSortedMatrix.TestSortedArrayFromSortedMatrix();
             SearchWordInMatrix.TestSearchWordInMatrix();
             MaxOnesInRow.TestMaxOnesInRow();
+            MatrixAsTriangle.TestMatrixAsTriangle();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
