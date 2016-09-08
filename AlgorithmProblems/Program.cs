@@ -35,6 +35,7 @@ using AlgorithmProblems.Graphs.ShortestPathAlgos.AStar;
 using AlgorithmProblems.Graphs.ShortestPathAlgos.ShortestPathWhenObstaclesRemoved;
 using AlgorithmProblems.Graphs.MaxFlow;
 using AlgorithmProblems.Graphs.GraphColoring;
+using AlgorithmProblems.Search;
 
 namespace AlgorithmProblems
 {
@@ -276,6 +277,9 @@ namespace AlgorithmProblems
             GetAllPrimeFactors.TestGetAllPrimeFactors();
             NumberOfFactors.TestNumberOfFactors();
             AllFactors.TestAllFactors();
+
+            //Search problems
+            SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
 
 
             Console.ReadLine();
