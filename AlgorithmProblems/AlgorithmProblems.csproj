@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
+    <Compile Include="Arrays\MaxDistanceInArray.cs" />
     <Compile Include="Bit Algorithms\Parity.cs" />
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />

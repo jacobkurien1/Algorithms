@@ -78,6 +78,7 @@ namespace AlgorithmProblems
             ArrayOfNumsIncrement.TestIncrementArrayOfNumbers();
             MajorityElement.TestFindMajorityElement();
             Merge2SortedArrays.TestMergeSortedArrays();
+            MaxDistanceInArray.TestMaxDistanceInArray();
             //Median.TestGetMedianOf2SortedArray();
 
             // Sorting Problems
