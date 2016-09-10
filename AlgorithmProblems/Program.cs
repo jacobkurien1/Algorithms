@@ -242,6 +242,7 @@ namespace AlgorithmProblems
             HeuristicSearch.TestHeuristicSearch();
             AStar.TestAStar();
             ShortestPathWhenObstaclesRemoved.TestShortestPathWhenObstaclesRemoved();
+            ShortestDistanceFromRoomsToGates.TestShortestDistanceFromRoomsToGates();
             //MaxFlow
             FordFulkersonEdmondKarp.TestFordFulkersonEdmondKarp();
             MinCut.TestMinCut();
