@@ -66,6 +66,7 @@ namespace AlgorithmProblems
             PalindromeInStringPermutation.TestPalindromeInStringPermutation();
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
             AnagramIsPalindrome.TestAnagramIsPalindrome();
+            GreatestPalindrome.TestGreatestPalindrome();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();

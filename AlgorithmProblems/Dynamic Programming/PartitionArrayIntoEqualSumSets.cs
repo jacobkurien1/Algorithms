@@ -187,22 +187,27 @@ namespace AlgorithmProblems.Dynamic_Programming
                         {
                             if (backTrack[i, j - 1] != null && backTrack[i, j - 1].Row == i)
                             {
+                                // get the value at the left of the matrix cell.
+                                // This is done for the optimization so that we can jump all the columns whose arr[j] is not present in the subset
                                 backTrack[i, j] = backTrack[i, j - 1];
                             }
                             else
                             {
+                                // store the cell object which points to the left of the matrix
                                 backTrack[i, j] = new Cell(i, j - 1);
                             }
                         }
                     }
                     else if (i - arr[j] == 0)
                     {
+                        // We have found the partition
                         backTrack[i, j] = new Cell(0, 0);
                     }
                     else
                     {
                         if(j-1>=0)
                         {
+                            // our partition will contain the arr[j] element
                             backTrack[i, j] = new Cell(i - arr[j], j - 1);
                         }
                     }
