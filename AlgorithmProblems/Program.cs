@@ -36,6 +36,7 @@ using AlgorithmProblems.Graphs.ShortestPathAlgos.ShortestPathWhenObstaclesRemove
 using AlgorithmProblems.Graphs.MaxFlow;
 using AlgorithmProblems.Graphs.GraphColoring;
 using AlgorithmProblems.Search;
+using AlgorithmProblems.Graphs.MinSpanningTree;
 
 namespace AlgorithmProblems
 {
@@ -249,6 +250,7 @@ namespace AlgorithmProblems
             MinCut.TestMinCut();
             MaximumBipartiteMatching.TestMaximumBipartiteMatching();
             //Minimum Spanning Tree
+            KruskalAlgorithm.TestKruskalAlgorithm();
 
 
             //Heap problems

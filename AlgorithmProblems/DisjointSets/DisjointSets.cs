@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.DisjointSets
 {
-    public class DisjointSets<T>
+    /// <summary>
+    /// This data structure is also known as union-find data structure.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class DisjointSets<T> where T : IEquatable<T>
     {
         private Dictionary<T, T> parentMapping;
         private Dictionary<T, int> depthOfTree;
@@ -17,28 +21,43 @@ namespace AlgorithmProblems.DisjointSets
         }
 
         /// <summary>
+        /// Returns true if both the item1 and item2 belongs to the same set
+        /// 
+        /// This operation takes 
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        /// <returns></returns>
+        public bool Find(T item1, T item2)
+        {
+            T root1 = GetRoot(item1);
+            T root2 = GetRoot(item2);
+            return root1.Equals(root2);
+        }
+
+        /// <summary>
         /// We need to find the root of the tree where item is present.
         /// The running time for the subroutine is O(depth_of_tree)
         /// </summary>
         /// <param name="item">item whose root needs to be found</param>
         /// <returns>the root of the tree in the set</returns>
-        public T Find(T item)
+        public T GetRoot(T item)
         {
             if(!parentMapping.ContainsKey(item))
             {
                 // this is a root node
                 return item;
             }
-            return Find(parentMapping[item]);
+            return GetRoot(parentMapping[item]);
         }
 
         /// <summary>
-        /// Union of 2 disjoint sets
+        /// Union of 2 disjoint sets when the root of the set is given as the input parameter
         /// The running time of this operation is O(1)
         /// </summary>
         /// <param name="item1">root of the set1</param>
         /// <param name="item2">root of set2</param>
-        public void Union(T item1, T item2)
+        public void UnionOfRoots(T item1, T item2)
         {
             if(parentMapping.ContainsKey(item1) || parentMapping.ContainsKey(item2))
             {
@@ -69,6 +88,18 @@ namespace AlgorithmProblems.DisjointSets
                 }
             }
         }
+
+        /// <summary>
+        /// Union of 2 disjoint sets where item1 belongs to set1 and item2 belongs to set2
+        /// </summary>
+        /// <param name="item1"></param>
+        /// <param name="item2"></param>
+        public void Union(T item1, T item2)
+        {
+            T root1 = GetRoot(item1);
+            T root2 = GetRoot(item2);
+            UnionOfRoots(root1, root2);
+        }
     }
 
     public class TestingDisjointSet
@@ -76,13 +107,13 @@ namespace AlgorithmProblems.DisjointSets
         public static void Run()
         {
             DisjointSets<char> ds = new DisjointSets<char>();
-            ds.Union('a', 'b');
-            ds.Union('c', 'd');
-            ds.Union('e', 'd');
-            Console.WriteLine(ds.Find('e'));
-            Console.WriteLine(ds.Find('a'));
-            ds.Union(ds.Find('a'), ds.Find('d'));
-            Console.WriteLine(ds.Find('a'));
+            ds.UnionOfRoots('a', 'b');
+            ds.UnionOfRoots('c', 'd');
+            ds.UnionOfRoots('e', 'd');
+            Console.WriteLine(ds.GetRoot('e'));
+            Console.WriteLine(ds.GetRoot('a'));
+            ds.UnionOfRoots(ds.GetRoot('a'), ds.GetRoot('d'));
+            Console.WriteLine(ds.GetRoot('a'));
         }
     }
 }
