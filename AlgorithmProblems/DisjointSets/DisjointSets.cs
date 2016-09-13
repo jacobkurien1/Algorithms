@@ -8,11 +8,20 @@ namespace AlgorithmProblems.DisjointSets
 {
     /// <summary>
     /// This data structure is also known as union-find data structure.
+    /// We will be using the depth of the tree for each node to keep the tree balanced
+    /// 
+    /// This algorithm is weighted Quick - union and 
+    /// the running time for M union-find ops on a set of N objects is O(N + M log N)
+    ///  
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class DisjointSets<T> where T : IEquatable<T>
     {
         private Dictionary<T, T> parentMapping;
+
+        /// <summary>
+        /// This helps in keeping the set tree balanced
+        /// </summary>
         private Dictionary<T, int> depthOfTree;
         public DisjointSets()
         {
