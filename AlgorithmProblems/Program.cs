@@ -251,6 +251,7 @@ namespace AlgorithmProblems
             MaximumBipartiteMatching.TestMaximumBipartiteMatching();
             //Minimum Spanning Tree
             KruskalAlgorithm.TestKruskalAlgorithm();
+            PrimsAlgorithm.TestPrimsAlgorithm();
 
 
             //Heap problems

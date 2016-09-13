@@ -54,6 +54,7 @@
     <Compile Include="Graphs\MaxFlow\MaximumBipartiteMatching.cs" />
     <Compile Include="Graphs\MaxFlow\MinCut.cs" />
     <Compile Include="Graphs\MinSpanningTree\KruskalAlgorithm.cs" />
+    <Compile Include="Graphs\MinSpanningTree\PrimsAlgorithm.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestDistanceFromRoomsToGates.cs" />
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />

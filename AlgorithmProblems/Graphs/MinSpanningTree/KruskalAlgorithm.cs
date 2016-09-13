@@ -59,7 +59,7 @@ namespace AlgorithmProblems.Graphs.MinSpanningTree
         /// <summary>
         /// This is a weighted undirected graph
         /// </summary>
-        public class Graph
+        internal class Graph
         {
             public Graph()
             {
@@ -84,7 +84,7 @@ namespace AlgorithmProblems.Graphs.MinSpanningTree
         /// <summary>
         /// This is a weighted undirected edge
         /// </summary>
-        public class Edge
+        internal class Edge
         {
             public int StId { get; set; }
             public int EndId { get; set; }
