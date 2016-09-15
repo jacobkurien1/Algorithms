@@ -261,6 +261,7 @@ namespace AlgorithmProblems
 
             //DisjointSets
             TestingDisjointSet.Run();
+            TestWeightedDisjointSetsWithPathCompression.Run();
 
             //Geometry
             ClosestPairOfPoints.TestClosestPairOfPoints();
