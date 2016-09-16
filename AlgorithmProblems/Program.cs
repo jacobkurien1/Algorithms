@@ -261,7 +261,7 @@ namespace AlgorithmProblems
 
             //DisjointSets
             TestingDisjointSet.Run();
-            TestWeightedDisjointSetsWithPathCompression.Run();
+            //TestWeightedDisjointSetsWithPathCompression.Run(); // this runs slow, hence commenting it
 
             //Geometry
             ClosestPairOfPoints.TestClosestPairOfPoints();
@@ -287,6 +287,7 @@ namespace AlgorithmProblems
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
+            KClosestElementInArray.TestKClosestElementInArray();
 
 
             Console.ReadLine();
