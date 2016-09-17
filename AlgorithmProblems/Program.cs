@@ -268,6 +268,7 @@ namespace AlgorithmProblems
             RectangleIntersection.TestRectangleIntersection();
             LineSegmentIntersection.TestLineSegmentIntersection();
             ConvexHull.TestConvexHull();
+            KClosestPointToOrigin.TestKClosestPointToOrigin();
 
             //Greedy Algorithm
             HuffmanCoding.TestHuffmanCoding();
