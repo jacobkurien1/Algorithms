@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Linked_List
 {
-    class CircularLinkedList
+    class CycleInLinkedList
     {
         /// <summary>
         /// We will use floyd's cycle detection.
@@ -59,7 +59,7 @@ namespace AlgorithmProblems.Linked_List
             return currentNode;
         }
 
-        public static void TestStartOfCircularLinkedList()
+        public static void TestStartOfCycleInLinkedList()
         {
             Console.WriteLine("Find the start of the circular linked list");
             SingleLinkedListNode<int> linkedlist = LinkedListHelper.CreateSinglyLinkedList(10);

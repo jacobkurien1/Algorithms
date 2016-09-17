@@ -116,7 +116,7 @@ namespace AlgorithmProblems
             CommonElementInTwoLinkedList.TestCommonElement();
             ReverseAdjacentNodesInLinkedList.TestReverseAdjacentNodes();
             MergeSortedLinkedList.TestMerge();
-            CircularLinkedList.TestStartOfCircularLinkedList();
+            CycleInLinkedList.TestStartOfCircularLinkedList();
             MedianForCircularLinkedList.TestGetMedian();
             ReverseLinkedList.TestReverseLinkedList();
 
