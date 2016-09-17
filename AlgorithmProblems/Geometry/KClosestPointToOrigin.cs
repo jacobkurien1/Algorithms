@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmProblems.Heaps.HeapHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace AlgorithmProblems.Geometry
     /// Extract the max element and add the new element. After the first pass, all the remaining 
     /// k elements in the max heap is the k points closest to the origin.
     /// The running time of this approach is O(nlog(k))
+    /// We will use method 2 when we have a million points and need 100 closest points to the origin.
+    /// 
     /// 
     /// Method3:(optimal) Do a quickselect and get the element at kth position in the sorted array(note: the array is partially sorted)
     /// All the elements to the left of the kth position will be the k points closest to origin
@@ -24,7 +27,16 @@ namespace AlgorithmProblems.Geometry
     /// </summary>
     class KClosestPointToOrigin
     {
-
+        #region method3
+        /// <summary>
+        /// Method3:(optimal) Do a quickselect and get the element at kth position in the sorted array(note: the array is partially sorted)
+        /// All the elements to the left of the kth position will be the k points closest to origin
+        /// The average running time for quick select is O(n). Note the worst case is O(n^2) and depends on the pivot selection
+        /// The space requirement is O(1)
+        /// </summary>
+        /// <param name="allPoints"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public IEnumerable<Point> GetKClosestPoints(Point[] allPoints, int k)
         {
             if(allPoints.Length <k )
@@ -106,6 +118,46 @@ namespace AlgorithmProblems.Geometry
             arr[indexToSwap1] = arr[indexToSwap2];
             arr[indexToSwap2] = temp;
         }
+        #endregion
+
+        #region Method2
+        /// <summary>
+        /// Method 2:Use a max heap of size K and keep adding elements and when the heap is full
+        /// Extract the max element and add the new element. After the first pass, all the remaining 
+        /// k elements in the max heap is the k points closest to the origin.
+        /// The running time of this approach is O(nlog(k))
+        /// We will use method 2 when we have a million points and need 100 closest points to the origin.
+        /// </summary>
+        /// <param name="allPoints"></param>
+        /// <returns></returns>
+        public IEnumerable<Point> GetKClosestPointsMethod2(Point[] allPoints, int k)
+        {
+            if (allPoints.Length < k)
+            {
+                // Error condition
+                throw new ArgumentException("k is less than the number of elements in array");
+            }
+
+            // Create a max heap of size k+1
+            MaxHeap<Point> mh = new MaxHeap<Point>(k+1);
+            for(int i=0; i<allPoints.Length; i++)
+            {
+                if(mh.HeapSize == k+1)
+                {
+                    // once the capacity is hit, we need to extract the max value
+                    mh.ExtractMax();
+                }
+                mh.Insert(allPoints[i]);
+            }
+            // Extract the last max value, now the max heap has k elements
+            if (mh.HeapSize == k + 1)
+            {
+                mh.ExtractMax();
+            }
+
+            return mh.HeapArray;
+        }
+        #endregion
 
         public class Point : IComparable
         {
@@ -155,6 +207,20 @@ namespace AlgorithmProblems.Geometry
             };
             KClosestPointToOrigin kpts = new KClosestPointToOrigin();
             PrintKClosePoints(kpts.GetKClosestPoints(allPoints, 4), 4);
+            allPoints = new Point[]
+            {
+                new Point(0,0),
+                new Point(1,1),
+                new Point(0,1),
+                new Point(1,0),
+                new Point(-1,-1),
+                new Point(-1,0),
+                new Point(5,6),
+                new Point(9,22),
+                new Point(44,2),
+                new Point (43,22)
+            };
+            PrintKClosePoints(kpts.GetKClosestPointsMethod2(allPoints, 4), 4);
 
             allPoints = new Point[]
             {
@@ -170,6 +236,20 @@ namespace AlgorithmProblems.Geometry
                 new Point (43,22)
             };
             PrintKClosePoints(kpts.GetKClosestPoints(allPoints, 6), 6);
+            allPoints = new Point[]
+            {
+                new Point(0,0),
+                new Point(1,1),
+                new Point(0,1),
+                new Point(1,0),
+                new Point(-1,-1),
+                new Point(-1,0),
+                new Point(5,6),
+                new Point(9,22),
+                new Point(44,2),
+                new Point (43,22)
+            };
+            PrintKClosePoints(kpts.GetKClosestPointsMethod2(allPoints, 6), 6);
 
             allPoints = new Point[]
             {
@@ -185,6 +265,20 @@ namespace AlgorithmProblems.Geometry
                 new Point (43,22)
             };
             PrintKClosePoints(kpts.GetKClosestPoints(allPoints, 7), 7);
+            allPoints = new Point[]
+            {
+                new Point(0,0),
+                new Point(1,1),
+                new Point(0,1),
+                new Point(1,0),
+                new Point(-1,-1),
+                new Point(-1,0),
+                new Point(5,6),
+                new Point(9,22),
+                new Point(44,2),
+                new Point (43,22)
+            };
+            PrintKClosePoints(kpts.GetKClosestPointsMethod2(allPoints, 7), 7);
 
             allPoints = new Point[]
             {
@@ -200,6 +294,20 @@ namespace AlgorithmProblems.Geometry
                 new Point (43,22)
             };
             PrintKClosePoints(kpts.GetKClosestPoints(allPoints, 10), 10);
+            allPoints = new Point[]
+            {
+                new Point(0,0),
+                new Point(1,1),
+                new Point(0,1),
+                new Point(1,0),
+                new Point(-1,-1),
+                new Point(-1,0),
+                new Point(5,6),
+                new Point(9,22),
+                new Point(44,2),
+                new Point (43,22)
+            };
+            PrintKClosePoints(kpts.GetKClosestPointsMethod2(allPoints, 10), 10);
 
             allPoints = new Point[]
             {
@@ -215,6 +323,20 @@ namespace AlgorithmProblems.Geometry
                 new Point (43,22)
             };
             PrintKClosePoints(kpts.GetKClosestPoints(allPoints, 0), 0);
+            allPoints = new Point[]
+            {
+                new Point(0,0),
+                new Point(1,1),
+                new Point(0,1),
+                new Point(1,0),
+                new Point(-1,-1),
+                new Point(-1,0),
+                new Point(5,6),
+                new Point(9,22),
+                new Point(44,2),
+                new Point (43,22)
+            };
+            PrintKClosePoints(kpts.GetKClosestPointsMethod2(allPoints, 0), 0);
         }
         private static void PrintKClosePoints(IEnumerable<Point> points, int k)
         {
