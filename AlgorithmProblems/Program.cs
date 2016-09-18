@@ -116,9 +116,10 @@ namespace AlgorithmProblems
             CommonElementInTwoLinkedList.TestCommonElement();
             ReverseAdjacentNodesInLinkedList.TestReverseAdjacentNodes();
             MergeSortedLinkedList.TestMerge();
-            CycleInLinkedList.TestStartOfCircularLinkedList();
+            CycleInLinkedList.TestStartOfCycleInLinkedList();
             MedianForCircularLinkedList.TestGetMedian();
             ReverseLinkedList.TestReverseLinkedList();
+            SortedCircularLinkedList.TestCircularLinkedList();
 
             // stack and queue problem
             ThreeStackWithOneArray.TestThreeStackWithOneArray();
