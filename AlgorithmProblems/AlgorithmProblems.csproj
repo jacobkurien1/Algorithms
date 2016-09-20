@@ -48,6 +48,7 @@
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
+    <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />
     <Compile Include="Dynamic Programming\TravellingSalesmanProblem.cs" />
     <Compile Include="Geometry\KClosestPointToOrigin.cs" />
     <Compile Include="Graphs\GraphColoring\CheckBipartiteGraph.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
     <Compile Include="Linked List\SortedCircularLinkedList.cs" />
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />
+    <Compile Include="matrix problems\MinRangeInMatrix.cs" />
     <Compile Include="Misc\JosephusProblem.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
     <Compile Include="Search\SearchInSortedRotatedArray.cs" />

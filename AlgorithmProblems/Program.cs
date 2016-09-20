@@ -105,6 +105,7 @@ namespace AlgorithmProblems
             SearchWordInMatrix.TestSearchWordInMatrix();
             MaxOnesInRow.TestMaxOnesInRow();
             MatrixAsTriangle.TestMatrixAsTriangle();
+            MinRangeInMatrix.TestMinRangeInMatrix();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
@@ -219,6 +220,7 @@ namespace AlgorithmProblems
             StringDecodeAsAlphabets.TestStringDecodeAsAlphabets();
             BalloonBursting.TestBalloonBursting();
             TravellingSalesmanProblem.TestTravellingSalesmanProblem();
+            MaxSumWithoutAdjacentElements.TestMaxSumWithoutAdjacentElements();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();
