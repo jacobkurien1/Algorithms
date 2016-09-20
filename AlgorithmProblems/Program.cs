@@ -37,6 +37,7 @@ using AlgorithmProblems.Graphs.MaxFlow;
 using AlgorithmProblems.Graphs.GraphColoring;
 using AlgorithmProblems.Search;
 using AlgorithmProblems.Graphs.MinSpanningTree;
+using AlgorithmProblems.Heaps.HeapHelper;
 
 namespace AlgorithmProblems
 {
@@ -262,6 +263,7 @@ namespace AlgorithmProblems
             BasicMaxHeap.TestMaxHeap();
             BasicMinHeap.TestMinHeap();
             TestMinHeapMap.DoTest();
+            TestPriorityQueue.Run();
 
             //DisjointSets
             TestingDisjointSet.Run();
