@@ -225,9 +225,9 @@ namespace AlgorithmProblems.Trees
         /// <param name="node2"></param>
         /// <param name="treeNode"></param>
         /// <returns></returns>
-        private static BinaryTreeNode<int> GetAncestorOfTwoNodesInBTAlgo4(BinaryTreeNode<int> node1, BinaryTreeNode<int> node2, BinaryTreeNode<int> treeNode)
+        public static BinaryTreeNode<int> GetAncestorOfTwoNodesInBTAlgo4(BinaryTreeNode<int> node1, BinaryTreeNode<int> node2, BinaryTreeNode<int> treeNode)
         {
-            if(SearchNodeInTree(treeNode, node1) && SearchNodeInTree(treeNode, node2))
+            if(node1!= null && node2 != null && SearchNodeInTree(treeNode, node1) && SearchNodeInTree(treeNode, node2))
             {
                 return GetAncestorOfTwoNodesInBTAlgo4Rec(node1, node2, treeNode);
             }

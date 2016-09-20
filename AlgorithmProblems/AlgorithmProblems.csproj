@@ -242,6 +242,7 @@
     <Compile Include="StringProblems\SimpleProblem.cs" />
     <Compile Include="StringProblems\StringRotation.cs" />
     <Compile Include="StringProblems\StringToLongConverter.cs" />
+    <Compile Include="Trees\AncestorOfMultiNodesInBT.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInBST.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInBT.cs" />
     <Compile Include="Trees\BalancedBST\RedBlackTree.cs" />

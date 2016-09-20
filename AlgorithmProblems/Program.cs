@@ -177,6 +177,7 @@ namespace AlgorithmProblems
             LinkedListOfTreeNodesAtEachDepth.TestCreateLinkedListOfTreeNodesAtEachDepth();
             TreeSubtreeOfAnother.TestMatchTree();
             AncestorOfTwoNodesInBT.TestGetAncestorOfTwoNodesInBT();
+            AncestorOfMultiNodesInBT.TestAncestorOfMultiNodesInBT();
             LinkedListFromLeavesOfBT.TestLinkedListFromLeavesOfBT();
             ExteriorOfBT.TestPrintExteriorOfBT();
             DepthOfTree.TestGetDepthOfTree();
