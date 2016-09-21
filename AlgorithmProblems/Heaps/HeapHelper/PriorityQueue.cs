@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Heaps.HeapHelper
 {
+    /// <summary>
+    /// Represents an efficient min heap.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class PriorityQueue<T> where T : IEquatable<T>
     {
         PriorityQueueElement<T>[] elementStore;
