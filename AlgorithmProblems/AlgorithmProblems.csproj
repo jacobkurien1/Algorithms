@@ -193,6 +193,7 @@
     <Compile Include="StringProblems\AnagramIsPalindrome.cs" />
     <Compile Include="StringProblems\CheckEditDistance.cs" />
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
+    <Compile Include="StringProblems\IsomorphicStrings.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
@@ -251,6 +252,7 @@
     <Compile Include="Trees\BalancedBST\RedBlackTree.cs" />
     <Compile Include="Trees\CheckBTisBST.cs" />
     <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
+    <Compile Include="Trees\CloneABTWithRandPointer.cs" />
     <Compile Include="Trees\DepthOfTree.cs" />
     <Compile Include="Trees\ExteriorOfBT.cs" />
     <Compile Include="Trees\KthSmallestElementFromBST.cs" />

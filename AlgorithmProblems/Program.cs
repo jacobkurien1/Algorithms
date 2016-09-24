@@ -187,6 +187,7 @@ namespace AlgorithmProblems
             KthSmallestElementFromBST.TestKthSmallestElementFromBST();
             MakeBSTFromPreOrder.TestMakeBSTFromPreOrder();
             MirrorATree.TestMirrorATree();
+            CloneABTWithRandPointer.TestCloneABTWithRandPointer();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
