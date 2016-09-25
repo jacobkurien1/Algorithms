@@ -108,6 +108,7 @@ namespace AlgorithmProblems
             MatrixAsTriangle.TestMatrixAsTriangle();
             MinRangeInMatrix.TestMinRangeInMatrix();
             PrintMatrixAsSnake.TestPrintMatrixAsSnake();
+            PrintMatrixInSpiral.TestPrintMatrixInSpiral();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
