@@ -65,6 +65,7 @@
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />
     <Compile Include="matrix problems\MinRangeInMatrix.cs" />
     <Compile Include="matrix problems\PrintMatrixAsSnake.cs" />
+    <Compile Include="matrix problems\PrintMatrixInSpiral.cs" />
     <Compile Include="Misc\JosephusProblem.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
     <Compile Include="Search\SearchInSortedRotatedArray.cs" />

@@ -9,6 +9,7 @@ namespace AlgorithmProblems.Graphs
 {
     class SolveAMaze
     {
+        #region Algo1: Using recursion
         /// <summary>
         /// This will have the MazePath in the reverse order
         /// </summary>
@@ -44,31 +45,128 @@ namespace AlgorithmProblems.Graphs
             return false;
 
         }
+        #endregion
+
+        #region Algo2: Iteratively
+
+        /// <summary>
+        /// Solves a maze iteratively
+        /// </summary>
+        /// <param name="start">start vertex</param>
+        /// <param name="end">end vertex</param>
+        /// <returns></returns>
+        public static List<GraphVertex> SolveMazeIter(GraphVertex start, GraphVertex end)
+        {
+            // parent will also be used to check whether a vertex is visited or not
+            Dictionary<GraphVertex, GraphVertex> parent = new Dictionary<GraphVertex, GraphVertex>();
+            Stack<GraphVertex> st = new Stack<GraphVertex>();
+            st.Push(start);
+            parent[start] = null;
+
+            while (st.Count > 0)
+            {
+                GraphVertex vertex = st.Pop();
+                if(vertex == end)
+                {
+                    // we have found the path
+                    // backtrack to get the path
+                    return BackTrackToGetPath(parent, start, end);
+                }
+                foreach (GraphVertex neighbour in vertex.NeighbourVertices)
+                {
+                    if(!parent.ContainsKey(neighbour))
+                    {
+                        // this vertex is not visited
+                        parent[neighbour] = vertex;
+                        st.Push(neighbour);
+                    }
+                }
+
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Backtrack to get the path from start to end vertex
+        /// </summary>
+        /// <param name="parent">stores a vertex as key and its parent in the path as value of the dictionary</param>
+        /// <param name="start">start vertex</param>
+        /// <param name="end">end vertex</param>
+        /// <returns></returns>
+        private static List<GraphVertex> BackTrackToGetPath(Dictionary<GraphVertex, GraphVertex> parent, GraphVertex start, GraphVertex end)
+        {
+            List<GraphVertex> path = new List<GraphVertex>();
+
+            if (parent != null && start != null)
+            {
+                while (end != null)
+                {
+                    path.Add(end);
+                    end = parent[end];
+                }
+                path.Reverse();
+            }
+
+            return path;
+        }
+
+
+        #endregion
 
         public static void TestSolveAMaze()
         {
             UndirectedGraph udg = GraphProbHelper.CreateUndirectedGraph();
             if (IsMazeSolved(udg.AllVertices[0], udg.AllVertices[5]))
             {
-                Console.WriteLine("The maze is solved and the path is");
-                for(int i=MazePath.Count-1; i>=0; i--)
-                {
-                    Console.Write(MazePath[i].Data + " -> ");
-                }
-                Console.WriteLine();
+                MazePath.Reverse();
+                PrintMazePath(MazePath);
             }
 
             MazePath = new List<GraphVertex>();
             DirectedGraph dg = GraphProbHelper.CreatedirectedGraphWithoutCycle();
             if (IsMazeSolved(dg.AllVertices[0], dg.AllVertices[5]))
             {
-                Console.WriteLine("The maze is solved and the path is");
-                for (int i = MazePath.Count - 1; i >= 0; i--)
-                {
-                    Console.Write(MazePath[i].Data + " -> ");
-                }
-                Console.WriteLine();
+                MazePath.Reverse();
+                PrintMazePath(MazePath);
             }
+
+            MazePath = new List<GraphVertex>();
+            DirectedGraph dgc = GraphProbHelper.CreatedirectedGraphWithCycle();
+            if (IsMazeSolved(dgc.AllVertices[0], dgc.AllVertices[5]))
+            {
+                MazePath.Reverse();
+                PrintMazePath(MazePath);
+            }
+
+            // test the iterative method
+            List<GraphVertex> path = SolveMazeIter(udg.AllVertices[0], udg.AllVertices[5]);
+            if (path != null)
+            {
+                PrintMazePath(path);
+            }
+
+            path = SolveMazeIter(dg.AllVertices[0], dg.AllVertices[5]);
+            if(path!=null)
+            {
+                PrintMazePath(path);
+            }
+
+            path = SolveMazeIter(dgc.AllVertices[0], dgc.AllVertices[5]);
+            if (path != null)
+            {
+                PrintMazePath(path);
+            }
+        }
+
+        private static void PrintMazePath(List<GraphVertex> path)
+        {
+            Console.WriteLine("The maze is solved and the path is");
+
+            for (int i = 0; i<path.Count; i++)
+            {
+                Console.Write(path[i].Data + " -> ");
+            }
+            Console.WriteLine();
         }
     }
 }
