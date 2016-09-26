@@ -276,6 +276,8 @@
     <Compile Include="Trees\TreeHelper\TreeNode.cs" />
     <Compile Include="Trees\TreeSubtreeOfAnother.cs" />
     <Compile Include="Trees\TreeToColumns.cs" />
+    <Compile Include="Trees\TreeWithInorderAndPostorder.cs" />
+    <Compile Include="Trees\TreeWithInorderAndPreorder.cs" />
     <Compile Include="Trees\WalkTheBinaryTree.cs" />
     <Compile Include="Trie\CreateAndSearchSimpleTrie.cs" />
     <Compile Include="Trie\ShortestPrefix.cs" />

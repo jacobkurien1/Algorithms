@@ -190,6 +190,7 @@ namespace AlgorithmProblems
             MakeBSTFromPreOrder.TestMakeBSTFromPreOrder();
             MirrorATree.TestMirrorATree();
             CloneABTWithRandPointer.TestCloneABTWithRandPointer();
+            TreeWithInorderAndPreorder.TestTreeWithInorderAndPreorder();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
