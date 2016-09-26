@@ -191,6 +191,7 @@ namespace AlgorithmProblems
             MirrorATree.TestMirrorATree();
             CloneABTWithRandPointer.TestCloneABTWithRandPointer();
             TreeWithInorderAndPreorder.TestTreeWithInorderAndPreorder();
+            TreeWithInorderAndPostorder.TestTreeWithInorderAndPostorder();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
