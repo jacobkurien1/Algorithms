@@ -41,19 +41,25 @@ namespace AlgorithmProblems.matrix_problems
                 }
                 rightCol--;
 
-                // print bottom row
-                for(int i=rightCol; i>=leftCol; i--)
+                if (topRow <= bottomRow)
                 {
-                    Console.Write("{0} ", mat[bottomRow, i]);
+                    // print bottom row
+                    for (int i = rightCol; i >= leftCol; i--)
+                    {
+                        Console.Write("{0} ", mat[bottomRow, i]);
+                    }
+                    bottomRow--;
                 }
-                bottomRow--;
 
-                // print left column
-                for(int i=bottomRow; i>=topRow; i--)
+                if (leftCol <= rightCol)
                 {
-                    Console.Write("{0} ", mat[i, leftCol]);
+                    // print left column
+                    for (int i = bottomRow; i >= topRow; i--)
+                    {
+                        Console.Write("{0} ", mat[i, leftCol]);
+                    }
+                    leftCol++;
                 }
-                leftCol++;
             }
             Console.WriteLine();
         }
@@ -79,6 +85,14 @@ namespace AlgorithmProblems.matrix_problems
 
             mat = MatrixProblemHelper.CreateMatrix(3, 3);
             MatrixProblemHelper.PrintMatrix(mat);
+
+
+            Console.WriteLine("The matrix spirally is as shown below:");
+            Print(mat);
+
+            mat = MatrixProblemHelper.CreateMatrix(3, 4);
+            MatrixProblemHelper.PrintMatrix(mat);
+
 
             Console.WriteLine("The matrix spirally is as shown below:");
             Print(mat);
