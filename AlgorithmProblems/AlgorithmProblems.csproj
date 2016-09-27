@@ -44,6 +44,8 @@
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
     <Compile Include="Arrays\MaxDistanceInArray.cs" />
+    <Compile Include="Arrays\MovingAverage.cs" />
+    <Compile Include="Arrays\TotalAverage.cs" />
     <Compile Include="Bit Algorithms\Parity.cs" />
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="Graphs\ShortestPathAlgos\ShortestPathWhenObstaclesRemoved.cs" />
     <Compile Include="Heaps\HeapHelper\PriorityQueue.cs" />
     <Compile Include="Linked List\SortedCircularLinkedList.cs" />
+    <Compile Include="Math Problems\PascalsTriangle.cs" />
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />
     <Compile Include="matrix problems\MinRangeInMatrix.cs" />
     <Compile Include="matrix problems\PrintMatrixAsSnake.cs" />
