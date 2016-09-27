@@ -296,6 +296,7 @@ namespace AlgorithmProblems
             GetAllPrimeFactors.TestGetAllPrimeFactors();
             NumberOfFactors.TestNumberOfFactors();
             AllFactors.TestAllFactors();
+            MultiplyLongNumbers.TestMultiplyLongNumbers();
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
