@@ -229,6 +229,7 @@ namespace AlgorithmProblems
             BalloonBursting.TestBalloonBursting();
             TravellingSalesmanProblem.TestTravellingSalesmanProblem();
             MaxSumWithoutAdjacentElements.TestMaxSumWithoutAdjacentElements();
+            MaxPathThroughMatrix.TestMaxPathThroughMatrix();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();

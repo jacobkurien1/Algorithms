@@ -50,6 +50,7 @@
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
+    <Compile Include="Dynamic Programming\MaxPathThroughMatrix.cs" />
     <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />
     <Compile Include="Dynamic Programming\TravellingSalesmanProblem.cs" />
     <Compile Include="Geometry\KClosestPointToOrigin.cs" />
