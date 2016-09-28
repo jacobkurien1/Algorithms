@@ -111,6 +111,7 @@ namespace AlgorithmProblems
             MinRangeInMatrix.TestMinRangeInMatrix();
             PrintMatrixAsSnake.TestPrintMatrixAsSnake();
             PrintMatrixInSpiral.TestPrintMatrixInSpiral();
+            MaxSqAreaInBinaryMatrix.TestMaxRectAreaInBinaryMatrix();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
