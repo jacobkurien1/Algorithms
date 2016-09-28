@@ -299,6 +299,7 @@ namespace AlgorithmProblems
             NumberOfFactors.TestNumberOfFactors();
             AllFactors.TestAllFactors();
             MultiplyLongNumbers.TestMultiplyLongNumbers();
+            NextLargestPermutation.TestNextLargestPermutation();
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
