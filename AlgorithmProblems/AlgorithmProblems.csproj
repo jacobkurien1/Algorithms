@@ -72,6 +72,7 @@
     <Compile Include="matrix problems\MinRangeInMatrix.cs" />
     <Compile Include="matrix problems\PrintMatrixAsSnake.cs" />
     <Compile Include="matrix problems\PrintMatrixInSpiral.cs" />
+    <Compile Include="matrix problems\TicTacToeWinner.cs" />
     <Compile Include="Misc\JosephusProblem.cs" />
     <Compile Include="Math Problems\MultiplyLongNumbers.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />

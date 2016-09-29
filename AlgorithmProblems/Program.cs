@@ -112,6 +112,7 @@ namespace AlgorithmProblems
             PrintMatrixAsSnake.TestPrintMatrixAsSnake();
             PrintMatrixInSpiral.TestPrintMatrixInSpiral();
             MaxSqAreaInBinaryMatrix.TestMaxRectAreaInBinaryMatrix();
+            TicTacToeWinner.TestTicTacToeWinner();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();
