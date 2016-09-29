@@ -97,6 +97,7 @@ namespace AlgorithmProblems
             CountingSort.TestSorting();
             RadixSort.TestRadixSort();
             DutchNationalFlag.TestDutchNationalFlag();
+            SortedSquares.TestSortedSquares();
 
             // Matrix Problem
             Rotate_Matrix_90_degree.TestRotateMatrix();

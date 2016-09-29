@@ -201,6 +201,7 @@
     <Compile Include="Misc\WidthOfCalendar.cs" />
     <Compile Include="Math Problems\ZerosInFactorial.cs" />
     <Compile Include="PermutationAndCombination\PowerSet.cs" />
+    <Compile Include="Sorting\SortedSquares.cs" />
     <Compile Include="StringProblems\AnagramIsPalindrome.cs" />
     <Compile Include="StringProblems\CheckEditDistance.cs" />
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
