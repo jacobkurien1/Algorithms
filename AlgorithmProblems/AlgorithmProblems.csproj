@@ -49,6 +49,7 @@
     <Compile Include="Bit Algorithms\Parity.cs" />
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />
+    <Compile Include="Distributed Algorithms\KWayMerge.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
     <Compile Include="Dynamic Programming\MaxPathThroughMatrix.cs" />
     <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />

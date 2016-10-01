@@ -38,6 +38,7 @@ using AlgorithmProblems.Graphs.GraphColoring;
 using AlgorithmProblems.Search;
 using AlgorithmProblems.Graphs.MinSpanningTree;
 using AlgorithmProblems.Heaps.HeapHelper;
+using AlgorithmProblems.Distributed_Algorithms;
 
 namespace AlgorithmProblems
 {
@@ -309,6 +310,9 @@ namespace AlgorithmProblems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
             KClosestElementInArray.TestKClosestElementInArray();
             SearchInSortedMatrix.TestSearchInSortedMatrix();
+
+            //Distributed algorithms
+            KWayMerge.TestKWayMerge();
 
 
             Console.ReadLine();

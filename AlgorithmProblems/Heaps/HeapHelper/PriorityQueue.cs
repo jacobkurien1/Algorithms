@@ -10,7 +10,7 @@ namespace AlgorithmProblems.Heaps.HeapHelper
     /// Represents an efficient min heap.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    class PriorityQueue<T> where T : IEquatable<T>
+    class PriorityQueue<T> 
     {
         PriorityQueueElement<T>[] elementStore;
         int currentNumOfElement = 0;
