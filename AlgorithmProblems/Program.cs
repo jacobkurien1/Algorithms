@@ -308,6 +308,7 @@ namespace AlgorithmProblems
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
             KClosestElementInArray.TestKClosestElementInArray();
+            SearchInSortedMatrix.TestSearchInSortedMatrix();
 
 
             Console.ReadLine();
