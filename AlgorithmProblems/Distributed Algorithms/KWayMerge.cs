@@ -15,6 +15,15 @@ namespace AlgorithmProblems.Distributed_Algorithms
     /// </summary>
     class KWayMerge
     {
+        /// <summary>
+        /// Algo: use a priority queue and save the cell location as the object and the cell value as the priority.
+        /// 2. Initialize the priority queue and add the 0th column values for all rows.
+        /// 3. extract min and add it to the output array.
+        /// 4. insert the next element to the extracted element
+        /// 5. Do 3,4 till the priority queue is empty
+        /// </summary>
+        /// <param name="mat"></param>
+        /// <returns></returns>
         public int[] DoKWayMerge(int[,] mat)
         {
             int[] sortedArr = new int[mat.GetLength(0) * mat.GetLength(1)];
