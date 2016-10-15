@@ -70,6 +70,7 @@ namespace AlgorithmProblems
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
             AnagramIsPalindrome.TestAnagramIsPalindrome();
             GreatestPalindrome.TestGreatestPalindrome();
+            IsomorphicStrings.TestIsomorphicStrings();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();
@@ -198,6 +199,7 @@ namespace AlgorithmProblems
             CloneABTWithRandPointer.TestCloneABTWithRandPointer();
             TreeWithInorderAndPreorder.TestTreeWithInorderAndPreorder();
             TreeWithInorderAndPostorder.TestTreeWithInorderAndPostorder();
+            TreePathSumsToValue.TestTreePathSumsToValue();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
@@ -313,6 +315,7 @@ namespace AlgorithmProblems
 
             //Distributed algorithms
             KWayMerge.TestKWayMerge();
+            GetMedianForLargeSet.TestGetMedianForLargeSet();
 
 
             Console.ReadLine();
