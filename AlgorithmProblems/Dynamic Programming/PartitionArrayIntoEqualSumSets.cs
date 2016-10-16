@@ -163,7 +163,7 @@ namespace AlgorithmProblems.Dynamic_Programming
         /// and the method should return a List of indices which represents a set of elements with sum = the parameter sum
         /// 
         /// The dynamic programming formulae is as shown below
-        /// M[i,j] = ->if( i-arr[j]<0) {(M[i,j].row == i)? M[i,j-1]:new Cell(i,j-1)}
+        /// M[i,j] = ->if( i-arr[j]<0) {(M[i,j-1].row == i)? M[i,j-1]:new Cell(i,j-1)}
         ///          ->if(i-arr[j]==0) {new Cell(0,0)}// We have got the partition
         ///          ->if(i-arr[j]>0)  {new Cell(i-arr[j], j-1)}
         /// 
