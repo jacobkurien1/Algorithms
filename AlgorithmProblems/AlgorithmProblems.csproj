@@ -258,6 +258,7 @@
     <Compile Include="StringProblems\RegexMatching.cs" />
     <Compile Include="StringProblems\RemoveDuplicates.cs" />
     <Compile Include="StringProblems\ReplaceSpaces.cs" />
+    <Compile Include="StringProblems\ReverseStringWithoutVowels.cs" />
     <Compile Include="StringProblems\SimpleProblem.cs" />
     <Compile Include="StringProblems\StringRotation.cs" />
     <Compile Include="StringProblems\StringToLongConverter.cs" />

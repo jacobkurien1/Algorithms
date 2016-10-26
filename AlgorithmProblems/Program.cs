@@ -71,6 +71,7 @@ namespace AlgorithmProblems
             AnagramIsPalindrome.TestAnagramIsPalindrome();
             GreatestPalindrome.TestGreatestPalindrome();
             IsomorphicStrings.TestIsomorphicStrings();
+            ReverseStringWithoutVowels.TestReverseStringWithoutVowels();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();
