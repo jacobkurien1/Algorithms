@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Arrays\ArrayOfNumsIncrement.cs" />
     <Compile Include="Arrays\ArraysHelper\ArrayHelper.cs" />
+    <Compile Include="Arrays\ArrayWithGreaterElementToRight.cs" />
     <Compile Include="Arrays\MaxDistanceInArray.cs" />
     <Compile Include="Arrays\MovingAverage.cs" />
     <Compile Include="Arrays\TotalAverage.cs" />

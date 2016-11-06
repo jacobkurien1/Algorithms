@@ -87,6 +87,7 @@ namespace AlgorithmProblems
             MaxDistanceInArray.TestMaxDistanceInArray();
             MovingAverage.TestMovingAverage();
             TotalAverage.TestTotalAverage();
+            ArrayWithGreaterElementToRight.TestArrayWithGreaterElementToRight();
             //Median.TestGetMedianOf2SortedArray();
 
             // Sorting Problems
