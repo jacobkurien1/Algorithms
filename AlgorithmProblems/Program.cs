@@ -202,6 +202,7 @@ namespace AlgorithmProblems
             TreeWithInorderAndPreorder.TestTreeWithInorderAndPreorder();
             TreeWithInorderAndPostorder.TestTreeWithInorderAndPostorder();
             TreePathSumsToValue.TestTreePathSumsToValue();
+            AllPathInNArayTree.TestAllPathInNArayTree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
