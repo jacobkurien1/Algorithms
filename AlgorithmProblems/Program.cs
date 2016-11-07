@@ -311,6 +311,7 @@ namespace AlgorithmProblems
             AllFactors.TestAllFactors();
             MultiplyLongNumbers.TestMultiplyLongNumbers();
             NextLargestPermutation.TestNextLargestPermutation();
+            AllPrimesTillN.TestAllPrimesTillN();
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
