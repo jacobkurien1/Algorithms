@@ -146,6 +146,7 @@ namespace AlgorithmProblems
             EvaluateInflixNotation.TestGetInflixNotationResults();
             EvaluatePostfixNotation.TestGetPostfixNotationResult();
             TestCircularQueue.TestCircularQueueWithDifferentCases();
+            LargestAreaInHistogram.TestLargestAreaInHistogram();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();
