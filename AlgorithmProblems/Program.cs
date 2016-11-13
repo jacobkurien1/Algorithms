@@ -147,6 +147,7 @@ namespace AlgorithmProblems
             EvaluatePostfixNotation.TestGetPostfixNotationResult();
             TestCircularQueue.TestCircularQueueWithDifferentCases();
             LargestAreaInHistogram.TestLargestAreaInHistogram();
+            TextEditerWithUndo.TestTextEditerWithUndo();
 
             //Recursion Problem
             TowerOfHanoi.TestTowerOfHanoi();

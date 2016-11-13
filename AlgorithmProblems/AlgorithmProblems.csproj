@@ -209,6 +209,7 @@
     <Compile Include="PermutationAndCombination\PowerSet.cs" />
     <Compile Include="Sorting\SortedSquares.cs" />
     <Compile Include="Stack and Queue\LargestAreaInHistogram.cs" />
+    <Compile Include="Stack and Queue\TextEditerWithStack.cs" />
     <Compile Include="StringProblems\AnagramIsPalindrome.cs" />
     <Compile Include="StringProblems\CheckEditDistance.cs" />
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
