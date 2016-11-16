@@ -47,6 +47,7 @@
     <Compile Include="Arrays\MaxDistanceInArray.cs" />
     <Compile Include="Arrays\MovingAverage.cs" />
     <Compile Include="Arrays\TotalAverage.cs" />
+    <Compile Include="Arrays\WaterCollectedInPuddleShownByHistogram.cs" />
     <Compile Include="Bit Algorithms\Parity.cs" />
     <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />

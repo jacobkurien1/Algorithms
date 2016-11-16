@@ -88,6 +88,7 @@ namespace AlgorithmProblems
             MovingAverage.TestMovingAverage();
             TotalAverage.TestTotalAverage();
             ArrayWithGreaterElementToRight.TestArrayWithGreaterElementToRight();
+            WaterCollectedInPuddleShownByHistogram.TestWaterCollectedInPuddleShownByHistogram();
             //Median.TestGetMedianOf2SortedArray();
 
             // Sorting Problems
