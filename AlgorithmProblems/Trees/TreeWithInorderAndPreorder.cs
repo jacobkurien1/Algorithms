@@ -28,10 +28,8 @@ namespace AlgorithmProblems.Trees
         /// 3. get the number of nodes in the left and right subtree from 2 and that is the length of the left and right subtree in preorder array.
         /// 4. now get the left node and right node recursively.
         /// 
-        /// The recurrance relationship is 
-        /// T(n) = T(n-k)+T(k) + O(n)
-        /// 
-        /// In worst case k=1 and the running time is O(n^2)
+        /// In worst case k=1 and the running time is O(n^2).
+        /// The worst case happens when the tree is skewed.
         /// </summary>
         /// <param name="inorder">array having the inorder traversal of the tree</param>
         /// <param name="inorderSt">start index in inorder array</param>
