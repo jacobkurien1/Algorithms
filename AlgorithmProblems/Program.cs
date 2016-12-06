@@ -206,6 +206,7 @@ namespace AlgorithmProblems
             TreeWithInorderAndPostorder.TestTreeWithInorderAndPostorder();
             TreePathSumsToValue.TestTreePathSumsToValue();
             AllPathInNArayTree.TestAllPathInNArayTree();
+            SerializeDeserializeBinaryTree.TestSerializeDeserializeBinaryTree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
