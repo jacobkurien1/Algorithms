@@ -284,6 +284,7 @@
     <Compile Include="Trees\MakeBSTFromPreOrder.cs" />
     <Compile Include="Trees\MaxSumOnTreeBranch.cs" />
     <Compile Include="Trees\MirrorATree.cs" />
+    <Compile Include="Trees\SerializeDeserializeAnNaryTree.cs" />
     <Compile Include="Trees\SerializeDeserializeBinaryTree.cs" />
     <Compile Include="Trees\SkewedBSTToCompleteBST.cs" />
     <Compile Include="Trees\TreeHelper\BinarySearchTree.cs" />
@@ -292,6 +293,7 @@
     <Compile Include="Trees\TreeHelper\BinaryTreeNode.cs" />
     <Compile Include="Trees\TreeFromExpression.cs" />
     <Compile Include="Trees\TreeHelper\BinaryTreeNodeWithParent.cs" />
+    <Compile Include="Trees\TreeHelper\NaryTreeNode.cs" />
     <Compile Include="Trees\TreeHelper\TreeHelper.cs" />
     <Compile Include="Trees\TreeHelper\TreeNode.cs" />
     <Compile Include="Trees\TreePathSumsToValue.cs" />

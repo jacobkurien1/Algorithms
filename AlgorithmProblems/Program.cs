@@ -207,6 +207,7 @@ namespace AlgorithmProblems
             TreePathSumsToValue.TestTreePathSumsToValue();
             AllPathInNArayTree.TestAllPathInNArayTree();
             SerializeDeserializeBinaryTree.TestSerializeDeserializeBinaryTree();
+            SerializeDeserializeAnNaryTree.TestSerializeDeserializeAnNaryTree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
