@@ -317,6 +317,7 @@ namespace AlgorithmProblems
             MultiplyLongNumbers.TestMultiplyLongNumbers();
             NextLargestPermutation.TestNextLargestPermutation();
             AllPrimesTillN.TestAllPrimesTillN();
+            PascalsTriangle.TestPascalsTriangle();
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
