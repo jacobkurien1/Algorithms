@@ -119,6 +119,7 @@ namespace AlgorithmProblems
             PrintMatrixInSpiral.TestPrintMatrixInSpiral();
             MaxSqAreaInBinaryMatrix.TestMaxRectAreaInBinaryMatrix();
             TicTacToeWinner.TestTicTacToeWinner();
+            WaterfallCreation.TestWaterfallCreation();
 
             // Linked list Problems
             DeleteLinkedListNode.TestDeleteFirstNode();

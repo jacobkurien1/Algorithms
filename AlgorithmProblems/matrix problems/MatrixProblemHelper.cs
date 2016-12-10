@@ -20,6 +20,18 @@ namespace AlgorithmProblems.matrix_problems
             }
         }
 
+        public static void PrintMatrix(float[,] mat)
+        {
+            for (int r = 0; r < mat.GetLength(0); r++)
+            {
+                for (int c = 0; c < mat.GetLength(1); c++)
+                {
+                    Console.Write(mat[r, c] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static int[,] CreateMatrix(int rowlength, int collength)
         {
             Random rnd = new Random();
