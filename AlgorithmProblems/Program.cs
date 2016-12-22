@@ -209,6 +209,7 @@ namespace AlgorithmProblems
             AllPathInNArayTree.TestAllPathInNArayTree();
             SerializeDeserializeBinaryTree.TestSerializeDeserializeBinaryTree();
             SerializeDeserializeAnNaryTree.TestSerializeDeserializeAnNaryTree();
+            AncestorOfTwoNodesInNaryTree.TestAncestorOfTwoNodesInNaryTree();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
@@ -246,6 +247,7 @@ namespace AlgorithmProblems
             MaxSumWithoutAdjacentElements.TestMaxSumWithoutAdjacentElements();
             MaxPathThroughMatrix.TestMaxPathThroughMatrix();
             BrickLaying.TestBrickLaying();
+            EggDrop.TestEggDrop();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();

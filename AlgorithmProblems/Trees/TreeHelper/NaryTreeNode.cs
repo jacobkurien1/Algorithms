@@ -17,5 +17,10 @@ namespace AlgorithmProblems.Trees.TreeHelper
             Data = data;
             Children = new List<NaryTreeNode<T>>();
         }
+
+        public override string ToString()
+        {
+            return Data.ToString();
+        }
     }
 }

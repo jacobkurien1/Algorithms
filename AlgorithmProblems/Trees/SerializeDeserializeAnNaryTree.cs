@@ -24,9 +24,9 @@ namespace AlgorithmProblems.Trees
     /// this tree will be serilaized as 
     /// A B ) C F ) G ) ) D H ) ) E ) )
     /// </summary>
-    class SerializeDeserializeAnNaryTree
+    public class SerializeDeserializeAnNaryTree
     {
-        static void Serialize(NaryTreeNode<int> node, StringBuilder sb)
+        public static void Serialize(NaryTreeNode<int> node, StringBuilder sb)
         {
             if (node == null)
             {
@@ -40,7 +40,7 @@ namespace AlgorithmProblems.Trees
             sb.Append(") ");
         }
 
-        static NaryTreeNode<int> DeSerialize(string[] allNodes)
+        public static NaryTreeNode<int> DeSerialize(string[] allNodes)
         {
             Stack<NaryTreeNode<int>> st = new Stack<NaryTreeNode<int>>();
             st.Push(new NaryTreeNode<int>(int.Parse(allNodes[0])));
