@@ -74,6 +74,7 @@
     <Compile Include="Math Problems\AllPrimesTillN.cs" />
     <Compile Include="Math Problems\NextLargestPermutation.cs" />
     <Compile Include="Math Problems\PascalsTriangle.cs" />
+    <Compile Include="Math Problems\SubtractLongNumbers.cs" />
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />
     <Compile Include="matrix problems\MaxSqAreaInBinaryMatrix.cs" />
     <Compile Include="matrix problems\MinRangeInMatrix.cs" />
@@ -287,6 +288,8 @@
     <Compile Include="Trees\MakeBSTFromPreOrder.cs" />
     <Compile Include="Trees\MaxSumOnTreeBranch.cs" />
     <Compile Include="Trees\MirrorATree.cs" />
+    <Compile Include="Trees\PrintBinaryTreeNodeAtEachLevel.cs" />
+    <Compile Include="Trees\PrintBinaryTreeNodeAtEachLevelSpirally.cs" />
     <Compile Include="Trees\SerializeDeserializeAnNaryTree.cs" />
     <Compile Include="Trees\SerializeDeserializeBinaryTree.cs" />
     <Compile Include="Trees\SkewedBSTToCompleteBST.cs" />

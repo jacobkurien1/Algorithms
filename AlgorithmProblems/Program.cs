@@ -192,6 +192,8 @@ namespace AlgorithmProblems
             SkewedBSTToCompleteBST.TestConvertSkewedBSTToCompleteBST();
             CheckIfTheTreeIsBalanced.TestIsTreeBalanced();
             LinkedListOfTreeNodesAtEachDepth.TestCreateLinkedListOfTreeNodesAtEachDepth();
+            PrintBinaryTreeNodeAtEachLevel.TestPrintBinaryTreeNodeAtEachLevel();
+            PrintBinaryTreeNodeAtEachLevelSpirally.TestPrintBinaryTreeNodeAtEachLevelSpirally();
             TreeSubtreeOfAnother.TestMatchTree();
             AncestorOfTwoNodesInBT.TestGetAncestorOfTwoNodesInBT();
             AncestorOfMultiNodesInBT.TestAncestorOfMultiNodesInBT();
@@ -321,6 +323,7 @@ namespace AlgorithmProblems
             NextLargestPermutation.TestNextLargestPermutation();
             AllPrimesTillN.TestAllPrimesTillN();
             PascalsTriangle.TestPascalsTriangle();
+            SubtractLongNumbers.TestSubtractLongNumbers();
 
             //Search problems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
