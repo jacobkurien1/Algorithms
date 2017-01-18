@@ -14,6 +14,11 @@ namespace AlgorithmProblems.Graphs
     /// 2. Give it the highest order (#graph_nodes)
     /// 3. Delete that node and all the edges.
     /// 4. Find the other sink nodes and do steps 1-3
+    /// 
+    /// lower topological order course will be taken by the student first
+    /// 
+    /// The running time is O(V+E)
+    /// The space requirement is O(V)
     /// </summary>
     class CourseScheduling
     {
@@ -21,7 +26,7 @@ namespace AlgorithmProblems.Graphs
         {
             this.TopologicalOrderPerVertex = new Dictionary<GraphVertex, int>();
             this.Graph = graph;
-            this.TopologicalOrder = 1;
+            this.TopologicalOrder = graph.AllVertices.Count;
         }
         public DirectedGraph Graph { get; set; }
         private int TopologicalOrder { get; set; }
@@ -64,8 +69,9 @@ namespace AlgorithmProblems.Graphs
             }
 
             // This step will find the sink element and then put it in the dictionary
+            // We can also add all the elements in a stack to mimic this behaviour
             this.TopologicalOrderPerVertex[currentVertex] = this.TopologicalOrder;
-            this.TopologicalOrder++;
+            this.TopologicalOrder--;
 
         }
 
