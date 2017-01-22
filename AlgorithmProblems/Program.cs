@@ -269,6 +269,7 @@ namespace AlgorithmProblems
             ReverseGraph.TestReverseGraph();
             StronglyConnectedGraph.TestStronglyConnectedGraph();
             ConnectedComponents.TestConnectedComponents();
+            ContinentalDivide.TestContinentalDivide();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();

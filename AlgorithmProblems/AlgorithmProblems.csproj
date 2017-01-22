@@ -60,6 +60,7 @@
     <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />
     <Compile Include="Dynamic Programming\TravellingSalesmanProblem.cs" />
     <Compile Include="Geometry\KClosestPointToOrigin.cs" />
+    <Compile Include="Graphs\ContinentalDivide.cs" />
     <Compile Include="Graphs\GraphColoring\CheckBipartiteGraph.cs" />
     <Compile Include="Graphs\MaxFlow\FordFulkersonEdmondKarp.cs" />
     <Compile Include="Graphs\MaxFlow\MaxFlowHelper.cs" />

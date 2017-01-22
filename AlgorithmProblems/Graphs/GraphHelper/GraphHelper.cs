@@ -229,6 +229,33 @@ namespace AlgorithmProblems.Graphs.GraphHelper
                 Console.WriteLine();
             }
         }
-        
+
+    }
+
+    public class Cell : IEquatable<Cell>
+    {
+        public int XCoordinate { get; set; }
+        public int YCoordinate { get; set; }
+
+        public Cell(int xCoordinate, int yCoordinate)
+        {
+            XCoordinate = xCoordinate;
+            YCoordinate = yCoordinate;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("({0}, {1})", XCoordinate, YCoordinate);
+        }
+
+        public bool Equals(Cell other)
+        {
+            return XCoordinate == other.XCoordinate && YCoordinate == other.YCoordinate;
+        }
+
+        public override int GetHashCode()
+        {
+            return XCoordinate.GetHashCode()^YCoordinate.GetHashCode();
+        }
     }
 }
