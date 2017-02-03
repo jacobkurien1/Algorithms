@@ -71,18 +71,17 @@ namespace AlgorithmProblems.Graphs
             }
             Queue<string> queueForBFS = new Queue<string>();
             queueForBFS.Enqueue(startStr);
-            Dictionary<string, bool> visitedNodes = new Dictionary<string, bool>(); //Todo: remove this and use backtrack dictionary
-            visitedNodes.Add(startStr, true);
+            
             Dictionary<string, string> backtrackDict = new Dictionary<string, string>();
+            backtrackDict.Add(startStr, null);
 
-            while(queueForBFS.Count>0)
+            while (queueForBFS.Count>0)
             {
                 string currentStr = queueForBFS.Dequeue();
                 foreach(string validNeighbour in GetAllValidWords(currentStr))
                 {
-                    if(!visitedNodes.ContainsKey(validNeighbour))
+                    if(!backtrackDict.ContainsKey(validNeighbour))
                     {
-                        visitedNodes[validNeighbour] = true;
                         queueForBFS.Enqueue(validNeighbour);
                         backtrackDict[validNeighbour] = currentStr;
                         if(validNeighbour == endStr)
@@ -90,12 +89,11 @@ namespace AlgorithmProblems.Graphs
                             // we need to get the path that led us here and return that path
                             List<string> path = new List<string>();
                             string backTrackPath = endStr;
-                            while (backtrackDict.ContainsKey(backTrackPath))
+                            while (backTrackPath != null)
                             {
                                 path.Add(backTrackPath);
                                 backTrackPath = backtrackDict[backTrackPath];
                             }
-                            path.Add(startStr);
                             path.Reverse();
                             return path;
                         }
