@@ -270,6 +270,7 @@ namespace AlgorithmProblems
             StronglyConnectedGraph.TestStronglyConnectedGraph();
             ConnectedComponents.TestConnectedComponents();
             ContinentalDivide.TestContinentalDivide();
+            CloneGraph.TestCloneGraph();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();

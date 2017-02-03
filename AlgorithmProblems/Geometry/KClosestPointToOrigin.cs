@@ -142,19 +142,15 @@ namespace AlgorithmProblems.Geometry
             MaxHeap<Point> mh = new MaxHeap<Point>(k+1);
             for(int i=0; i<allPoints.Length; i++)
             {
-                if(mh.HeapSize == k+1)
+                mh.Insert(allPoints[i]);
+
+                if (mh.HeapSize == k+1)
                 {
                     // once the capacity is hit, we need to extract the max value
                     mh.ExtractMax();
                 }
-                mh.Insert(allPoints[i]);
             }
-            // Extract the last max value, now the max heap has k elements
-            if (mh.HeapSize == k + 1)
-            {
-                mh.ExtractMax();
-            }
-
+            
             return mh.HeapArray;
         }
         #endregion

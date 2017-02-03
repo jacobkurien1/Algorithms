@@ -71,7 +71,7 @@ namespace AlgorithmProblems.Graphs
             }
             Queue<string> queueForBFS = new Queue<string>();
             queueForBFS.Enqueue(startStr);
-            Dictionary<string, bool> visitedNodes = new Dictionary<string, bool>();
+            Dictionary<string, bool> visitedNodes = new Dictionary<string, bool>(); //Todo: remove this and use backtrack dictionary
             visitedNodes.Add(startStr, true);
             Dictionary<string, string> backtrackDict = new Dictionary<string, string>();
 

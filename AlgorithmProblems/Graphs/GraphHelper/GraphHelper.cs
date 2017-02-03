@@ -230,6 +230,31 @@ namespace AlgorithmProblems.Graphs.GraphHelper
             }
         }
 
+        public static void PrintGraphBFS(GraphVertex root)
+        {
+            Dictionary<GraphVertex, bool> visited = new Dictionary<GraphVertex, bool>();
+            Queue<GraphVertex> queue = new Queue<GraphVertex>();
+            queue.Enqueue(root);
+            while(queue.Count>0)
+            {
+                GraphVertex v = queue.Dequeue();
+                if (!visited.ContainsKey(v))    // To make sure we dont print twice when we encounter cycle
+                {
+                    visited[v] = true;
+                    Console.Write("{0} -> ", v.Data);
+                    foreach (GraphVertex n in v.NeighbourVertices)
+                    {
+                        Console.Write("{0} ", n.Data);
+                        if (!visited.ContainsKey(n))
+                        {
+                            queue.Enqueue(n);
+                        }
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
+
     }
 
     public class Cell : IEquatable<Cell>
