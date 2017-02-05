@@ -72,6 +72,7 @@ namespace AlgorithmProblems
             GreatestPalindrome.TestGreatestPalindrome();
             IsomorphicStrings.TestIsomorphicStrings();
             ReverseStringWithoutVowels.TestReverseStringWithoutVowels();
+            LongestSubstringWithKDistinctChars.TestLongestSubstringWithKDistinctChars();
             // Pattern Matching
             NativePatternMatching.TestNativePatternMatching();
             KMPPatternMatching.TestKMPPatternMatching();

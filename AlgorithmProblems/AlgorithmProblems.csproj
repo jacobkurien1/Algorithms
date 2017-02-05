@@ -220,6 +220,7 @@
     <Compile Include="StringProblems\CheckEditDistance.cs" />
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
     <Compile Include="StringProblems\IsomorphicStrings.cs" />
+    <Compile Include="StringProblems\LongestSubstringWithKDistinctChars.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
