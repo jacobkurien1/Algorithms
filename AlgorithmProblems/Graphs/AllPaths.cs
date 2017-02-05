@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs
 {
+    /// <summary>
+    /// Get all the paths in a graph
+    /// 
+    /// Algo: We can do DFS and Keep track of the current path.
+    /// Print the path when we have no non-visited neighbours.
+    /// 
+    /// The running time is O(V+E) to do DFS
+    /// The spave requirement is O(V) to store the path
+    /// </summary>
     class AllPaths
     {
 
@@ -28,32 +37,26 @@ namespace AlgorithmProblems.Graphs
             startVertex.IsVisited = true;
             CurrentPath.Add(startVertex);
 
-            // Need to get all the nodes that can be visited from the start vertex
-            List<GraphVertex> nonVisitedGraphVertex = new List<GraphVertex>();
+            bool NoNonVisitedNeighbour = true;
             foreach(GraphVertex neighbour in startVertex.NeighbourVertices)
             {
                 if(!neighbour.IsVisited)
                 {
-                    nonVisitedGraphVertex.Add(neighbour);
+                    NoNonVisitedNeighbour = false;
+                    GetAllPathsInGraphFromStartVertex(neighbour);
                 }
             }
 
             // if none of the nodes can be visited from the start vertex then we have found a path and we need to print it
-            if(nonVisitedGraphVertex.Count == 0)
+            if (NoNonVisitedNeighbour)
             {
                 // We have reached the end of all the visited nodes
                 // We need to print this path
-                foreach(GraphVertex vertex in CurrentPath)
+                foreach (GraphVertex vertex in CurrentPath)
                 {
                     Console.Write(vertex.Data + " -> ");
                 }
                 Console.WriteLine();
-            }
-
-            // for all the neighbouring nodes which have not been visited, do the DFS
-            foreach(GraphVertex neighbour in nonVisitedGraphVertex)
-            {
-                GetAllPathsInGraphFromStartVertex(neighbour);
             }
 
             // the below steps will be used for backtracking
