@@ -251,6 +251,7 @@ namespace AlgorithmProblems
             MaxPathThroughMatrix.TestMaxPathThroughMatrix();
             BrickLaying.TestBrickLaying();
             EggDrop.TestEggDrop();
+            JobSchedullingWithConstraints.TestJobSchedullingWithConstraints();
 
             // Graph Problems
             ShortestPath.TestGetShortestPathBetween2Vertex();

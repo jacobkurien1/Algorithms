@@ -56,6 +56,7 @@
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
     <Compile Include="Dynamic Programming\BrickLaying.cs" />
     <Compile Include="Dynamic Programming\EggDrop.cs" />
+    <Compile Include="Dynamic Programming\JobSchedullingWithConstraints.cs" />
     <Compile Include="Dynamic Programming\MaxPathThroughMatrix.cs" />
     <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />
     <Compile Include="Dynamic Programming\TravellingSalesmanProblem.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Math Problems\NextLargestPermutation.cs" />
     <Compile Include="Math Problems\PascalsTriangle.cs" />
     <Compile Include="Math Problems\SubtractLongNumbers.cs" />
+    <Compile Include="matrix problems\Helper\MatrixHelper.cs" />
     <Compile Include="matrix problems\MatrixAsTriangle.cs" />
     <Compile Include="matrix problems\MaxSqAreaInBinaryMatrix.cs" />
     <Compile Include="matrix problems\MinRangeInMatrix.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
     <Compile Include="StringProblems\IsomorphicStrings.cs" />
     <Compile Include="StringProblems\LongestSubstringWithKDistinctChars.cs" />
+    <Compile Include="StringProblems\PatternMatching\FiniteAutomata.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
