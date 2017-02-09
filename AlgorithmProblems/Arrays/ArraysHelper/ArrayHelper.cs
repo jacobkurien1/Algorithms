@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Arrays.ArraysHelper
 {
-    class ArrayHelper
+    public static class ArrayHelper
     {
         public static int[] CreateArray(int size)
         {
@@ -35,6 +35,14 @@ namespace AlgorithmProblems.Arrays.ArraysHelper
                 Console.Write(arr[i]+" ");
             }
             Console.WriteLine();
+        }
+
+        public static void Populate<T>(this T[] arr, T value)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = value;
+            }
         }
     }
 
