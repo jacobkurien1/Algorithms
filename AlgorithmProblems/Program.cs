@@ -182,6 +182,7 @@ namespace AlgorithmProblems
             AllNumbersInRangeWithDifferentDigits.TestAllNumbersInRangeWithDifferentDigits();
             DivideSetIntoTwoEqualSetsWithMinSumDiff.TestDivideSetIntoTwoEqualSetsWithMinSumDiff();
             PowerSet.TestPowerSet();
+            AllCombinationsOfParenthesis.TestAllCombinationsOfParenthesis();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();

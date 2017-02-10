@@ -88,6 +88,7 @@
     <Compile Include="matrix problems\WaterfallCreation.cs" />
     <Compile Include="Misc\JosephusProblem.cs" />
     <Compile Include="Math Problems\MultiplyLongNumbers.cs" />
+    <Compile Include="PermutationAndCombination\AllCombinationsOfParenthesis.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
     <Compile Include="Search\SearchInSortedMatrix.cs" />
     <Compile Include="Search\SearchInSortedRotatedArray.cs" />
