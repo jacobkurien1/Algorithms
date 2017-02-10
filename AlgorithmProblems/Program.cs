@@ -274,6 +274,7 @@ namespace AlgorithmProblems
             ConnectedComponents.TestConnectedComponents();
             ContinentalDivide.TestContinentalDivide();
             CloneGraph.TestCloneGraph();
+            Wordament.TestWordament();
             // ShortestPathAlgo
             FloydWarshall.TestFloydWarshall();
             DijkstraAlgorithm.TestDijkstraAlgorithm();
