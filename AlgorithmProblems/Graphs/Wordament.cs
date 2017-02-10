@@ -27,6 +27,10 @@ namespace AlgorithmProblems.Graphs
 
         /// <summary>
         /// Get all the words present on the board
+        /// 
+        /// if total cells tc = rows*cols
+        /// The running time will be O(tc^3)
+        /// The space required will be the space used by stringbuilder which can be O(tc)
         /// </summary>
         /// <param name="board"></param>
         /// <returns></returns>
