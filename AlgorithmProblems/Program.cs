@@ -298,6 +298,7 @@ namespace AlgorithmProblems
             BasicMinHeap.TestMinHeap();
             TestMinHeapMap.DoTest();
             TestPriorityQueue.Run();
+            MedianForAStreamOfNumbers.TestMedianForAStreamOfNumbers();
 
             //DisjointSets
             TestingDisjointSet.Run();
