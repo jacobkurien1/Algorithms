@@ -17,9 +17,12 @@ namespace AlgorithmProblems.PermutationAndCombination
         /// this dictionary will contain the mapping between the number to the characters as shown in the pinpad
         /// </summary>
         public Dictionary<int, List<char>> NumToChar { get; set; }
+        public Dictionary<char, List<char>> CharPhNumToChar { get; set; }
+
         public PhoneNumberToWords()
         {
             NumToChar = new Dictionary<int, List<char>>();
+            CharPhNumToChar = new Dictionary<char, List<char>>();
             NumToChar.Add(2, new List<char> { 'A', 'B', 'C' });
             NumToChar.Add(3, new List<char> { 'D', 'E', 'F' });
             NumToChar.Add(4, new List<char> { 'G', 'H', 'I' });
@@ -28,13 +31,20 @@ namespace AlgorithmProblems.PermutationAndCombination
             NumToChar.Add(7, new List<char> { 'P', 'Q', 'R', 'S' });
             NumToChar.Add(8, new List<char> { 'T', 'U', 'V' });
             NumToChar.Add(9, new List<char> { 'W', 'X', 'Y', 'Z' });
+            foreach(KeyValuePair<int, List<char>> kvp in NumToChar)
+            {
+                CharPhNumToChar[Char.Parse(kvp.Key.ToString())] = kvp.Value;
+            }
         }
 
+        #region Method1: Recusive Method
         /// <summary>
         /// this is the recursive subroutine which helps in getting the combinations from the phonenumbers
         /// this subroutine will call itself with phonenumber /= 10 and the current subroutine will work 
         /// with the last digit of the phone number (phoneNumber % 10)
         /// 
+        /// The running time of this method is O(4^n)
+        /// The space requirement is also O(4^n) as we have to save all the combination
         /// </summary>
         /// <param name="phoneNumber"></param>
         /// <returns>list of combinations from the phone number</returns>
@@ -73,26 +83,88 @@ namespace AlgorithmProblems.PermutationAndCombination
             }
             return ret;
         }
+
+        #endregion
+
+        #region Method2: Iterative Method(Optimal method)
+
+        /// <summary>
+        /// This is the iterative method to get all possible combinations when a phone number is given.
+        /// Here we will use 2 lists and keep adding the chars to the strings of one list and save it in the second list.
+        /// 
+        /// The running time of this method is O(4^n)
+        /// The space requirement is also O(4^n) as we have to save all the combinations
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>
+        public List<string> ConvertPhoneNumberToWords(string phoneNumber)
+        {
+            if(phoneNumber == null || phoneNumber == string.Empty)
+            {
+                return null;
+            }
+            List<string> previous = new List<string>() { "" };
+            for(int numIndex = 0; numIndex < phoneNumber.Length; numIndex++)
+            {
+                List<string> currentList = new List<string>(); 
+                if (!CharPhNumToChar.ContainsKey(phoneNumber[numIndex]))
+                {
+                    throw new Exception("Invalid Phone number");
+                }
+
+                foreach (char c in CharPhNumToChar[phoneNumber[numIndex]])
+                {
+                    foreach(string str in previous)
+                    {
+                        currentList.Add(str + c.ToString());
+                    }
+                }
+                previous = currentList;
+            }
+            return previous;
+        }
+
+        #endregion
+
         public static void TestPhoneNumberToWords()
         {
             PhoneNumberToWords PhToWords = new PhoneNumberToWords();
             long phoneNumber = 285;
             Console.WriteLine("All the different combinations of {0} is as shown below", phoneNumber);
+            Console.WriteLine("Recursive Solution");
             PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber));
+            Console.WriteLine("Iterative Solution");
+            PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber.ToString()));
 
             phoneNumber = 9876;
             Console.WriteLine("All the different combinations of {0} is as shown below", phoneNumber);
+            Console.WriteLine("Recursive Solution");
             PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber));
+            Console.WriteLine("Iterative Solution");
+            PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber.ToString()));
 
             phoneNumber = 052;
             Console.WriteLine("All the different combinations of {0} is as shown below", phoneNumber);
+            Console.WriteLine("Recursive Solution");
             PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber));
+            Console.WriteLine("Iterative Solution");
+            PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber.ToString()));
 
             phoneNumber = 201;
             Console.WriteLine("All the different combinations of {0} is as shown below", phoneNumber);
             try
             {
+                Console.WriteLine("Recursive Solution");
                 PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0}", e.Message);
+            }
+            try
+            {
+                Console.WriteLine("Iterative Solution");
+                PrintCombinations(PhToWords.ConvertPhoneNumberToWords(phoneNumber.ToString()));
             }
             catch (Exception e)
             {
