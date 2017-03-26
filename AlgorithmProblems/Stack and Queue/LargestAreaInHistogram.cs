@@ -67,15 +67,50 @@ namespace AlgorithmProblems.Stack_and_Queue
         }
         #endregion
 
+        #region Cleaner Code
+        private static long GetLargestAreaClean(long[] hist)
+        {
+            if (hist == null)
+            {
+                throw new Exception("The histogram is null");
+            }
+
+            Stack<int> st = new Stack<int>();
+            int i = 0;
+            long maxArea = long.MinValue;
+            while (i < hist.Length || st.Count != 0)
+            {
+                if (st.Count == 0 || (i < hist.Length && hist[st.Peek()] <= hist[i]))
+                {
+                    st.Push(i);
+                    i++;
+                }
+                else
+                {
+                    int stVal = st.Pop();
+                    int width = (st.Count == 0) ? i : i - stVal;
+                    long area = width * hist[stVal];
+                    if (area > maxArea)
+                    {
+                        maxArea = area;
+                    }
+                }
+            }
+            return maxArea;
+        }
+        #endregion
+
         #region TestArea
         public static void TestLargestAreaInHistogram()
         {
             long[] hist = new long[] { 1, 2, 3, 1, 4 };
             Console.WriteLine("The max area of the above histogram is {0}. Expected:5", GetLargestArea(hist));
+            Console.WriteLine("The max area of the above histogram is {0}. Expected:5", GetLargestAreaClean(hist));
 
             hist = new long[] { 8979, 4570, 6436, 5083, 7780, 3269, 5400, 7579, 2324, 2116 };
             Console.WriteLine("The max area of the above histogram is {0}. Expected:26152", GetLargestArea(hist));
-        }
+            Console.WriteLine("The max area of the above histogram is {0}. Expected:26152", GetLargestAreaClean(hist));
+         }
         #endregion
     }
 }
