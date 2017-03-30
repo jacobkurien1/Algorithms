@@ -18,6 +18,11 @@ namespace AlgorithmProblems.Trees
                 return new List<BinaryTreeNode<T>>() { Left, Right };
             }
         }
+
+        public bool IsLeaf()
+        {
+            return Left == null && Right == null;
+        }
         
         public T Data { get; set; }
 

@@ -214,6 +214,7 @@ namespace AlgorithmProblems
             SerializeDeserializeBinaryTree.TestSerializeDeserializeBinaryTree();
             SerializeDeserializeAnNaryTree.TestSerializeDeserializeAnNaryTree();
             AncestorOfTwoNodesInNaryTree.TestAncestorOfTwoNodesInNaryTree();
+            AbsOfMaxAndSecondMaxDepthInBT.TestGetAbsOfMaxAndSecondMaxDepthInBT();
 
             // Trie problems
             CreateAndSearchSimpleTrie.TestCreateAndSearchSimpleTrie();
