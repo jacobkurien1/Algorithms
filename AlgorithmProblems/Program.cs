@@ -183,6 +183,7 @@ namespace AlgorithmProblems
             DivideSetIntoTwoEqualSetsWithMinSumDiff.TestDivideSetIntoTwoEqualSetsWithMinSumDiff();
             PowerSet.TestPowerSet();
             AllCombinationsOfParenthesis.TestAllCombinationsOfParenthesis();
+            GoodDiceRoll.TestGoodDiceRoll();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();
