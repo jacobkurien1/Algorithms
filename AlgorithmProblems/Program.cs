@@ -70,7 +70,6 @@ namespace AlgorithmProblems
             EditDistanceBetweenStrings.TestEditDistanceBetweenStrings();
             AnagramIsPalindrome.TestAnagramIsPalindrome();
             GreatestPalindrome.TestGreatestPalindrome();
-            IsomorphicStrings.TestIsomorphicStrings();
             ReverseStringWithoutVowels.TestReverseStringWithoutVowels();
             LongestSubstringWithKDistinctChars.TestLongestSubstringWithKDistinctChars();
             // Pattern Matching
@@ -253,7 +252,6 @@ namespace AlgorithmProblems
             MaxSumWithoutAdjacentElements.TestMaxSumWithoutAdjacentElements();
             MaxPathThroughMatrix.TestMaxPathThroughMatrix();
             BrickLaying.TestBrickLaying();
-            EggDrop.TestEggDrop();
             JobSchedullingWithConstraints.TestJobSchedullingWithConstraints();
 
             // Graph Problems
@@ -338,10 +336,10 @@ namespace AlgorithmProblems
             SearchInSortedRotatedArray.TestSearchInSortedRotatedArray();
             KClosestElementInArray.TestKClosestElementInArray();
             SearchInSortedMatrix.TestSearchInSortedMatrix();
+            BinarySearchUnbounded.TestBinarySearchUnbounded();
 
             //Distributed algorithms
             KWayMerge.TestKWayMerge();
-            GetMedianForLargeSet.TestGetMedianForLargeSet();
 
 
             Console.ReadLine();

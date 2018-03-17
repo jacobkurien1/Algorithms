@@ -49,13 +49,10 @@
     <Compile Include="Arrays\TotalAverage.cs" />
     <Compile Include="Arrays\WaterCollectedInPuddleShownByHistogram.cs" />
     <Compile Include="Bit Algorithms\Parity.cs" />
-    <Compile Include="Bit Algorithms\SwapBits.cs" />
     <Compile Include="DisjointSets\WeightedDisjointSetsWithPathCompression.cs" />
-    <Compile Include="Distributed Algorithms\GetMedianForLargeSet.cs" />
     <Compile Include="Distributed Algorithms\KWayMerge.cs" />
     <Compile Include="Dynamic Programming\BalloonBursting.cs" />
     <Compile Include="Dynamic Programming\BrickLaying.cs" />
-    <Compile Include="Dynamic Programming\EggDrop.cs" />
     <Compile Include="Dynamic Programming\JobSchedullingWithConstraints.cs" />
     <Compile Include="Dynamic Programming\MaxPathThroughMatrix.cs" />
     <Compile Include="Dynamic Programming\MaxSumWithoutAdjacentElements.cs" />
@@ -92,10 +89,10 @@
     <Compile Include="Math Problems\MultiplyLongNumbers.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfParenthesis.cs" />
     <Compile Include="PermutationAndCombination\GoodDiceRoll.cs" />
+    <Compile Include="Search\BinarySearchUnbounded.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
     <Compile Include="Search\SearchInSortedMatrix.cs" />
     <Compile Include="Search\SearchInSortedRotatedArray.cs" />
-    <Compile Include="Search\SearchInSpirallySortedMatrix.cs" />
     <Compile Include="Sorting\DutchNationalFlag.cs" />
     <Compile Include="Arrays\MajorityElement.cs" />
     <Compile Include="Arrays\MaxSumOfConsecutiveNums.cs" />
@@ -106,7 +103,6 @@
     <Compile Include="Arrays\SumOfTwoNumbersInArray.cs" />
     <Compile Include="BackTracking\GraphColoringWithMColors.cs" />
     <Compile Include="BackTracking\HamiltonianCycle.cs" />
-    <Compile Include="Bit Algorithms\BitHelper.cs" />
     <Compile Include="Bit Algorithms\IntHaveOppositeSigns.cs" />
     <Compile Include="DisjointSets\DisjointSets.cs" />
     <Compile Include="Dynamic Programming\BinomialCoefficient.cs" />
@@ -223,11 +219,8 @@
     <Compile Include="Stack and Queue\LargestAreaInHistogram.cs" />
     <Compile Include="Stack and Queue\TextEditerWithStack.cs" />
     <Compile Include="StringProblems\AnagramIsPalindrome.cs" />
-    <Compile Include="StringProblems\CheckEditDistance.cs" />
     <Compile Include="StringProblems\GreatestPalindrome.cs" />
-    <Compile Include="StringProblems\IsomorphicStrings.cs" />
     <Compile Include="StringProblems\LongestSubstringWithKDistinctChars.cs" />
-    <Compile Include="StringProblems\PatternMatching\FiniteAutomata.cs" />
     <Compile Include="StringProblems\PatternMatching\KMPPatternMatching.cs" />
     <Compile Include="StringProblems\PatternMatching\NativePatternMatching.cs" />
     <Compile Include="PermutationAndCombination\AllCombinationsOfString.cs" />
@@ -287,7 +280,6 @@
     <Compile Include="Trees\AncestorOfTwoNodesInBST.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInBT.cs" />
     <Compile Include="Trees\AncestorOfTwoNodesInNaryTree.cs" />
-    <Compile Include="Trees\BalancedBST\RedBlackTree.cs" />
     <Compile Include="Trees\CheckBTisBST.cs" />
     <Compile Include="Trees\CheckIfTheTreeIsBalanced.cs" />
     <Compile Include="Trees\CloneABTWithRandPointer.cs" />
@@ -321,14 +313,15 @@
     <Compile Include="Trees\WalkTheBinaryTree.cs" />
     <Compile Include="Trie\CreateAndSearchSimpleTrie.cs" />
     <Compile Include="Trie\ShortestPrefix.cs" />
-    <Compile Include="Trie\SuffixTree.cs" />
     <Compile Include="Trie\TrieHelper\Trie.cs" />
     <Compile Include="Trie\TrieHelper\TrieNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Trees\BalancedBST\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

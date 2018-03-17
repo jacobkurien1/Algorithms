@@ -97,7 +97,7 @@ namespace AlgorithmProblems.Graphs.MaxFlow
     /// </summary>
     internal class GraphWithFwdEdges : Graph
     {
-        public Dictionary<string, bool> IsEdgeFwd { get; }
+        public Dictionary<string, bool> IsEdgeFwd;
         public GraphWithFwdEdges()
         {
             IsEdgeFwd = new Dictionary<string, bool>();
