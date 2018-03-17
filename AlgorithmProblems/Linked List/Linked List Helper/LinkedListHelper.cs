@@ -38,6 +38,26 @@ namespace AlgorithmProblems.Linked_List.Linked_List_Helper
             return head;
         }
 
+        public static SingleLinkedListNode<int> CreateSinglyLinkedList(int[] arr)
+        {
+            SingleLinkedListNode<int> head = null;
+            SingleLinkedListNode<int> current = null;
+            for(int i=0; i<arr.Length; i++)
+            {
+                if(head == null)
+                {
+                    head = new SingleLinkedListNode<int>(arr[i]);
+                    current = head;
+                }
+                else
+                {
+                    current.NextNode = new SingleLinkedListNode<int>(arr[i]);
+                    current = current.NextNode;
+                }
+            }
+            return head;
+        }
+
         public static SingleLinkedListNode<int> CreateSinglyLinkedList(int length)
         {
             return CreateSinglyLinkedList(length, 0, 9);

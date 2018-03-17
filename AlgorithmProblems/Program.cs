@@ -337,6 +337,7 @@ namespace AlgorithmProblems
             KClosestElementInArray.TestKClosestElementInArray();
             SearchInSortedMatrix.TestSearchInSortedMatrix();
             BinarySearchUnbounded.TestBinarySearchUnbounded();
+            LinkedListSublistSearch.TestLinkedListSublistSearch();
 
             //Distributed algorithms
             KWayMerge.TestKWayMerge();

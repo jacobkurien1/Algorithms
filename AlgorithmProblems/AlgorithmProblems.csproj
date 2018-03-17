@@ -91,6 +91,7 @@
     <Compile Include="PermutationAndCombination\GoodDiceRoll.cs" />
     <Compile Include="Search\BinarySearchUnbounded.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
+    <Compile Include="Search\LinkedListSublistSearch.cs" />
     <Compile Include="Search\SearchInSortedMatrix.cs" />
     <Compile Include="Search\SearchInSortedRotatedArray.cs" />
     <Compile Include="Sorting\DutchNationalFlag.cs" />
