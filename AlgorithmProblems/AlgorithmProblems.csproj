@@ -90,6 +90,7 @@
     <Compile Include="PermutationAndCombination\AllCombinationsOfParenthesis.cs" />
     <Compile Include="PermutationAndCombination\GoodDiceRoll.cs" />
     <Compile Include="Search\BinarySearchUnbounded.cs" />
+    <Compile Include="Search\GetSmallestInSortedRotatedArray.cs" />
     <Compile Include="Search\KClosestElementInArray.cs" />
     <Compile Include="Search\LinkedListSublistSearch.cs" />
     <Compile Include="Search\NoOfOccuranceInSortedArray.cs" />
