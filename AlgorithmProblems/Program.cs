@@ -338,6 +338,7 @@ namespace AlgorithmProblems
             SearchInSortedMatrix.TestSearchInSortedMatrix();
             BinarySearchUnbounded.TestBinarySearchUnbounded();
             LinkedListSublistSearch.TestLinkedListSublistSearch();
+            NoOfOccuranceInSortedArray.TestNoOfOccuranceInSortedArray();
 
             //Distributed algorithms
             KWayMerge.TestKWayMerge();
