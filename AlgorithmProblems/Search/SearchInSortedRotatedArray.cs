@@ -12,6 +12,7 @@ namespace AlgorithmProblems.Search
     /// </summary>
     class SearchInSortedRotatedArray
     {
+        #region Algo1 - Recursive approach
         /// <summary>
         /// We will use the binary search here and get the running time to be O(logn).
         /// Check in which side the pivot element(element where the sorted array starts if the array was not rotated).
@@ -65,7 +66,55 @@ namespace AlgorithmProblems.Search
             }
 
         }
+        #endregion
 
+        #region Algo2 - iterative approach
+
+        public int SearchIterative(int[] arr, int searchVal)
+        {
+            if(arr == null || arr.Length == 0)
+            {
+                throw new ArgumentException("The array is not valid");
+            }
+            int low = 0;
+            int high = arr.Length - 1;
+
+            while(low <= high)
+            {
+                int mid = low + ((high - low) / 2);
+                if(arr[mid] == searchVal)
+                {
+                    return mid; // Element found
+                }
+                
+                if(arr[high] >= arr[mid])
+                {
+                    if(searchVal > arr[mid] && searchVal <= arr[high])
+                    {
+                        low = mid + 1;//Search right
+                    }
+                    else
+                    {
+                        high = mid - 1;//Search left
+                    }
+                }
+                else if(arr[low] <= arr[mid])
+                {
+                    if(searchVal >= arr[low] && searchVal < arr[mid])
+                    {
+                        high = mid - 1;//search left
+                    }
+                    else
+                    {
+                        low = mid + 1; // Search right
+                    }
+                }
+            }
+
+            return -1; // Element is not found
+        }
+
+        #endregion
 
         public static void TestSearchInSortedRotatedArray()
         {
@@ -73,38 +122,47 @@ namespace AlgorithmProblems.Search
             int searchVal = 2;
             SearchInSortedRotatedArray search = new SearchInSortedRotatedArray();
             Console.WriteLine("The {0} is present at index {1}. Expected: 8", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 8", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 3, 4, 5, 6, 7, 8, 9, 1, 2 };
             searchVal = 9;
             Console.WriteLine("The {0} is present at index {1}. Expected: 6", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 6", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 3, 4, 5, 6, 7, 8, 9, 1, 2 };
             searchVal = 4;
             Console.WriteLine("The {0} is present at index {1}. Expected: 1", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 1", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 8, 9, 1, 2, 3, 4, 5, 6, 7 };
             searchVal = 1;
             Console.WriteLine("The {0} is present at index {1}. Expected: 2", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 2", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 8, 9, 1, 2, 3, 4, 5, 6, 7 };
             searchVal = 8;
             Console.WriteLine("The {0} is present at index {1}. Expected: 0", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 0", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 8, 9, 1, 2, 3, 4, 5, 6, 7 };
             searchVal = 6;
             Console.WriteLine("The {0} is present at index {1}. Expected: 7", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 7", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 2, 3, 3, 4, 4, 4, 4, 4, 4, 4 };
             searchVal = 2;
             Console.WriteLine("The {0} is present at index {1}. Expected: 0", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: 0", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 2, 3, 3, 4, 4, 4, 4, 4, 4, 4 };
             searchVal = 4;
-            Console.WriteLine("The {0} is present at index {1}. Expected: 5", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: [3-9]", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: [3-9]", searchVal, search.SearchIterative(arr, searchVal));
 
             arr = new int[] { 2, 3, 3, 4, 4, 4, 4, 4, 4, 4 };
             searchVal = 8;
             Console.WriteLine("The {0} is present at index {1}. Expected: -1", searchVal, search.Search(arr, 0, arr.Length - 1, searchVal));
+            Console.WriteLine("The {0} is present at index {1}. Expected: -1", searchVal, search.SearchIterative(arr, searchVal));
 
         }
     }
