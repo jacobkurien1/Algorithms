@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.matrix_problems
 {
+    /// <summary>
+    /// Rotate the square matrix inplace by 90 degree
+    /// </summary>
     class Rotate_Matrix_90_degree
     {
         public int[,] RotateMatrix(int[,] mat)

@@ -32,13 +32,13 @@ namespace AlgorithmProblems.Linked_List
             }
 
             // Add all list1 items if any of them are left
-            while(list1 != null)
+            if(list1 != null)
             {
                 AddToMergedList(ref mergedListHead, ref mergedListCurrent, ref list1);
             }
 
             // Add all the list2 items if any of them are left
-            while(list2 !=null)
+            if(list2 !=null)
             {
                 AddToMergedList(ref mergedListHead, ref mergedListCurrent, ref list2);
             }
@@ -68,6 +68,17 @@ namespace AlgorithmProblems.Linked_List
             LinkedListHelper.PrintSinglyLinkedList(list1);
 
             SingleLinkedListNode<int> list2 = LinkedListHelper.SortedLinkedList(10, 5);
+            LinkedListHelper.PrintSinglyLinkedList(list2);
+
+            Console.WriteLine("The merged linked list is as follows:");
+            LinkedListHelper.PrintSinglyLinkedList(Merge(list1, list2));
+
+            //Test2
+            Console.WriteLine("Test2:Test merging of 2 sorted linked list");
+            list1 = LinkedListHelper.SortedLinkedList(10);
+            LinkedListHelper.PrintSinglyLinkedList(list1);
+
+            list2 = LinkedListHelper.SortedLinkedList(1, 5);
             LinkedListHelper.PrintSinglyLinkedList(list2);
 
             Console.WriteLine("The merged linked list is as follows:");

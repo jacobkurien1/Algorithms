@@ -20,9 +20,11 @@ namespace AlgorithmProblems.Graphs.ShortestPathAlgos
         /// the algorithm would optimize in the path with less manhattan distance from the endpoint
         /// 
         /// This is different than the breadth first search which expands in all direction, 
-        /// here we travel the path which points to the direction where the endpoint is located
+        /// here we travel the path which points to the direction where the endpoint is located.
         /// 
-        /// Heuristic seach is faster than the BFS in cases where we dont have many obstracles
+        /// Heuristic search might not find the shortest path.
+        /// 
+        /// Heuristic search is faster than the BFS in cases where we dont have many obstracles
         /// But as the number of obstracles increases this would become closer to BFS.
         /// 
         /// A* algorithm uses a combination of dijkstra and heuristic search

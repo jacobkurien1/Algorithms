@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.Graphs
 {
+    /// <summary>
+    /// Color the vertices in a graph with 2 different colors such that no 2 connected vertices have the same color
+    /// </summary>
     class ColorVertices
     {
 
         private static Dictionary<GraphVertex, int> vertexColorDict = new Dictionary<GraphVertex, int>();
         /// <summary>
-        /// Color the vertices in a graph with different colors such that no 2 connected vertices have the same color
+        /// Color the vertices in a graph with 2 different colors such that no 2 connected vertices have the same color
         /// 
         /// We do a BFS here and color all odd layer node with the same color 
         /// if you encounter any node in the odd layer with the color of the even layer then return false

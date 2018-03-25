@@ -42,7 +42,11 @@ namespace AlgorithmProblems.Arrays
         /// <param name="n">size of the sliding window</param>
         public void GetMovingAvg(int n)
         {
-            
+            if(n < 1)
+            {
+                throw new ArgumentException("n should be greater or equal to 1");
+            }
+
             int[] arrForCurrentAvg = new int[n]; // this is a circular buffer
             int arrIndex = 0; // index of the buffer where the new elements needs to be added
             int numOfElementSeen = 0; // keeps track of the number of elements seen till now
