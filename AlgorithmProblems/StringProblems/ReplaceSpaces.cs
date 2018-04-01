@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems.StringProblems
 {
+    /// <summary>
+    /// Replace the spaces in the string with '%20'
+    /// </summary>
     class ReplaceSpaces
     {
         public StringBuilder ReplaceSpacesInplace(StringBuilder sb)

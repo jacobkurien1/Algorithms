@@ -179,6 +179,54 @@ namespace AlgorithmProblems.Trees
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// This is an optimized version of the above algorithm
+        /// Here we want to traverse the tree in which we will keep track of whether we visited 
+        /// the left child and right child using a Node reference lastvisitedNode
+        /// 
+        /// Steps: 1. Create a stack and push the tree root into the stack.
+        /// 2. while stack is not empty, peek at stacktop and check if the left node is present 
+        ///    and it is not already visited. Push left node to stack and update lastvisitednode as this left node
+        /// 3. Do step 2 if right node is present and is not visited.
+        /// 4. if steps 2 and 3 are not valid( ie either we reached a leaf node or a node which has both left and 
+        ///    right child visited), Print the node and update the last visited node
+        ///    
+        /// The running time is O(n)
+        /// The space requirement is O(h) h= height; h=n for a skewed tree 
+        /// </summary>
+        /// <param name="treeNode"></param>
+        public static void PostOrderTraversalIterativelySingleStackCleaner(BinaryTreeNode<int> treeNode)
+        {
+            Stack<BinaryTreeNode<int>> st = new Stack<BinaryTreeNode<int>>();
+            BinaryTreeNode<int> lastVisitedNode = treeNode;
+            st.Push(treeNode);
+
+            while(st.Count>0)
+            {
+                BinaryTreeNode<int> currentNode = st.Peek();
+                if (currentNode.Left != null && currentNode.Left != lastVisitedNode && currentNode.Right != lastVisitedNode)
+                {
+                    // if the left node is present and it is not already visited
+                    st.Push(currentNode.Left);
+                    lastVisitedNode = currentNode.Left;
+                }
+                else if (currentNode.Right != null && currentNode.Right != lastVisitedNode)
+                {
+                    // if the right node is present and it is not already visited
+                    st.Push(currentNode.Right);
+                    lastVisitedNode = currentNode.Right;
+                }
+                else
+                {
+                    //either we reached a leaf node or a node which has both left and right child visited
+                    currentNode = st.Pop();
+                    Console.Write("{0} ", currentNode.Data);
+                    lastVisitedNode = currentNode;
+                }
+            }
+            Console.WriteLine();
+        }
+
         public static void InOrderTraversal(BinaryTreeNode<int> treeNode)
         {
             if (treeNode != null)
@@ -253,6 +301,7 @@ namespace AlgorithmProblems.Trees
 
         public static void TestWalkTheTree()
         {
+            // complete BT
             BinaryTree<int> bt1 = new BinaryTree<int>(new int[] { 8, 4, 12, 1, 5, 9, 13 }, true);
             PreOrderTraversalIteratively(bt1.Head);
             Console.WriteLine();
@@ -261,8 +310,19 @@ namespace AlgorithmProblems.Trees
 
             PostOrderTraversalIterativelyWith2Stacks(bt1.Head);
             PostOrderTraversalIterativelySingleStack(bt1.Head);
+            PostOrderTraversalIterativelySingleStackCleaner(bt1.Head);
             PostOrderTraversal(bt1.Head);
+            Console.WriteLine();
 
+            // skewed BT
+            bt1.Head.Left.Left.Right = new BinaryTreeNode<int>(22);
+            bt1.Head.Right.Left.Left = new BinaryTreeNode<int>(44);
+
+            PostOrderTraversalIterativelyWith2Stacks(bt1.Head);
+            PostOrderTraversalIterativelySingleStack(bt1.Head);
+            PostOrderTraversalIterativelySingleStackCleaner(bt1.Head);
+            PostOrderTraversal(bt1.Head);
+            Console.WriteLine();
         }
     }
 }
