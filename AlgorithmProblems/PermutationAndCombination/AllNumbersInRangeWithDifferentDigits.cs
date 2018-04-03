@@ -14,6 +14,8 @@ namespace AlgorithmProblems.PermutationAndCombination
     /// </summary>
     public class AllNumbersInRangeWithDifferentDigits
     {
+
+        #region Recursive approach
         /// <summary>
         /// This list will be used to store all the different combinations with different digits
         /// </summary>
@@ -53,11 +55,54 @@ namespace AlgorithmProblems.PermutationAndCombination
                 }
             }
         }
+        #endregion
+
+        #region Iterative approach
+        /// <summary>
+        /// We can do the same iteratively by using 2 lists.
+        /// </summary>
+        /// <param name="maxValue"></param>
+        /// <returns></returns>
+        public List<long> GetAllNumsInRangeWithDifferentDigitsIter(int maxValue)
+        {
+            List<long> previous = new List<long>();
+            List<long> current = new List<long>();
+            bool isMaxReached = false;
+            previous.Add(0);
+
+            while(!isMaxReached)
+            {
+                foreach (long val in previous)
+                {
+                    int lastdigit = (int)val%10;
+                    for (int i = lastdigit; i <= 9; i++) 
+                    {
+                        long newVal = val * 10 + i;
+                        if(newVal>=maxValue)
+                        {
+                            isMaxReached = true;
+                            break; // break all loops
+                        }
+                        current.Add(newVal);
+                    }
+                    if (isMaxReached)
+                    {
+                        break;  // break all loops
+                    }
+                }
+                previous = current;
+                current = new List<long>();
+            }
+            return previous;
+        }
+
+        #endregion
 
         public static void TestAllNumbersInRangeWithDifferentDigits()
         {
             AllNumbersInRangeWithDifferentDigits allNums = new AllNumbersInRangeWithDifferentDigits(100);
             PrintCombinations(allNums.AllCombinations);
+            PrintCombinations(allNums.GetAllNumsInRangeWithDifferentDigitsIter(100));
         }
 
         private static void PrintCombinations(List<long> combinations)

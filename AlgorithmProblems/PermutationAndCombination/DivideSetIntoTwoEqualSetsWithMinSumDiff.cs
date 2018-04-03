@@ -67,7 +67,7 @@ namespace AlgorithmProblems.PermutationAndCombination
 
         /// <summary>
         /// This is the main subroutine which calls the recursive subroutine MinimizeTheSumOfEqualLengthSets
-        /// 
+        /// This problem has an optimized solution via Dynamic Programming approach.
         /// </summary>
         /// <param name="arr"></param>
         /// <returns></returns>
