@@ -12,7 +12,7 @@ namespace AlgorithmProblems.PermutationAndCombination
     public class GoodDiceRoll
     {
 
-        #region Recursive solution
+        #region iterative solution - the sum and prod mod are calculated at end
         /// <summary>
         /// Algo: 1. Get all the combinations of n dice rolls.
         /// 2. Filter the list by the combinations which satisfy sum%mod == product%mod
@@ -83,12 +83,14 @@ namespace AlgorithmProblems.PermutationAndCombination
 
         #endregion
 
-        #region Iterative solution
+        #region Iterative solution - the sum and prod mod are calculated while adding dice roll
         /// <summary>
         /// 1. Get all dice rolls iteratively while also keeping track of sum and prod mod
         /// 2. filter the elements having equal sum and prod mod values.
         /// The running time is O(6^n)
-        /// The space requriement is O(6^n)
+        /// The space requriement is O(6^n) 
+        /// 
+        /// This is not an optimal solution as space requirement is more here as we are tackling the problem as BFS
         /// </summary>
         /// <param name="mod">mod value so that we dont have overflow for sum and product</param>
         /// <param name="maxDiceRolls">max number of dice rolls that needs to be performed</param>
@@ -157,6 +159,46 @@ namespace AlgorithmProblems.PermutationAndCombination
 
         #endregion
 
+        #region Recursive solution - better space requirement 
+
+        private static int CountOfGoodDiceRolls { get; set; }
+        private static void GoodDiceRollsRecur(int mod, int maxRolls, List<int> roll)
+        {
+            if(roll.Count == maxRolls)
+            {
+                // check whether the sum mod and prod mod is same
+                if(sumMod(roll, mod) == prodMod(roll, mod))
+                {
+                    CountOfGoodDiceRolls++;
+                }
+                return;
+            }
+            for(int dicethrow = 1; dicethrow<=6; dicethrow++)
+            {
+                roll.Add(dicethrow);
+                GoodDiceRollsRecur(mod, maxRolls, roll);
+                roll.RemoveAt(roll.Count - 1); // backtracking
+            }
+        }
+
+        /// <summary>
+        /// Main method which calls into the recursive subroutine
+        /// The space requriement is the stack requriement for the recursive subroutine as only 1 set of rolls 
+        /// is targetted at a time. The space requirement is O(maxRolls) as maxRolls is the height of the tree formed.
+        /// 
+        /// The time taken is same O(6^maxRolls)
+        /// </summary>
+        /// <param name="mod"></param>
+        /// <param name="maxRolls"></param>
+        /// <returns></returns>
+        public static int GetCountOfGoodDiceRollsRecur(int mod, int maxRolls)
+        {
+            GoodDiceRollsRecur(mod, maxRolls, new List<int>());
+            return CountOfGoodDiceRolls;
+        }
+
+        #endregion
+
         /// <summary>
         /// Test method
         /// </summary>
@@ -171,6 +213,11 @@ namespace AlgorithmProblems.PermutationAndCombination
                 mod);
             Console.WriteLine("The good dice for {2} rolls with mod value as {3} are {0}. Expected: {1}",
                 GetCountOfGoodDiceRolls(mod, n),
+                4,
+                n,
+                mod);
+            Console.WriteLine("The good dice for {2} rolls with mod value as {3} for recursive approach are {0}. Expected: {1}",
+                GetCountOfGoodDiceRollsRecur(mod, n),
                 4,
                 n,
                 mod);
