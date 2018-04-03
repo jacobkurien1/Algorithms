@@ -85,7 +85,10 @@ namespace AlgorithmProblems.PermutationAndCombination
 
         #region Iterative solution
         /// <summary>
-        /// 
+        /// 1. Get all dice rolls iteratively while also keeping track of sum and prod mod
+        /// 2. filter the elements having equal sum and prod mod values.
+        /// The running time is O(6^n)
+        /// The space requriement is O(6^n)
         /// </summary>
         /// <param name="mod">mod value so that we dont have overflow for sum and product</param>
         /// <param name="maxDiceRolls">max number of dice rolls that needs to be performed</param>
