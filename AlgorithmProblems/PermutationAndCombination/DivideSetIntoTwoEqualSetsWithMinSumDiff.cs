@@ -20,7 +20,7 @@ namespace AlgorithmProblems.PermutationAndCombination
         /// <summary>
         /// This is a recursive subroutine which will be calculating all possible combinations
         /// of the elements present in arr.
-        /// The current combination will be saved in currentSet and once its length reaches arr.Length/2
+        /// The current combination will be saved in set and once its length reaches arr.Length/2
         /// we will check the difference between sum of elements in the currentSet and the sum of elements in
         /// the set compliment to currentSet.
         /// If this difference is less than MinDifference we will replace MinDifference with the currentDifference
@@ -29,15 +29,14 @@ namespace AlgorithmProblems.PermutationAndCombination
         /// <param name="arr"></param>
         /// <param name="currentIndex"></param>
         /// <param name="currentSet"></param>
-        private void MinimizeTheSumOfEqualLengthSets(int[] arr, int currentIndex, SetWithSum set)
+        private void MinimizeTheSumOfEqualLengthSets(int[] arr, int currentIndex, List<int> set, int setSum)
         {
-            
             if(set.Count == (arr.Length+1)/2)
             {
-                int currentDifference = GetTheDifferenceOfSumOfSets(set);
+                int currentDifference = Math.Abs(Math.Abs(TotalArraySum - setSum) - setSum);
                 if(currentDifference < MinDifference)
                 {
-                    OptimizedSet = set.currentSet;
+                    OptimizedSet = new List<int>(set);
                     MinDifference = currentDifference;
                 }
                 return;
@@ -46,24 +45,13 @@ namespace AlgorithmProblems.PermutationAndCombination
             {
                 return;
             }
-            SetWithSum clone1 = new SetWithSum(set);
-            SetWithSum clone2 = new SetWithSum(set);
-            clone2.AddElement(arr[currentIndex], currentIndex);
-            MinimizeTheSumOfEqualLengthSets(arr, currentIndex + 1, clone1);
-            MinimizeTheSumOfEqualLengthSets(arr, currentIndex + 1, clone2);
+            set.Add(currentIndex);
+            MinimizeTheSumOfEqualLengthSets(arr, currentIndex + 1, set, setSum+arr[currentIndex]);// with arr[currentIndex]
+            set.RemoveAt(set.Count - 1); // backtrack
+            MinimizeTheSumOfEqualLengthSets(arr, currentIndex + 1, set, setSum); // without arr[currentIndex]
 
         }
 
-        /// <summary>
-        /// The {sum of elements in set1} - {sum of elements in set2}
-        /// = {total sum of all elements} - 2*{sum of elements in set1}
-        /// </summary>
-        /// <param name="set"></param>
-        /// <returns></returns>
-        private int GetTheDifferenceOfSumOfSets(SetWithSum set)
-        {
-            return Math.Abs((TotalArraySum - set.currentSum)- set.currentSum);
-        }
 
         /// <summary>
         /// This is the main subroutine which calls the recursive subroutine MinimizeTheSumOfEqualLengthSets
@@ -79,18 +67,18 @@ namespace AlgorithmProblems.PermutationAndCombination
             {
                 TotalArraySum += arr[i];
             }
-            MinimizeTheSumOfEqualLengthSets(arr, 0, new SetWithSum());
+            MinimizeTheSumOfEqualLengthSets(arr, 0, new List<int>(), 0);
             List<int> set2 = new List<int>();
             List<int> set1 = new List<int>();
-            Dictionary<int, bool> dict = new Dictionary<int, bool>();
+            HashSet<int> hashset = new HashSet<int>();
             foreach(int index in OptimizedSet)
             {
-                dict[index] = true;
+                hashset.Add(index);
             }
             // divide all the elements into set1 and set2
             for (int i = 0; i < arr.Length; i++)
             {
-                if(dict.ContainsKey(i))
+                if(hashset.Contains(i))
                 {
                     set1.Add(arr[i]);
                 }
@@ -158,58 +146,6 @@ namespace AlgorithmProblems.PermutationAndCombination
                 Console.Write("{0} , ", i);
             }
             Console.WriteLine();
-        }
-    }
-
-    /// <summary>
-    /// This is a data structure which will store a list of index to the array
-    /// And also store the total sum of the set formed by the list of indices
-    /// </summary>
-    public class SetWithSum
-    {
-        /// <summary>
-        /// This will contain the set of indices
-        /// </summary>
-        public List<int> currentSet { get; set; }
-
-        /// <summary>
-        /// This will contain all the sum of numbers in all the indices present in currentSet
-        /// </summary>
-        public int currentSum { get; set; }
-
-        public SetWithSum()
-        {
-            currentSet = new List<int>();
-            currentSum = 0;
-        }
-
-        /// <summary>
-        /// Returns the count of all the indices in the currentSet
-        /// </summary>
-        public int Count
-        {
-            get
-            {
-                return (currentSet != null) ? currentSet.Count : 0;
-            }
-        }
-
-        public SetWithSum(SetWithSum newSet)
-        {
-            // clone the list here
-            currentSet = new List<int>(newSet.currentSet);
-            currentSum = newSet.currentSum;
-        }
-
-        /// <summary>
-        /// Adds the index to the currentSet and adds value to the currentSum
-        /// </summary>
-        /// <param name="valToAdd">value which needs to be added to the currentSum</param>
-        /// <param name="currentIndex">index which needs to be added to the currentSet</param>
-        public void AddElement(int valToAdd, int currentIndex)
-        {
-            currentSet.Add(currentIndex);
-            currentSum += valToAdd;
         }
     }
 }
