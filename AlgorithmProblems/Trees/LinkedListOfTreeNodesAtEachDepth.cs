@@ -25,15 +25,14 @@ namespace AlgorithmProblems.Trees
         {
             // the list of the linkedlist of nodes at each level
             List<SinglyLinkedList<BinaryTreeNode<int>>> retList = new List<SinglyLinkedList<BinaryTreeNode<int>>>();
-            retList.Add(new SinglyLinkedList<BinaryTreeNode<int>>());
 
-
-            SinglyLinkedList<BinaryTreeNode<int>> lastLinkedList = retList[retList.Count - 1];
+            SinglyLinkedList<BinaryTreeNode<int>> lastLinkedList = new SinglyLinkedList<BinaryTreeNode<int>>();
             lastLinkedList.AppendToEnd(head);
-            SingleLinkedListNode<BinaryTreeNode<int>> lastLinkedListNode = lastLinkedList.Head;
             while (lastLinkedList.Head != null)
             {
+                SingleLinkedListNode<BinaryTreeNode<int>> lastLinkedListNode = lastLinkedList.Head;
                 SinglyLinkedList<BinaryTreeNode<int>> newLinkedList = new SinglyLinkedList<BinaryTreeNode<int>>();
+
                 while (lastLinkedListNode != null)
                 {
                     if (lastLinkedListNode.Data.Left != null)
@@ -49,12 +48,9 @@ namespace AlgorithmProblems.Trees
 
                     lastLinkedListNode = lastLinkedListNode.NextNode;
                 }
-                retList.Add(newLinkedList);
-                lastLinkedList = retList[retList.Count - 1];
-                lastLinkedListNode = lastLinkedList.Head;
+                retList.Add(lastLinkedList);
+                lastLinkedList = newLinkedList;
             }
-            // remove the last linked list because it is empty
-            retList.RemoveAt(retList.Count - 1);
 
             return retList;
         }
