@@ -9,7 +9,7 @@ namespace AlgorithmProblems.Trees
 {
     /// <summary>
     /// you are given a tree and you are required to seperate the tree into columns
-    /// for example a complete tree given by the preorder traversal 8,5,3,9,10,1,2
+    /// for example a complete tree given by the bfs traversal 8,5,3,9,10,1,2
     /// needs to be divided into the following columns
     /// col1 : 9
     /// col2 : 5

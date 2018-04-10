@@ -183,6 +183,7 @@ namespace AlgorithmProblems
             PowerSet.TestPowerSet();
             AllCombinationsOfParenthesis.TestAllCombinationsOfParenthesis();
             GoodDiceRoll.TestGoodDiceRoll();
+            PermutationsOfValidTime.TestPermutationsOfValidTime();
 
             // Tree Problems
             TreeFromExpression.TestCreateTreeFromExpression();
