@@ -28,33 +28,26 @@ namespace AlgorithmProblems.Stack_and_Queue
             stack2 = new StackViaLinkedListWithLimit<int>(capacity);
         }
 
-        public void Push(int dataToPush)
+        public void Enqueue(int dataToPush)
         {
-            try
+            if(stack1.Capacity == stack1.CurrentCapacity)
             {
-                stack1.Push(dataToPush);
-            }
-            catch(Exception exp)
-            {
-                if(exp.Message == "Stack Full" && stack2.CurrentCapacity == 0)
+                if(stack2.CurrentCapacity != 0)
                 {
-                    // add all elements from stack1 to stack2
-                    while(stack1.CurrentCapacity != 0)
-                    {
-                        stack2.Push(stack1.Pop());
-                    }
-                    // now push the new data to stack1
-                    stack1.Push(dataToPush);
-
+                    throw new Exception("Queue is full");
                 }
                 else
                 {
-                    throw exp;
+                    while(stack1.CurrentCapacity!=0)
+                    {
+                        stack2.Push(stack1.Pop());
+                    }
                 }
             }
+            stack1.Push(dataToPush);
         }
 
-        public SingleLinkedListNode<int> Pop()
+        public SingleLinkedListNode<int> Dequeue()
         {
             // if stack2 is empty then pop all elements from stack1 to stack2
             if(stack2.CurrentCapacity == 0)
@@ -65,7 +58,14 @@ namespace AlgorithmProblems.Stack_and_Queue
                 }
             }
             // pop from stack2
-            return stack2.Pop();
+            if (stack2.CurrentCapacity != 0)
+            {
+                return stack2.Pop();
+            }
+            else
+            {
+                throw new Exception("Queue Empty");
+            }
         }
 
         public static void TestQueueVia2Stack()
@@ -73,7 +73,7 @@ namespace AlgorithmProblems.Stack_and_Queue
             QueueVia2Stack queue = new QueueVia2Stack(5);
             for(int i=0; i<7; i++)
             {
-                queue.Push(i);
+                queue.Enqueue(i);
             }
 
             Console.WriteLine("The 2 stacks are as shown below:");
@@ -82,7 +82,7 @@ namespace AlgorithmProblems.Stack_and_Queue
 
             for (int i = 0; i < 7; i++)
             {
-                Console.WriteLine("The poped value is "+queue.Pop().Data);
+                Console.WriteLine("The poped value is "+queue.Dequeue().Data);
             }
 
             Console.WriteLine("The 2 stacks are as shown below:");
