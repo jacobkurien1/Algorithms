@@ -48,31 +48,59 @@ namespace AlgorithmProblems.Misc
 
             int len1 = 0, len2 = 0;
             // lastSkylinePointFromSkyline1 tracks whether the last skyline point we put in the combinedSkyline list is from the skyline1
-            // if it is from the skyline1 we should not do the comparison (combinedSkyline.Last().Height < skyline1[len1].Height)
-            // instead we should just add the skyline1[len1] to the combinedSkylineList(done here ***)
             bool lastSkylinePointFromSkyline1 = false;
-            bool lastSkylinePointFromSkyline2 = false;
 
             while(len1<skyline1.Count && len2 < skyline2.Count)
             {
                 if(skyline1[len1].Start < skyline2[len2].Start)
                 {
-                    if (combinedSkyline.Count == 0 || lastSkylinePointFromSkyline1 || combinedSkyline.Last().Height < skyline1[len1].Height)
+                    if (combinedSkyline.Count == 0 || combinedSkyline.Last().Height < skyline1[len1].Height)
                     {
-                        // *** We will add the skyline1[len1] to the combinedSkyline if the last entry in this list is also coming from skyline1
                         combinedSkyline.Add(skyline1[len1]);
                         lastSkylinePointFromSkyline1 = true;
-                        lastSkylinePointFromSkyline2 = false;
+                    }
+                    else if (lastSkylinePointFromSkyline1)
+                    {
+                        if(len2 - 1>=0 && skyline2[len2-1].Height > skyline1[len1].Height)
+                        {
+                            /*	Case where x axis is at x	
+                            |-------|
+                            |       |skyline1
+                            |       |
+                                |---------| skyline2
+	                            |         |
+                                    x
+                            */
+                            combinedSkyline.Add(new SkylinePoint(skyline1[len1].Start, skyline2[len2 - 1].Height));
+                            lastSkylinePointFromSkyline1 = false;
+                        }
+                        else
+                        {
+                            combinedSkyline.Add(skyline1[len1]);
+                            lastSkylinePointFromSkyline1 = true;
+                        }
                     }
                     len1++;
                 }
                 else if (skyline2[len2].Start < skyline1[len1].Start)
                 {
-                    if (combinedSkyline.Count == 0 || lastSkylinePointFromSkyline2 || combinedSkyline.Last().Height < skyline2[len2].Height)
+                    if (combinedSkyline.Count == 0 || combinedSkyline.Last().Height < skyline2[len2].Height)
                     {
                         combinedSkyline.Add(skyline2[len2]);
                         lastSkylinePointFromSkyline1 = false;
-                        lastSkylinePointFromSkyline2 = true;
+                    }
+                    else if(!lastSkylinePointFromSkyline1)
+                    {
+                        if (len1 - 1 >= 0 && skyline1[len1 - 1].Height > skyline2[len2].Height)
+                        {
+                            combinedSkyline.Add(new SkylinePoint(skyline2[len2].Start, skyline1[len1 - 1].Height));
+                            lastSkylinePointFromSkyline1 = true;
+                        }
+                        else
+                        {
+                            combinedSkyline.Add(skyline2[len2]);
+                            lastSkylinePointFromSkyline1 = false;
+                        }
                     }
                     len2++;
                 }
@@ -143,6 +171,25 @@ namespace AlgorithmProblems.Misc
 
             Console.WriteLine("The skyline is as shown below:");
             foreach(SkylinePoint sp in skyline)
+            {
+                Console.WriteLine("The skyline point start is {0} and the height is {1}", sp.Start, sp.Height);
+            }
+            //Case:
+            /*		
+            |-------|
+            |       |
+            |       |
+                |---------|
+	            |         |
+
+            */
+            buildings = new List<Building>();
+            buildings.Add(new Building(0, 2, 5));
+            buildings.Add(new Building(1, 3, 2));
+            skyline = GetSkyline(buildings, 0, buildings.Count - 1);
+
+            Console.WriteLine("The skyline is as shown below:");
+            foreach (SkylinePoint sp in skyline)
             {
                 Console.WriteLine("The skyline point start is {0} and the height is {1}", sp.Start, sp.Height);
             }
