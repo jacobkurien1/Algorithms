@@ -61,6 +61,7 @@
     <Compile Include="Graphs\CloneGraph.cs" />
     <Compile Include="Graphs\ContinentalDivide.cs" />
     <Compile Include="Graphs\GraphColoring\CheckBipartiteGraph.cs" />
+    <Compile Include="Graphs\MakeLargestIsland.cs" />
     <Compile Include="Graphs\MaxFlow\FordFulkersonEdmondKarp.cs" />
     <Compile Include="Graphs\MaxFlow\MaxFlowHelper.cs" />
     <Compile Include="Graphs\MaxFlow\MaximumBipartiteMatching.cs" />

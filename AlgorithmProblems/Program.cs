@@ -159,6 +159,7 @@ namespace AlgorithmProblems
             Sudoku.TestSudokuSolver();
             HamiltonianCycle.TestHamiltonianCycle();
             GraphColoringWithMColors.TestGraphColoringWithMColors();
+            MakeLargestIsland.TestMakeLargestIsland();
 
             //Misc Problem
             MinNumOfCoins.TestMinNumOfCoins();
