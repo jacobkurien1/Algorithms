@@ -89,6 +89,7 @@ namespace AlgorithmProblems
             TotalAverage.TestTotalAverage();
             ArrayWithGreaterElementToRight.TestArrayWithGreaterElementToRight();
             WaterCollectedInPuddleShownByHistogram.TestWaterCollectedInPuddleShownByHistogram();
+            CountOfPairsWhichSumUpToGivenSum.TestCountOfPairsWhichSumUpToGivenSum();
             //Median.TestGetMedianOf2SortedArray();
 
             // Sorting Problems
