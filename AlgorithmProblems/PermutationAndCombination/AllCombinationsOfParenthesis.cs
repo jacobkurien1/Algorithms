@@ -38,7 +38,12 @@ namespace AlgorithmProblems.PermutationAndCombination
         /// Remove "{" at the end of the recursion.
         /// 4. If close<open, means we can add "}".
         /// 
-        /// The running time is O(2^n) as the question is at every n can either have { or }
+        /// The total number of valid expressions follow the nth Catalan number
+        /// Catalan(n) = {1/(n+1) } 2nCn 
+        /// or Catalan(n) = 2nCn - 2nC(n+1)
+        /// The catalan numbers grow as 4^n/(n*Sqrt(n)) or 4^n/(n^(3/2))
+        /// Since each valid sequence has n steps to backtrack
+        /// So running time is 4^n/sqrt(n) and space requirement is also 4^n/sqrt(n)
         /// </summary>
         /// <param name="sb"></param>
         /// <param name="open"></param>
